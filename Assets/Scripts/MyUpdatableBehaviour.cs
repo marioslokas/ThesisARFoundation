@@ -5,6 +5,12 @@ using UnityEngine;
 public abstract class MyUpdatableBehaviour : MonoBehaviour, IUpdatable
 {
 
+    void Awake()
+    {
+        myRigidBody = this.GetComponent<Rigidbody>();
+        myGravity = this.GetComponent<ManualGravity>();
+    }
+    
     private void OnDisable()
     {
         Unregister();
@@ -30,4 +36,6 @@ public abstract class MyUpdatableBehaviour : MonoBehaviour, IUpdatable
     public abstract void MyStart();
 
     public abstract void MyUpdate();
+    public Rigidbody myRigidBody { get; private set; }
+    public ManualGravity myGravity { get; private set; }
 }

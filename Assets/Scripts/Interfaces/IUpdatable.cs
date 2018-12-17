@@ -7,4 +7,7 @@ public interface IUpdatable
     void Register();
     void Unregister();
     void MyUpdate();
+
+    Rigidbody myRigidBody { get;}
+    ManualGravity myGravity { get; }
 }

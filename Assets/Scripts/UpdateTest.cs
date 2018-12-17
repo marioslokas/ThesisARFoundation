@@ -12,7 +12,10 @@ public class UpdateTest : MyUpdatableBehaviour
 
     public override void MyUpdate()
     {
-        Debug.Log("MyUpdate");
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            this.GetComponent<Rigidbody>().AddForce(Vector3.up * 100);
+        }
     }
 
 }
