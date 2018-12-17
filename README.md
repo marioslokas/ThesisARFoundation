@@ -1,4 +1,4 @@
-# AR Foundation Samples
+# Thesis project directly taken from AR Foundation
 Example projects that use *AR Foundation* and demonstrate its functionality with sample assets and components.
 
 Compatible with Unity 2018.3.
