@@ -11,4 +11,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/FeatheredPlaneScene.unity
     guid: 8252358a1e2ba7549a94df43aacec984
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: f760c2aca4dc76247aaef4f584c08bb4,
+      type: 2}
