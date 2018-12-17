@@ -45,6 +45,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="CallSphereOnTap.cs" t="Include" />
           <e p="Interfaces" t="Include">
             <e p="IUpdatable.cs" t="Include" />
           </e>
