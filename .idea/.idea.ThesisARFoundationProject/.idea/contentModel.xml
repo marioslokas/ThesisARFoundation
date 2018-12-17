@@ -50,8 +50,8 @@
           </e>
           <e p="MyUpdatableBehaviour.cs" t="Include" />
           <e p="UpdateManager.cs" t="Include" />
+          <e p="UpdateTest.cs" t="Include" />
         </e>
-        <e p="UpdateTest.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />

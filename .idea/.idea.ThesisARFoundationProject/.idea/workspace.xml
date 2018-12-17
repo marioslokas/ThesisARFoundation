@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d552ab52-1952-4766-9627-21f01fff0f88" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ARFoundation/Scripts/PlaceOnPlane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ARFoundation/Scripts/PlaceOnPlane.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/IntroScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IntroScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UpdateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UpdateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UpdateTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UpdateTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,19 +20,8 @@
       <file leaf-file-name="UpdateManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UpdateManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <marker date="1545057483352" expanded="false" signature="6:99" ph="..." />
-                <marker date="1545057483352" expanded="true" signature="158:903" ph="{...}" />
-                <marker date="1545057483352" expanded="true" signature="277:334" ph="{...}" />
-                <marker date="1545057483352" expanded="true" signature="398:526" ph="{...}" />
-                <marker date="1545057483352" expanded="true" signature="455:520" ph="{...}" />
-                <marker date="1545057483352" expanded="true" signature="592:722" ph="{...}" />
-                <marker date="1545057483352" expanded="true" signature="648:716" ph="{...}" />
-                <marker date="1545057483352" expanded="true" signature="780:901" ph="{...}" />
-                <marker date="1545057483352" expanded="true" signature="837:895" ph="{...}" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -49,42 +39,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyUpdatableBehaviour.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyUpdatableBehaviour.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/MyUpdatableBehaviour.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="4" column="42" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="42" />
+            <state relative-caret-position="75">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
-                <marker date="1545057572022" expanded="false" signature="6:78" ph="..." />
-                <marker date="1545057572022" expanded="true" signature="150:871" ph="{...}" />
-                <marker date="1545057572022" expanded="true" signature="222:254" ph="{...}" />
-                <marker date="1545057572022" expanded="true" signature="284:318" ph="{...}" />
-                <marker date="1545057572022" expanded="true" signature="347:411" ph="{...}" />
-                <marker date="1545057572022" expanded="true" signature="439:602" ph="{...}" />
-                <marker date="1545057572022" expanded="true" signature="632:794" ph="{...}" />
+                <marker date="1545057772538" expanded="false" signature="6:78" ph="..." />
+                <marker date="1545057772538" expanded="true" signature="150:737" ph="{...}" />
+                <marker date="1545057772538" expanded="true" signature="182:216" ph="{...}" />
+                <marker date="1545057772538" expanded="true" signature="245:277" ph="{...}" />
+                <marker date="1545057772538" expanded="true" signature="305:468" ph="{...}" />
+                <marker date="1545057772538" expanded="true" signature="498:660" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateTest.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/UpdateTest.cs">
+      <file leaf-file-name="PlaceOnPlane.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Imported/ARFoundation/Scripts/PlaceOnPlane.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="987">
+              <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+              <folding>
+                <marker date="1545058644732" expanded="false" signature="6:122" ph="..." />
+                <marker date="1545058644732" expanded="true" signature="124:441" ph="/// Listens for touch events and performs an AR raycast from the screen touch point. ... " />
+                <marker date="1545058644732" expanded="true" signature="534:2052" ph="{...}" />
+                <marker date="1545058644732" expanded="true" signature="670:746" ph="/// The prefab to instantiate on touch. ... " />
+                <marker date="1545058644732" expanded="true" signature="781:872" ph="{...}" />
+                <marker date="1545058644732" expanded="true" signature="882:1009" ph="/// The object instantiated as a result of a successful raycast intersection with a plane. ... " />
+                <marker date="1545058644732" expanded="true" signature="1085:1156" ph="{...}" />
+                <marker date="1545058644732" expanded="true" signature="1194:1847" ph="{...}" />
+                <marker date="1545058644732" expanded="true" signature="1391:1841" ph="{...}" />
+                <marker date="1545058644732" expanded="true" signature="1414:1510" ph="/* Raycast hits are sorted by distance, so the first one ... */" />
+                <marker date="1545058644732" expanded="true" signature="1592:1717" ph="{...}" />
+                <marker date="1545058644732" expanded="true" signature="1734:1831" ph="{...}" />
+                <marker date="1545058644732" expanded="true" signature="1986:2050" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>a</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UpdateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Imported/ARFoundation/Scripts/PlaceOnPlane.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IUpdatable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UpdateTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Imported/WanzyeeStudio/Scripts/Runtime/Component/Common/BaseSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MyUpdatableBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -96,6 +106,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MyBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UpdateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MyUpdatableBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Imported/ARFoundation/Scripts/PlaceOnPlane.cs" />
       </list>
     </option>
   </component>
@@ -159,12 +170,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545054799819</updated>
-      <workItem from="1545054802948" duration="1682000" />
+      <workItem from="1545054802948" duration="2635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1682000" />
+    <option name="totallyTimeSpent" value="2635000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -221,21 +232,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Imported/WanzyeeStudio/Scripts/Runtime/Component/Common/BaseSingleton.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="79" column="36" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="36" />
+          <folding>
+            <marker date="1539509776000" expanded="true" signature="1:392" ph="/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW*\     (   (     ) ) ... */" />
+            <marker date="1539509776000" expanded="false" signature="400:426" ph="..." />
+            <marker date="1539509776000" expanded="true" signature="451:2988" ph="{...}" />
+            <marker date="1539509776000" expanded="true" signature="456:1448" ph="/// Base class to implement the singleton pattern for &lt;c&gt;UnityEngine.MonoBehaviour&lt;/c&gt;. ... " />
+            <marker date="1539509776000" expanded="true" signature="1538:2985" ph="{...}" />
+            <marker date="1539509776000" expanded="true" signature="1543:2594" ph="Runtime" />
+            <marker date="1539509776000" expanded="true" signature="1564:1673" ph="/// Flag if to destroy excess instance automatically when it &lt;c&gt;Awake()&lt;/c&gt;. ... " />
+            <marker date="1539509776000" expanded="true" signature="1714:1813" ph="/// Get the singleton instance. ... " />
+            <marker date="1539509776000" expanded="true" signature="1840:1885" ph="{...}" />
+            <marker date="1539509776000" expanded="true" signature="1889:2243" ph="/// Awake, check and handle duplicated instances. ... " />
+            <marker date="1539509776000" expanded="true" signature="2246:2333" ph="/* Can't place in constructor, to ensure only work in play mode main thread. ... */" />
+            <marker date="1539509776000" expanded="true" signature="2366:2580" ph="{...}" />
+            <marker date="1539509776000" expanded="true" signature="2619:2725" ph="/// Constructor to check inheritance, since we can't constraint subclass. ... " />
+            <marker date="1539509776000" expanded="true" signature="2753:2971" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/UpdateManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <marker date="1545057483352" expanded="false" signature="6:99" ph="..." />
-            <marker date="1545057483352" expanded="true" signature="158:903" ph="{...}" />
-            <marker date="1545057483352" expanded="true" signature="277:334" ph="{...}" />
-            <marker date="1545057483352" expanded="true" signature="398:526" ph="{...}" />
-            <marker date="1545057483352" expanded="true" signature="455:520" ph="{...}" />
-            <marker date="1545057483352" expanded="true" signature="592:722" ph="{...}" />
-            <marker date="1545057483352" expanded="true" signature="648:716" ph="{...}" />
-            <marker date="1545057483352" expanded="true" signature="780:901" ph="{...}" />
-            <marker date="1545057483352" expanded="true" signature="837:895" ph="{...}" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -252,16 +275,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MyUpdatableBehaviour.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="42" />
+        <state relative-caret-position="75">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
-            <marker date="1545057572022" expanded="false" signature="6:78" ph="..." />
-            <marker date="1545057572022" expanded="true" signature="150:871" ph="{...}" />
-            <marker date="1545057572022" expanded="true" signature="222:254" ph="{...}" />
-            <marker date="1545057572022" expanded="true" signature="284:318" ph="{...}" />
-            <marker date="1545057572022" expanded="true" signature="347:411" ph="{...}" />
-            <marker date="1545057572022" expanded="true" signature="439:602" ph="{...}" />
-            <marker date="1545057572022" expanded="true" signature="632:794" ph="{...}" />
+            <marker date="1545057772538" expanded="false" signature="6:78" ph="..." />
+            <marker date="1545057772538" expanded="true" signature="150:737" ph="{...}" />
+            <marker date="1545057772538" expanded="true" signature="182:216" ph="{...}" />
+            <marker date="1545057772538" expanded="true" signature="245:277" ph="{...}" />
+            <marker date="1545057772538" expanded="true" signature="305:468" ph="{...}" />
+            <marker date="1545057772538" expanded="true" signature="498:660" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Imported/ARFoundation/Scripts/PlaceOnPlane.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+          <folding>
+            <marker date="1545058644732" expanded="false" signature="6:122" ph="..." />
+            <marker date="1545058644732" expanded="true" signature="124:441" ph="/// Listens for touch events and performs an AR raycast from the screen touch point. ... " />
+            <marker date="1545058644732" expanded="true" signature="534:2052" ph="{...}" />
+            <marker date="1545058644732" expanded="true" signature="670:746" ph="/// The prefab to instantiate on touch. ... " />
+            <marker date="1545058644732" expanded="true" signature="781:872" ph="{...}" />
+            <marker date="1545058644732" expanded="true" signature="882:1009" ph="/// The object instantiated as a result of a successful raycast intersection with a plane. ... " />
+            <marker date="1545058644732" expanded="true" signature="1085:1156" ph="{...}" />
+            <marker date="1545058644732" expanded="true" signature="1194:1847" ph="{...}" />
+            <marker date="1545058644732" expanded="true" signature="1391:1841" ph="{...}" />
+            <marker date="1545058644732" expanded="true" signature="1414:1510" ph="/* Raycast hits are sorted by distance, so the first one ... */" />
+            <marker date="1545058644732" expanded="true" signature="1592:1717" ph="{...}" />
+            <marker date="1545058644732" expanded="true" signature="1734:1831" ph="{...}" />
+            <marker date="1545058644732" expanded="true" signature="1986:2050" ph="{...}" />
           </folding>
         </state>
       </provider>

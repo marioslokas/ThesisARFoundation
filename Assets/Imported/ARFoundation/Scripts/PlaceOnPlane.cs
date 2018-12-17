@@ -11,7 +11,7 @@ using UnityEngine.XR.ARFoundation;
 /// and moved to the hit position.
 /// </summary>
 [RequireComponent(typeof(ARSessionOrigin))]
-public class PlaceOnPlane : MonoBehaviour
+public class PlaceOnPlane : MyUpdatableBehaviour
 {
     [SerializeField]
     [Tooltip("Instantiates this prefab on a plane at the touch location.")]
@@ -36,7 +36,8 @@ public class PlaceOnPlane : MonoBehaviour
         m_SessionOrigin = GetComponent<ARSessionOrigin>();
     }
 
-    void Update()
+
+    public override void MyUpdate()
     {
         if (Input.touchCount == 0)
             return;
@@ -63,4 +64,8 @@ public class PlaceOnPlane : MonoBehaviour
     static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 
     ARSessionOrigin m_SessionOrigin;
+    public override void MyStart()
+    {
+        throw new System.NotImplementedException();
+    }
 }
