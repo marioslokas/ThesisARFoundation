@@ -15,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UpdateManager.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UpdateManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UpdateManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-195">
@@ -80,11 +80,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CallSphereOnTap.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CallSphereOnTap.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/CallSphereOnTap.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="9" column="75" selection-start-line="9" selection-start-column="75" selection-end-line="9" selection-end-column="75" />
+            <state relative-caret-position="15">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <marker date="1545063472192" expanded="false" signature="6:148" ph="..." />
+                <marker date="1545063472192" expanded="true" signature="201:1535" ph="{...}" />
+                <marker date="1545063472192" expanded="true" signature="371:462" ph="{...}" />
+                <marker date="1545063472192" expanded="true" signature="646:717" ph="{...}" />
+                <marker date="1545063472192" expanded="true" signature="753:817" ph="{...}" />
+                <marker date="1545063472192" expanded="true" signature="854:1533" ph="{...}" />
+                <marker date="1545063472192" expanded="true" signature="1051:1527" ph="{...}" />
+                <marker date="1545063472192" expanded="true" signature="1074:1170" ph="/* Raycast hits are sorted by distance, so the first one ... */" />
+                <marker date="1545063472192" expanded="true" signature="1252:1390" ph="{...}" />
+                <marker date="1545063472192" expanded="true" signature="1407:1517" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -194,12 +206,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545054799819</updated>
-      <workItem from="1545054802948" duration="7370000" />
+      <workItem from="1545054802948" duration="7986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7370000" />
+    <option name="totallyTimeSpent" value="7986000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -212,7 +224,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" />
@@ -307,13 +318,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CallSphereOnTap.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="75" selection-start-line="9" selection-start-column="75" selection-end-line="9" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MyUpdatableBehaviour.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -344,6 +348,25 @@
             <marker date="1545062411546" expanded="true" signature="2824:2908" ph="{...}" />
             <marker date="1545062411546" expanded="true" signature="3062:3227" ph="{...}" />
             <marker date="1545062411546" expanded="true" signature="3163:3221" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CallSphereOnTap.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <marker date="1545063472192" expanded="false" signature="6:148" ph="..." />
+            <marker date="1545063472192" expanded="true" signature="201:1535" ph="{...}" />
+            <marker date="1545063472192" expanded="true" signature="371:462" ph="{...}" />
+            <marker date="1545063472192" expanded="true" signature="646:717" ph="{...}" />
+            <marker date="1545063472192" expanded="true" signature="753:817" ph="{...}" />
+            <marker date="1545063472192" expanded="true" signature="854:1533" ph="{...}" />
+            <marker date="1545063472192" expanded="true" signature="1051:1527" ph="{...}" />
+            <marker date="1545063472192" expanded="true" signature="1074:1170" ph="/* Raycast hits are sorted by distance, so the first one ... */" />
+            <marker date="1545063472192" expanded="true" signature="1252:1390" ph="{...}" />
+            <marker date="1545063472192" expanded="true" signature="1407:1517" ph="{...}" />
           </folding>
         </state>
       </provider>
