@@ -3,6 +3,7 @@
   <component name="ContentModelStore">
     <e p="C:\Users\Marios-2\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_ThesisARFoundationProject.-689615879.00" t="ExcludeRecursive" />
     <e p="D:\Unity Projects\ThesisARFoundationProject" t="IncludeRecursive">
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Imported" t="Include">
@@ -44,8 +45,19 @@
             </e>
           </e>
         </e>
+        <e p="Plugins" t="Include">
+          <e p="Simple UI" t="Include">
+            <e p="Fonts" t="Include">
+              <e p="OFL.txt" t="Include" />
+            </e>
+            <e p="Samples" t="Include">
+              <e p="IconPreview.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="CallSphereOnTap.cs" t="Include" />
+          <e p="GameSetup.cs" t="Include" />
           <e p="Interfaces" t="Include">
             <e p="IUpdatable.cs" t="Include" />
           </e>
