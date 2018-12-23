@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d552ab52-1952-4766-9627-21f01fff0f88" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ARFoundation/Prefabs/AR Plane Debug Visualizer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ARFoundation/Prefabs/AR Plane Debug Visualizer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/IntroScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IntroScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CallSphereOnTap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CallSphereOnTap.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,45 +81,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CallSphereOnTap.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CallSphereOnTap.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/CallSphereOnTap.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="495">
+              <caret line="52" column="88" selection-start-line="52" selection-start-column="88" selection-end-line="52" selection-end-column="88" />
               <folding>
-                <marker date="1545063472192" expanded="false" signature="6:148" ph="..." />
-                <marker date="1545063472192" expanded="true" signature="201:1535" ph="{...}" />
-                <marker date="1545063472192" expanded="true" signature="371:462" ph="{...}" />
-                <marker date="1545063472192" expanded="true" signature="646:717" ph="{...}" />
-                <marker date="1545063472192" expanded="true" signature="753:817" ph="{...}" />
-                <marker date="1545063472192" expanded="true" signature="854:1533" ph="{...}" />
-                <marker date="1545063472192" expanded="true" signature="1051:1527" ph="{...}" />
-                <marker date="1545063472192" expanded="true" signature="1074:1170" ph="/* Raycast hits are sorted by distance, so the first one ... */" />
-                <marker date="1545063472192" expanded="true" signature="1252:1390" ph="{...}" />
-                <marker date="1545063472192" expanded="true" signature="1407:1517" ph="{...}" />
+                <marker date="1545568656680" expanded="false" signature="6:148" ph="..." />
+                <marker date="1545568656680" expanded="true" signature="201:1546" ph="{...}" />
+                <marker date="1545568656680" expanded="true" signature="371:462" ph="{...}" />
+                <marker date="1545568656680" expanded="true" signature="646:717" ph="{...}" />
+                <marker date="1545568656680" expanded="true" signature="753:817" ph="{...}" />
+                <marker date="1545568656680" expanded="true" signature="854:1544" ph="{...}" />
+                <marker date="1545568656680" expanded="true" signature="1051:1538" ph="{...}" />
+                <marker date="1545568656680" expanded="true" signature="1074:1170" ph="/* Raycast hits are sorted by distance, so the first one ... */" />
+                <marker date="1545568656680" expanded="true" signature="1252:1390" ph="{...}" />
+                <marker date="1545568656680" expanded="true" signature="1407:1528" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameSetup.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameSetup.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="87" column="33" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
-              <folding>
-                <marker date="1545567623883" expanded="false" signature="6:100" ph="..." />
-                <marker date="1545567623883" expanded="true" signature="140:2628" ph="{...}" />
-                <marker date="1545567623883" expanded="true" signature="173:242" ph="{...}" />
-                <marker date="1545567623883" expanded="true" signature="275:357" ph="{...}" />
-                <marker date="1545567623883" expanded="true" signature="385:687" ph="{...}" />
-                <marker date="1545567623883" expanded="true" signature="571:681" ph="{...}" />
-                <marker date="1545567623883" expanded="true" signature="1106:1789" ph="{...}" />
-                <marker date="1545567623883" expanded="true" signature="1853:2032" ph="{...}" />
-                <marker date="1545567623883" expanded="true" signature="2090:2270" ph="{...}" />
-                <marker date="1545567623883" expanded="true" signature="2300:2446" ph="{...}" />
-                <marker date="1545567623883" expanded="true" signature="2478:2625" ph="{...}" />
-              </folding>
+            <state relative-caret-position="432">
+              <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -164,12 +153,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IUpdatable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MyUpdatableBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UpdateManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CallSphereOnTap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSetup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CallSphereOnTap.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="170" />
     <option name="y" value="91" />
     <option name="width" value="1026" />
@@ -230,12 +219,12 @@
       <option name="presentableId" value="Default" />
       <updated>1545054799819</updated>
       <workItem from="1545054802948" duration="7986000" />
-      <workItem from="1545557516543" duration="5323000" />
+      <workItem from="1545557516543" duration="6054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13309000" />
+    <option name="totallyTimeSpent" value="14040000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -282,13 +271,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs</url>
-          <line>66</line>
+          <line>69</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/GameSetup.cs" initialLine="66">
             <startOffsets>
-              <startOffset value="1868" />
+              <startOffset value="1935" />
             </startOffsets>
             <endOffsets>
-              <endOffset value="1932" />
+              <endOffset value="1999" />
             </endOffsets>
           </properties>
         </line-breakpoint>
@@ -364,16 +353,16 @@
         <state relative-caret-position="240">
           <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
-            <marker date="1545063472192" expanded="false" signature="6:148" ph="..." />
-            <marker date="1545063472192" expanded="true" signature="201:1535" ph="{...}" />
-            <marker date="1545063472192" expanded="true" signature="371:462" ph="{...}" />
-            <marker date="1545063472192" expanded="true" signature="646:717" ph="{...}" />
-            <marker date="1545063472192" expanded="true" signature="753:817" ph="{...}" />
-            <marker date="1545063472192" expanded="true" signature="854:1533" ph="{...}" />
-            <marker date="1545063472192" expanded="true" signature="1051:1527" ph="{...}" />
-            <marker date="1545063472192" expanded="true" signature="1074:1170" ph="/* Raycast hits are sorted by distance, so the first one ... */" />
-            <marker date="1545063472192" expanded="true" signature="1252:1390" ph="{...}" />
-            <marker date="1545063472192" expanded="true" signature="1407:1517" ph="{...}" />
+            <marker date="1545568656680" expanded="false" signature="6:148" ph="..." />
+            <marker date="1545568656680" expanded="true" signature="201:1546" ph="{...}" />
+            <marker date="1545568656680" expanded="true" signature="371:462" ph="{...}" />
+            <marker date="1545568656680" expanded="true" signature="646:717" ph="{...}" />
+            <marker date="1545568656680" expanded="true" signature="753:817" ph="{...}" />
+            <marker date="1545568656680" expanded="true" signature="854:1544" ph="{...}" />
+            <marker date="1545568656680" expanded="true" signature="1051:1538" ph="{...}" />
+            <marker date="1545568656680" expanded="true" signature="1074:1170" ph="/* Raycast hits are sorted by distance, so the first one ... */" />
+            <marker date="1545568656680" expanded="true" signature="1252:1390" ph="{...}" />
+            <marker date="1545568656680" expanded="true" signature="1407:1528" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -449,41 +438,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CallSphereOnTap.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <marker date="1545063472192" expanded="false" signature="6:148" ph="..." />
-            <marker date="1545063472192" expanded="true" signature="201:1535" ph="{...}" />
-            <marker date="1545063472192" expanded="true" signature="371:462" ph="{...}" />
-            <marker date="1545063472192" expanded="true" signature="646:717" ph="{...}" />
-            <marker date="1545063472192" expanded="true" signature="753:817" ph="{...}" />
-            <marker date="1545063472192" expanded="true" signature="854:1533" ph="{...}" />
-            <marker date="1545063472192" expanded="true" signature="1051:1527" ph="{...}" />
-            <marker date="1545063472192" expanded="true" signature="1074:1170" ph="/* Raycast hits are sorted by distance, so the first one ... */" />
-            <marker date="1545063472192" expanded="true" signature="1252:1390" ph="{...}" />
-            <marker date="1545063472192" expanded="true" signature="1407:1517" ph="{...}" />
-          </folding>
+        <state relative-caret-position="432">
+          <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CallSphereOnTap.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="87" column="33" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
+        <state relative-caret-position="495">
+          <caret line="52" column="88" selection-start-line="52" selection-start-column="88" selection-end-line="52" selection-end-column="88" />
           <folding>
-            <marker date="1545567623883" expanded="false" signature="6:100" ph="..." />
-            <marker date="1545567623883" expanded="true" signature="140:2628" ph="{...}" />
-            <marker date="1545567623883" expanded="true" signature="173:242" ph="{...}" />
-            <marker date="1545567623883" expanded="true" signature="275:357" ph="{...}" />
-            <marker date="1545567623883" expanded="true" signature="385:687" ph="{...}" />
-            <marker date="1545567623883" expanded="true" signature="571:681" ph="{...}" />
-            <marker date="1545567623883" expanded="true" signature="1106:1789" ph="{...}" />
-            <marker date="1545567623883" expanded="true" signature="1853:2032" ph="{...}" />
-            <marker date="1545567623883" expanded="true" signature="2090:2270" ph="{...}" />
-            <marker date="1545567623883" expanded="true" signature="2300:2446" ph="{...}" />
-            <marker date="1545567623883" expanded="true" signature="2478:2625" ph="{...}" />
+            <marker date="1545568656680" expanded="false" signature="6:148" ph="..." />
+            <marker date="1545568656680" expanded="true" signature="201:1546" ph="{...}" />
+            <marker date="1545568656680" expanded="true" signature="371:462" ph="{...}" />
+            <marker date="1545568656680" expanded="true" signature="646:717" ph="{...}" />
+            <marker date="1545568656680" expanded="true" signature="753:817" ph="{...}" />
+            <marker date="1545568656680" expanded="true" signature="854:1544" ph="{...}" />
+            <marker date="1545568656680" expanded="true" signature="1051:1538" ph="{...}" />
+            <marker date="1545568656680" expanded="true" signature="1074:1170" ph="/* Raycast hits are sorted by distance, so the first one ... */" />
+            <marker date="1545568656680" expanded="true" signature="1252:1390" ph="{...}" />
+            <marker date="1545568656680" expanded="true" signature="1407:1528" ph="{...}" />
           </folding>
         </state>
       </provider>

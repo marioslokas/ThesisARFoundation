@@ -50,7 +50,7 @@ public class CallSphereOnTap : MyUpdatableBehaviour
             }
             else
             {
-                spawnedObject.transform.position = hitPose.position + Vector3.up;
+                spawnedObject.transform.position = hitPose.position + new Vector3(0,0.5f,0);
             }
         }
     }
