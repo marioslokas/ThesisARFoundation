@@ -26,10 +26,6 @@ public class CallSphereOnTap : MyUpdatableBehaviour
         m_SessionOrigin = GetComponent<ARSessionOrigin>();
     }
 
-    public override void MyStart()
-    {
-        throw new System.NotImplementedException();
-    }
 
     public override void MyUpdate()
     {

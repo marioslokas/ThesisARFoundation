@@ -20,7 +20,7 @@ public class TargetingManager : MyUpdatableBehaviour
     private Vector2 initialTouchPosition;
     
 
-    public override void MyStart()
+    void Start()
     {
         uiRaycaster = this.GetComponent<GraphicRaycaster>();
 
@@ -49,10 +49,12 @@ public class TargetingManager : MyUpdatableBehaviour
                 // check which panel is being touched
                 if (IsTouchingUiImage(xForceImageArea.gameObject, worldPoint))
                 {
+                    Debug.Log("Touching X panel");
                     adjustingXForce = true;
                 }
                 else if (IsTouchingUiImage(yForceImageArea.gameObject, worldPoint))
                 {
+                    Debug.Log("Touching Y panel");
                     adjustingYForce = true;
                 }
 
@@ -113,6 +115,9 @@ public class TargetingManager : MyUpdatableBehaviour
 
         List<RaycastResult> results = new List<RaycastResult>();
         uiRaycaster.Raycast(eventDataCurrentPosition, results);
+        
+        
+        
         for (int i = 0; i < results.Count; i++)
         {
             if (results[i].gameObject.GetInstanceID().Equals(uiImage.GetInstanceID()))

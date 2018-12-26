@@ -64,8 +64,4 @@ public class PlaceOnPlane : MyUpdatableBehaviour
     static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 
     ARSessionOrigin m_SessionOrigin;
-    public override void MyStart()
-    {
-        throw new System.NotImplementedException();
-    }
 }

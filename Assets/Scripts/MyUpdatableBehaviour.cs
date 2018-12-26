@@ -33,8 +33,6 @@ public abstract class MyUpdatableBehaviour : MonoBehaviour, IUpdatable
         Debug.Log("Object " + this.gameObject.GetInstanceID() + " removed");
     }
 
-    public abstract void MyStart();
-
     public abstract void MyUpdate();
     public Rigidbody myRigidBody { get; private set; }
     public ManualGravity myGravity { get; private set; }
