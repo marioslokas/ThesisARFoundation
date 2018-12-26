@@ -10,14 +10,15 @@ public class TargetingManager : MyUpdatableBehaviour
     [SerializeField] private LineRenderer yForceRenderer;
 
     [SerializeField] private Transform rotatingObject;
-    [SerializeField] private GameObject xForceImageArea;
-    [SerializeField] private GameObject yForceImageArea;
+    [SerializeField] private RectTransform xForceImageArea;
+    [SerializeField] private RectTransform yForceImageArea;
 
     private GraphicRaycaster uiRaycaster;
 
     private bool adjustingXForce, adjustingYForce;
 
     private Vector2 initialTouchPosition;
+    
 
     public override void MyStart()
     {
@@ -39,7 +40,6 @@ public class TargetingManager : MyUpdatableBehaviour
         // calculate which panel is being pressed
         if (Input.touchCount == 1)
         {
-            
             Touch touch = Input.GetTouch(0);
             
             if (touch.phase.Equals(TouchPhase.Began))
@@ -47,11 +47,11 @@ public class TargetingManager : MyUpdatableBehaviour
                 Vector2 worldPoint = Camera.main.ScreenToWorldPoint( touch.position );
             
                 // check which panel is being touched
-                if (IsTouchingUiImage(xForceImageArea, worldPoint))
+                if (IsTouchingUiImage(xForceImageArea.gameObject, worldPoint))
                 {
                     adjustingXForce = true;
                 }
-                else if (IsTouchingUiImage(yForceImageArea, worldPoint))
+                else if (IsTouchingUiImage(yForceImageArea.gameObject, worldPoint))
                 {
                     adjustingYForce = true;
                 }
@@ -59,30 +59,51 @@ public class TargetingManager : MyUpdatableBehaviour
                 // store the first finger position
                 initialTouchPosition = touch.position;
             }
-            
-            if (adjustingXForce)
+            else if (touch.phase.Equals((TouchPhase.Moved)))
             {
-                // divide by the screen width
-                float xDifference = Mathf.Abs(initialTouchPosition.x - touch.position.x) / Screen.width;
-                AdjustLineRendererPosition(xForceRenderer, xDifference);
+                if (adjustingXForce)
+                {
+                    // divide by the screen width
+                    Vector2 xDifference = new Vector2(Mathf.Abs(initialTouchPosition.x - touch.position.x) / xForceImageArea.sizeDelta.x, 0);
+                    AdjustLineRendererPosition(xForceRenderer, xDifference, Vector2.right);
+                }
+                else if (adjustingYForce)
+                {
+                    Vector2 yDifference = new Vector2(0,Mathf.Clamp((initialTouchPosition.y - touch.position.y) / yForceImageArea.sizeDelta.y, 0f, 1f));
+                    AdjustLineRendererPosition(yForceRenderer, yDifference, Vector2.up);
+                }
             }
-            else if (adjustingYForce)
+            else if (touch.phase.Equals((TouchPhase.Ended)))
             {
-                float yDifference = Mathf.Clamp((initialTouchPosition.y - touch.position.y) / Screen.height, 0f, 1f);
-                AdjustLineRendererPosition(yForceRenderer, yDifference);
+                adjustingXForce = false;
+                adjustingYForce = false;
             }
-           
         }
+        else if (Input.touchCount == 2)
+        {
 
-        
-        
-        
+            adjustingXForce = false;
+            adjustingYForce = false;
+            
+            Quaternion desiredRotation = rotatingObject.rotation;
+            DetectTouchMovement.Calculate();
+            
+            if (Mathf.Abs(DetectTouchMovement.turnAngleDelta) > 0) { // rotate
+                Vector3 rotationDeg = Vector3.zero;
+                rotationDeg.z = -DetectTouchMovement.turnAngleDelta;
+                desiredRotation *= Quaternion.Euler(rotationDeg);
+            }
+            
+            transform.rotation = desiredRotation;
+        }
+ 
         
     }
 
-    private void AdjustLineRendererPosition(LineRenderer lineRenderer, float difference)
+    private void AdjustLineRendererPosition(LineRenderer lineRenderer, Vector2 difference, Vector2 direction)
     {
-        
+        lineRenderer.SetPosition(1, difference);
+        lineRenderer.SetPosition(2, difference + direction);
     }
 
     private bool IsTouchingUiImage(GameObject uiImage, Vector2 screenPosition)
