@@ -45,18 +45,6 @@ public class TargetingManager : MyUpdatableBehaviour
             if (touch.phase.Equals(TouchPhase.Began))
             {
                 Vector2 worldPoint = Camera.main.ScreenToWorldPoint( touch.position );
-            
-                // check which panel is being touched
-                if (IsTouchingUiImage(xForceImageArea.gameObject, worldPoint))
-                {
-                    Debug.Log("Touching X panel");
-                    adjustingXForce = true;
-                }
-                else if (IsTouchingUiImage(yForceImageArea.gameObject, worldPoint))
-                {
-                    Debug.Log("Touching Y panel");
-                    adjustingYForce = true;
-                }
 
                 // store the first finger position
                 initialTouchPosition = touch.position;
@@ -99,7 +87,26 @@ public class TargetingManager : MyUpdatableBehaviour
             transform.rotation = desiredRotation;
         }
  
-        
+    }
+
+    public void TouchingXPanel()
+    {
+        adjustingXForce = true;
+    }
+
+    public void EndTouchingXPanel()
+    {
+        adjustingXForce = false;
+    }
+
+    public void TouchingYPanel()
+    {
+        adjustingYForce = true;
+    }
+    
+    public void EndTouchingYPanel()
+    {
+        adjustingYForce = false;
     }
 
     private void AdjustLineRendererPosition(LineRenderer lineRenderer, Vector2 difference, Vector2 direction)
@@ -108,24 +115,3 @@ public class TargetingManager : MyUpdatableBehaviour
         lineRenderer.SetPosition(2, difference + direction);
     }
 
-    private bool IsTouchingUiImage(GameObject uiImage, Vector2 screenPosition)
-    {
-        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-        eventDataCurrentPosition.position = screenPosition;
-
-        List<RaycastResult> results = new List<RaycastResult>();
-        uiRaycaster.Raycast(eventDataCurrentPosition, results);
-        
-        
-        
-        for (int i = 0; i < results.Count; i++)
-        {
-            if (results[i].gameObject.GetInstanceID().Equals(uiImage.GetInstanceID()))
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
-}
