@@ -6,20 +6,16 @@ using UnityEngine.XR.ARFoundation;
 
 public class CallSphereOnTap : MyUpdatableBehaviour
 {
-    [SerializeField]
-    [Tooltip("Instantiates this prefab on a plane at the touch location.")]
-    GameObject m_SpherePrefab;
+
+    [SerializeField] private GameObject placedObject;
     
-    public GameObject spherePrefab
-    {
-        get { return m_SpherePrefab; }
-        set { m_SpherePrefab = value; }
-    }
+    [SerializeField] private GameObject controlCanvas;
     
-    public GameObject spawnedObject { get; private set; }
     static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 
     ARSessionOrigin m_SessionOrigin;
+
+    private bool endPlacement = false;
 
     void Awake()
     {
@@ -29,8 +25,20 @@ public class CallSphereOnTap : MyUpdatableBehaviour
 
     public override void MyUpdate()
     {
+        if (Input.touchCount > 3 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            endPlacement = !endPlacement;
+            controlCanvas.active = !controlCanvas.active;
+        }
+        
+        if (endPlacement)
+        {
+            return;
+        }
+        
         if (Input.touchCount == 0)
             return;
+        
 
         var touch = Input.GetTouch(0);
 
@@ -40,14 +48,16 @@ public class CallSphereOnTap : MyUpdatableBehaviour
             // will be the closest hit.
             var hitPose = s_Hits[0].pose;
 
-            if (spawnedObject == null)
-            {
-                spawnedObject = Instantiate(m_SpherePrefab, hitPose.position + Vector3.up, hitPose.rotation);
-            }
-            else
-            {
-                spawnedObject.transform.position = hitPose.position + new Vector3(0,0.5f,0);
-            }
+            placedObject.SetActive(true);
+            placedObject.transform.position = hitPose.position;
+//            if (spawnedObject == null)
+//            {
+//                spawnedObject = Instantiate(m_SpherePrefab, hitPose.position + Vector3.up, hitPose.rotation);
+//            }
+//            else
+//            {
+//                spawnedObject.transform.position = hitPose.position + new Vector3(0,0.5f,0);
+//            }
         }
     }
 }

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class TargetingManager : MyUpdatableBehaviour
 {
+
+    [SerializeField] private Camera mainCamera;
     [SerializeField] private LineRenderer xForceRenderer;
     [SerializeField] private LineRenderer yForceRenderer;
 
@@ -19,7 +21,7 @@ public class TargetingManager : MyUpdatableBehaviour
 
     private Vector2 previousTouchPosition;
 
-    private Vector2 xForceToObject, yForceToObject;
+    private Vector2 xForceToObject = Vector2.one, yForceToObject = Vector2.one;
     private Vector3 movableObjectStartingPosition;
 
     public float pushForce = 1000f;
@@ -50,7 +52,7 @@ public class TargetingManager : MyUpdatableBehaviour
 
             if (touch.phase.Equals(TouchPhase.Began))
             {
-                Vector2 worldPoint = Camera.main.ScreenToWorldPoint(touch.position);
+                Vector2 worldPoint = mainCamera.ScreenToWorldPoint(touch.position);
 
                 // store the first finger position
                 previousTouchPosition = touch.position;
