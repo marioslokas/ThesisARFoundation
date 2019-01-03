@@ -1144,7 +1144,7 @@ PrefabInstance:
       objectReference: {fileID: 1263650534}
     - target: {fileID: 2641537158983767808, guid: b316e7f3bd23abb43a719e669c32022c,
         type: 3}
-      propertyPath: rotatingObject
+      propertyPath: movableObject
       value: 
       objectReference: {fileID: 1647700962}
     m_RemovedComponents: []

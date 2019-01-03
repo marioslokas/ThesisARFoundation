@@ -55,7 +55,6 @@
             </e>
           </e>
         </e>
-        <e p="RotateTest.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="CallSphereOnTap.cs" t="Include" />
           <e p="DetectTouchMovement.cs" t="Include" />

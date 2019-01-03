@@ -9,7 +9,7 @@ public class TargetingManager : MyUpdatableBehaviour
     [SerializeField] private LineRenderer xForceRenderer;
     [SerializeField] private LineRenderer yForceRenderer;
 
-    [SerializeField] private Transform rotatingObject;
+    [SerializeField] private Transform movableObject;
     [SerializeField] private RectTransform xForceImageArea;
     [SerializeField] private RectTransform yForceImageArea;
 
@@ -19,18 +19,24 @@ public class TargetingManager : MyUpdatableBehaviour
 
     private Vector2 previousTouchPosition;
 
+    private Vector2 xForceToObject, yForceToObject;
+    private Vector3 movableObjectStartingPosition;
+
+    public float pushForce = 1000f;
 
     void Start()
     {
         uiRaycaster = this.GetComponent<GraphicRaycaster>();
 
-        if (!yForceRenderer || !xForceRenderer || !xForceImageArea || !yForceImageArea || !rotatingObject)
+        if (!yForceRenderer || !xForceRenderer || !xForceImageArea || !yForceImageArea || !movableObject)
         {
             Debug.LogError("References missing");
         }
 
         adjustingXForce = false;
         adjustingYForce = false;
+
+        movableObjectStartingPosition = movableObject.position;
     }
 
     public override void MyUpdate()
@@ -55,12 +61,12 @@ public class TargetingManager : MyUpdatableBehaviour
                 {
                     // divide by the screen width
                     Vector2 xDifference = new Vector2((touch.position.x - previousTouchPosition.x) / xForceImageArea.sizeDelta.x, 0);
-                    AdjustLineRendererPosition(xForceRenderer, xDifference, Vector2.right);
+                    AdjustLineRendererPosition(xForceRenderer, xDifference, Vector2.right, out xForceToObject);
                 }
                 else if (adjustingYForce)
                 {
                     Vector2 yDifference = new Vector2(0, (touch.position.y - previousTouchPosition.y) / yForceImageArea.sizeDelta.y);
-                    AdjustLineRendererPosition(yForceRenderer, yDifference, Vector2.up);
+                    AdjustLineRendererPosition(yForceRenderer, yDifference, Vector2.up, out yForceToObject);
                 }
 
                 previousTouchPosition = touch.position;
@@ -77,7 +83,7 @@ public class TargetingManager : MyUpdatableBehaviour
             adjustingXForce = false;
             adjustingYForce = false;
 
-            Quaternion desiredRotation = rotatingObject.rotation;
+            Quaternion desiredRotation = movableObject.rotation;
             DetectTouchMovement.Calculate();
 
             if (Mathf.Abs(DetectTouchMovement.turnAngleDelta) > 0)
@@ -88,7 +94,7 @@ public class TargetingManager : MyUpdatableBehaviour
                 desiredRotation *= Quaternion.Euler(rotationDeg);
             }
             
-            rotatingObject.Rotate(Vector3.up, DetectTouchMovement.turnAngleDelta);
+            movableObject.Rotate(Vector3.up, DetectTouchMovement.turnAngleDelta);
         }
         
     }
@@ -113,13 +119,29 @@ public class TargetingManager : MyUpdatableBehaviour
         adjustingYForce = false;
     }
 
-    private void AdjustLineRendererPosition(LineRenderer lineRenderer, Vector2 difference, Vector2 direction)
+    public void FireObject()
+    {
+        movableObject.GetComponent<Rigidbody>().AddForce( (movableObject.rotation *  xForceToObject) * pushForce);
+        movableObject.GetComponent<Rigidbody>().AddForce( (movableObject.rotation * yForceToObject) * pushForce);
+    }
+
+    public void Restart()
+    {
+        movableObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        movableObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        movableObject.rotation = Quaternion.identity;
+        
+        movableObject.position = movableObjectStartingPosition;
+    }
+
+    private void AdjustLineRendererPosition(LineRenderer lineRenderer, Vector2 difference, Vector2 direction, out Vector2 forceValue)
     {
         Vector2 rendererPos1 = new Vector2(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y);
         
         lineRenderer.SetPosition(1, difference + rendererPos1);
         lineRenderer.SetPosition(2, direction + new Vector2(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y) );
-        
+
+        forceValue = difference + rendererPos1;
     }
 
 }
