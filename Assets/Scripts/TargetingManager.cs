@@ -87,10 +87,10 @@ public class TargetingManager : MyUpdatableBehaviour
                 rotationDeg.z = -DetectTouchMovement.turnAngleDelta;
                 desiredRotation *= Quaternion.Euler(rotationDeg);
             }
-
-            transform.rotation = desiredRotation;
+            
+            rotatingObject.Rotate(Vector3.up, DetectTouchMovement.turnAngleDelta);
         }
-
+        
     }
 
     public void TouchingXPanel()

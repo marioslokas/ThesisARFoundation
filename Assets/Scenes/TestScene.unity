@@ -124,60 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04465ba8a6c8fbc42848d53b728ff1e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &149511750 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2641537158730967223, guid: b316e7f3bd23abb43a719e669c32022c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2641537158876116721}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &149511751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149511750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 435610097}
-          m_MethodName: TouchingYPanel
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 435610097}
-          m_MethodName: EndTouchingYPanel
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!1001 &264010475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -247,18 +193,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29482a86b3d7cf46931b16a70caad6f, type: 3}
---- !u!114 &435610097 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2641537158983767808, guid: b316e7f3bd23abb43a719e669c32022c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2641537158876116721}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4df70a48c840984b9cc8e9f1a9d6414, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &775227709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,6 +1147,5 @@ PrefabInstance:
       propertyPath: rotatingObject
       value: 
       objectReference: {fileID: 1647700962}
-    m_RemovedComponents:
-    - {fileID: 2641537158222768773, guid: b316e7f3bd23abb43a719e669c32022c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b316e7f3bd23abb43a719e669c32022c, type: 3}
