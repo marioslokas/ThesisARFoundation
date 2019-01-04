@@ -8,21 +8,26 @@ public class TargetingManager : MonoBehaviour
 {
 
     [SerializeField] private Camera mainCamera;
+    
+    [Header("Projectile references")]
+    [SerializeField] private Transform movableObject;
     [SerializeField] private LineRenderer xForceRenderer;
     [SerializeField] private LineRenderer yForceRenderer;
 
-    [SerializeField] private Transform movableObject;
+    [Header("UI references")]
     [SerializeField] private RectTransform xForceImageArea;
     [SerializeField] private RectTransform yForceImageArea;
-
     private GraphicRaycaster uiRaycaster;
 
     private bool adjustingXForce, adjustingYForce;
 
     private Vector2 previousTouchPosition;
 
+    // force values for the object
     private Vector2 xForceToObject = Vector2.one, yForceToObject = Vector2.one;
+    
     private Vector3 movableObjectStartingPosition;
+    private Quaternion lastAdjustedRotation;
 
     public float pushForce = 1000f;
 
@@ -43,6 +48,10 @@ public class TargetingManager : MonoBehaviour
 
     void Update()
     {
+        
+//        Debug.DrawRay(Vector3.zero, Vector3.Cross(mainCamera.transform.forward, movableObject.right),Color.blue);
+        
+        
         if (Input.touchCount <= 0) return;
 
         // calculate which panel is being pressed
@@ -61,8 +70,13 @@ public class TargetingManager : MonoBehaviour
             {
                 if (adjustingXForce)
                 {
-                    // divide by the screen width
-                    Vector2 xDifference = new Vector2((touch.position.x - previousTouchPosition.x) / xForceImageArea.sizeDelta.x, 0);
+                    // camera's look at direction determines where the finger must move to to adjust the x force
+
+                    float adjustableValueX = Vector3.Cross(mainCamera.transform.forward, movableObject.right).y > 0
+                        ? touch.position.x - previousTouchPosition.x
+                        : previousTouchPosition.x - touch.position.x;
+                    
+                    Vector2 xDifference = new Vector2( adjustableValueX / xForceImageArea.sizeDelta.x, 0);
                     AdjustLineRendererPosition(xForceRenderer, xDifference, Vector2.right, out xForceToObject);
                 }
                 else if (adjustingYForce)
@@ -97,6 +111,7 @@ public class TargetingManager : MonoBehaviour
             }
             
             movableObject.Rotate(Vector3.up, DetectTouchMovement.turnAngleDelta);
+            lastAdjustedRotation = movableObject.rotation;
         }
         
     }
@@ -131,7 +146,7 @@ public class TargetingManager : MonoBehaviour
     {
         movableObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         movableObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-        movableObject.rotation = Quaternion.identity;
+        movableObject.rotation = lastAdjustedRotation;
         
         movableObject.position = movableObjectStartingPosition;
     }
