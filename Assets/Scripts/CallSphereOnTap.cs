@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Experimental.XR;
 using UnityEngine.XR.ARFoundation;
 
-public class CallSphereOnTap : MyUpdatableBehaviour
+public class CallSphereOnTap : MonoBehaviour
 {
 
     [SerializeField] private GameObject placedObject;
@@ -22,13 +22,12 @@ public class CallSphereOnTap : MyUpdatableBehaviour
         m_SessionOrigin = GetComponent<ARSessionOrigin>();
     }
 
-
-    public override void MyUpdate()
+    void Update()
     {
-        if (Input.touchCount > 3 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.touchCount > 3 && Input.GetTouch(3).phase == TouchPhase.Began)
         {
             endPlacement = !endPlacement;
-            controlCanvas.active = !controlCanvas.active;
+            controlCanvas.SetActive(!controlCanvas.activeSelf);
         }
         
         if (endPlacement)
@@ -48,16 +47,12 @@ public class CallSphereOnTap : MyUpdatableBehaviour
             // will be the closest hit.
             var hitPose = s_Hits[0].pose;
 
-            placedObject.SetActive(true);
-            placedObject.transform.position = hitPose.position;
-//            if (spawnedObject == null)
-//            {
-//                spawnedObject = Instantiate(m_SpherePrefab, hitPose.position + Vector3.up, hitPose.rotation);
-//            }
-//            else
-//            {
-//                spawnedObject.transform.position = hitPose.position + new Vector3(0,0.5f,0);
-//            }
+            if (!placedObject.activeSelf)
+            {
+                placedObject.SetActive(true);
+            }
+            
+            placedObject.transform.position = hitPose.position + new Vector3(0,0.25f,0);
         }
     }
 }

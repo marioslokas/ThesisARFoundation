@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class TargetingManager : MyUpdatableBehaviour
+public class TargetingManager : MonoBehaviour
 {
 
     [SerializeField] private Camera mainCamera;
@@ -41,7 +41,7 @@ public class TargetingManager : MyUpdatableBehaviour
         movableObjectStartingPosition = movableObject.position;
     }
 
-    public override void MyUpdate()
+    void Update()
     {
         if (Input.touchCount <= 0) return;
 

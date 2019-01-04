@@ -65,7 +65,7 @@ public class UpdateManager : BaseSingleton<UpdateManager>
         // pause manual gravities
         for (int i = 0; i < updatableGravityComponents.Count; i++)
         {
-            updatableGravityComponents[i].pauseGravity = true;
+            updatableGravityComponents[i].gravityPaused = true;
         }
     }
 
@@ -84,7 +84,7 @@ public class UpdateManager : BaseSingleton<UpdateManager>
         // restart gravity
         for (int i = 0; i < updatableGravityComponents.Count; i++)
         {
-            updatableGravityComponents[i].pauseGravity = false;
+            updatableGravityComponents[i].gravityPaused = false;
         }
         
         updatableVelocities.Clear();
