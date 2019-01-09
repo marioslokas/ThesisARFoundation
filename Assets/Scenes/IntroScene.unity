@@ -260,6 +260,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2109168528634955184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2109168528634955184, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2109168530231718125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2109168530231718125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -377,30 +383,30 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2109168528820108755, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6,
+    - target: {fileID: 2109168528820108716, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6,
         type: 3}
-      propertyPath: m_UiScaleMode
+      propertyPath: howToPlayInfo
+      value: 
+      objectReference: {fileID: 2109168528634955184}
+    - target: {fileID: 2109168529017544518, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2109168528820108755, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6,
+    - target: {fileID: 2109168528634955184, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6,
         type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 720
-      objectReference: {fileID: 0}
-    - target: {fileID: 2109168528820108755, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6,
-        type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1280
-      objectReference: {fileID: 0}
-    - target: {fileID: 2109168528820108755, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6,
-        type: 3}
-      propertyPath: m_ScreenMatchMode
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2109168528820108755, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6,
+    - target: {fileID: 2109168530290822102, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6,
         type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 0.5
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109168529543490215, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 384.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6, type: 3}

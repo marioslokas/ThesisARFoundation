@@ -10,15 +10,13 @@ public class GameSetup : MonoBehaviour
     {
         Earth,
         Space,
-        Mars,
         None
     }
 
     private enum BallProjectile
     {
         GolfBall,
-        BowlingBall,
-        Football,
+        Meteor,
         None
     }
     
@@ -35,7 +33,7 @@ public class GameSetup : MonoBehaviour
     }
 
     [SerializeField] private GameObject startOptions;
-    [SerializeField] private GameObject[] lawInfo;
+    [SerializeField] private GameObject howToPlayInfo;
     [SerializeField] private GameObject toArScene;
 
     [SerializeField] private Dropdown environmentDropdown;
@@ -53,9 +51,9 @@ public class GameSetup : MonoBehaviour
         _options = new GameOptions(ArEnvironment.Earth, BallProjectile.GolfBall);
 
         _environmentValues = new ArEnvironment[]
-            {ArEnvironment.Earth, ArEnvironment.Space, ArEnvironment.Mars, ArEnvironment.None};
+            {ArEnvironment.Earth, ArEnvironment.Space, ArEnvironment.None};
         _projectileValues = new BallProjectile[]
-            {BallProjectile.GolfBall, BallProjectile.Football, BallProjectile.BowlingBall, BallProjectile.None};
+            {BallProjectile.GolfBall, BallProjectile.Meteor, BallProjectile.None};
 
         // dropdown delegates
         environmentDropdown.onValueChanged.AddListener(
@@ -80,14 +78,14 @@ public class GameSetup : MonoBehaviour
     public void ToInfoView()
     {
         startOptions.SetActive(false);
-        lawInfo[environmentDropdown.value].SetActive(true);
+        howToPlayInfo.SetActive(true);
         toArScene.SetActive(true);
     }
 
     public void ToSelectView()
     {
         startOptions.SetActive(true);
-        lawInfo[environmentDropdown.value].SetActive(false);
+        howToPlayInfo.SetActive(false);
         toArScene.SetActive(false);
     }
 
