@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -7,6 +8,9 @@ using UnityEngine.XR.ARFoundation;
 
 public class EyeRaycaster : MonoBehaviour
 {
+
+	[SerializeField] private Text debugText;
+	
 	[SerializeField] private ARSessionOrigin m_SessionOrigin;
 	List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 	
@@ -46,30 +50,31 @@ public class EyeRaycaster : MonoBehaviour
 
 	void Update()
 	{
-		// Centre of the screen
-		PointerEventData pointer = new PointerEventData(EventSystem.current);
-		pointer.position = new Vector2(Screen.width / 2, Screen.height / 2);
-		pointer.button = PointerEventData.InputButton.Left;
-		
-		RaycastHit hitInfo;
-
-		if (m_SessionOrigin.Raycast(pointer.position, s_Hits, TrackableType.PlaneWithinPolygon))
+		try
 		{
-			// Target is being activating -> fade in anim
-			if (target == s_Hits[0] && target != lastActivatedTarget)
-			{
-				progress = Mathf.Lerp(1, 0, (endFocusTime - Time.time) / loadingTime);
+			// Centre of the screen
+			PointerEventData pointer = new PointerEventData(EventSystem.current);
+			pointer.position = new Vector2(Screen.width / 2, Screen.height / 2);
+			pointer.button = PointerEventData.InputButton.Left;
 
-				indicatorFillRT.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, curve.Evaluate(progress));
-				indicatorFillRawImage.color = Color.Lerp(Color.clear, activeColor, curve.Evaluate(progress));
-				centerRawImage.color = Color.Lerp(Color.black, Color.white, curve.Evaluate(progress));
+
+			if (m_SessionOrigin.Raycast(pointer.position, s_Hits, TrackableType.PlaneWithinPolygon))
+			{
+				// Target is being activating -> fade in anim
+				if (target.trackableId == s_Hits[0].trackableId && target.trackableId != lastActivatedTarget.trackableId)
+				{
+					progress = Mathf.Lerp(1, 0, (endFocusTime - Time.time) / loadingTime);
+
+					indicatorFillRT.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, curve.Evaluate(progress));
+					indicatorFillRawImage.color = Color.Lerp(Color.clear, activeColor, curve.Evaluate(progress));
+					centerRawImage.color = Color.Lerp(Color.black, Color.white, curve.Evaluate(progress));
 
 //				if (target.GetComponent<Selectable>())
 //					target.GetComponent<Selectable>().OnPointerEnter(pointer);
 
-				if (Time.time >= endFocusTime && target != lastActivatedTarget)
-				{
-					lastActivatedTarget = target;
+					if (Time.time >= endFocusTime && target.trackableId != lastActivatedTarget.trackableId)
+					{
+						lastActivatedTarget = target;
 
 //					if (target.GetComponent<ISubmitHandler>() != null)
 //						target.GetComponent<ISubmitHandler>().OnSubmit(pointer);
@@ -87,41 +92,47 @@ public class EyeRaycaster : MonoBehaviour
 //						else
 //							target.GetComponentInParent<Slider>().normalizedValue = 0;
 //					}
+					}
 				}
-			}
 
-			// Target activated -> fade out anim
-			else
-			{
+				// Target activated -> fade out anim
+				else
+				{
 //				if (target && target.GetComponent<Selectable>()) 
 //					target.GetComponent<Selectable>().OnPointerExit(pointer);
 
-				if(target != s_Hits[0])
-				{
-					target = s_Hits[0];
-					endFocusTime = Time.time + loadingTime;
+					if (target.trackableId != s_Hits[0].trackableId)
+					{
+						target = s_Hits[0];
+						endFocusTime = Time.time + loadingTime;
+					}
+
+					progress = Mathf.Lerp(0, 1, (Time.time - endFocusTime) / loadingTime * 2);
+
+					indicatorFillRawImage.color = Color.Lerp(Color.white, Color.clear, curve.Evaluate(progress));
+					centerRawImage.color = Color.Lerp(activeColor, Color.gray, curve.Evaluate(progress));
 				}
-
-				progress = Mathf.Lerp(0, 1, (Time.time - endFocusTime) / loadingTime * 2);
-
-				indicatorFillRawImage.color = Color.Lerp(Color.white, Color.clear, curve.Evaluate(progress));
-				centerRawImage.color = Color.Lerp(activeColor, Color.gray, curve.Evaluate(progress));
 			}
-		}
 
-		// No target -> reset
-		else
-		{
-			lastActivatedTarget = defaultValue;
+			// No target -> reset
+			else
+			{
+				lastActivatedTarget = defaultValue;
 
 //			if (target && target.GetComponent<ARPlane>())
 //				target.GetComponent<Selectable>().OnPointerExit(pointer);
 
-			target = defaultValue;
+				target = defaultValue;
 
-			indicatorFillRT.localScale = Vector3.zero;
-			centerRawImage.color = Color.gray;
-			endFocusTime = Time.time + loadingTime;
+				indicatorFillRT.localScale = Vector3.zero;
+				centerRawImage.color = Color.gray;
+				endFocusTime = Time.time + loadingTime;
+			}
+
+		}
+		catch (Exception e)
+		{
+			debugText.text = e.Message;
 		}
 
 	}
