@@ -16,6 +16,11 @@ public class PrepareGame : MonoBehaviour
     [SerializeField] private ARPlaneManager _planeManager;
     
     [SerializeField] private Button startButton;
+
+    [SerializeField] private GameObject sphereAndGroundPrefab;
+    [SerializeField] private GameObject spaceEnvironment;
+
+    [SerializeField] private EyeRaycaster _eyeRaycaster;
     
     // Start is called before the first frame update
     void Start()
@@ -51,6 +56,12 @@ public class PrepareGame : MonoBehaviour
             SetAllPlanesActive(false);
         }
 
+    }
+    
+    public void SetEnvironment()
+    {
+        Instantiate(sphereAndGroundPrefab, _eyeRaycaster.planeRaycastPoint, Quaternion.identity);
+        spaceEnvironment.SetActive(true);
     }
     
     void SetAllPlanesActive(bool value)

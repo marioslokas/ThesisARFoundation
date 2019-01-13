@@ -40,6 +40,8 @@ public class EyeRaycaster : MonoBehaviour
 	private bool planeDetected = false;
 
 	[SerializeField] private Button startButton;
+
+	[HideInInspector] public Vector3 planeRaycastPoint;
 	
 	void Start()
 	{
@@ -64,6 +66,9 @@ public class EyeRaycaster : MonoBehaviour
 
 			if (m_SessionOrigin.Raycast(pointer.position, s_Hits, TrackableType.PlaneWithinPolygon))
 			{
+
+				planeRaycastPoint = s_Hits[0].pose.position;
+				
 				progress = Mathf.Lerp(1, 0, (endFocusTime - Time.time) / loadingTime);
 
 				indicatorFillRT.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, curve.Evaluate(progress));
@@ -83,6 +88,8 @@ public class EyeRaycaster : MonoBehaviour
 				{
 					startButton.interactable = false;
 				}
+				
+				planeRaycastPoint = Vector3.zero;
 
 				progress = Mathf.Lerp(0, 1, (Time.time - endFocusTime) / loadingTime * 2);
 				indicatorFillRawImage.color = Color.Lerp(Color.white, Color.clear, curve.Evaluate(progress));
