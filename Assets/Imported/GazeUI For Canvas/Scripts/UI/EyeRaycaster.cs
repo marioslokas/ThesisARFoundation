@@ -36,6 +36,10 @@ public class EyeRaycaster : MonoBehaviour
 	ARRaycastHit target;
 
 	private ARRaycastHit defaultValue;
+
+	private bool planeDetected = false;
+
+	[SerializeField] private Button startButton;
 	
 	void Start()
 	{
@@ -60,38 +64,26 @@ public class EyeRaycaster : MonoBehaviour
 
 			if (m_SessionOrigin.Raycast(pointer.position, s_Hits, TrackableType.PlaneWithinPolygon))
 			{
-
 				progress = Mathf.Lerp(1, 0, (endFocusTime - Time.time) / loadingTime);
 
 				indicatorFillRT.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, curve.Evaluate(progress));
 				indicatorFillRawImage.color = Color.Lerp(Color.clear, activeColor, curve.Evaluate(progress));
 				centerRawImage.color = Color.Lerp(Color.black, Color.white, curve.Evaluate(progress));
-				
-//				if (Time.time >= endFocusTime && target.trackableId != lastActivatedTarget.trackableId)
-//				{
-//					lastActivatedTarget = target;
-//
-//				}
-//				else
-//				{
-//					if (target.trackableId != s_Hits[0].trackableId)
-//					{
-//						target = s_Hits[0];
-//						endFocusTime = Time.time + loadingTime;
-//					}
-//
-//					progress = Mathf.Lerp(0, 1, (Time.time - endFocusTime) / loadingTime * 2);
-//
-//					indicatorFillRawImage.color = Color.Lerp(Color.white, Color.clear, curve.Evaluate(progress));
-//					centerRawImage.color = Color.Lerp(activeColor, Color.gray, curve.Evaluate(progress));
-//				}
-			}
 
+				if (startButton.IsActive())
+				{
+					startButton.interactable = true;
+				}
+				
+			}
 			// No target -> reset
 			else
 			{
-//				lastActivatedTarget = defaultValue;
-				
+				if (startButton.IsActive())
+				{
+					startButton.interactable = false;
+				}
+
 				progress = Mathf.Lerp(0, 1, (Time.time - endFocusTime) / loadingTime * 2);
 				indicatorFillRawImage.color = Color.Lerp(Color.white, Color.clear, curve.Evaluate(progress));
 				centerRawImage.color = Color.Lerp(activeColor, Color.gray, curve.Evaluate(progress));

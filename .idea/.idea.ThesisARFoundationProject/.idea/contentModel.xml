@@ -6,7 +6,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="AlertPlayer.cs" t="Include" />
         <e p="Imported" t="Include">
           <e p="ARFoundation" t="Include">
             <e p="link.xml" t="Include" />
@@ -64,6 +63,7 @@
             </e>
           </e>
         </e>
+        <e p="PrepareGame.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="CallSphereOnTap.cs" t="Include" />
           <e p="DetectTouchMovement.cs" t="Include" />
