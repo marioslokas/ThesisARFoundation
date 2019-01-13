@@ -73,6 +73,7 @@
           </e>
           <e p="ManualGravity.cs" t="Include" />
           <e p="MyUpdatableBehaviour.cs" t="Include" />
+          <e p="OneHandTargetingManager.cs" t="Include" />
           <e p="TargetingManager.cs" t="Include" />
           <e p="UpdateManager.cs" t="Include" />
           <e p="UpdateTest.cs" t="Include" />
