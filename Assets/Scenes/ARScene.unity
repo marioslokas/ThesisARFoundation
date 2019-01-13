@@ -423,8 +423,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 420999896}
   - {fileID: 1131732845}
+  - {fileID: 420999896}
   m_Father: {fileID: 1127487257}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 25.77, y: 0, z: 0}
@@ -648,7 +648,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 126853987}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 25.77, y: 0, z: 0}
 --- !u!20 &420999897
 Camera:
@@ -680,7 +680,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 0fe6d6fdb0c93cb41a935b5f36986243, type: 2}
   m_TargetDisplay: 0
@@ -1139,7 +1139,7 @@ Transform:
   m_LocalScale: {x: 200, y: 350, z: 1}
   m_Children: []
   m_Father: {fileID: 126853987}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1131732846
 MeshCollider:
@@ -1172,7 +1172,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: feebd045face18f4bb882f8ba44a4edd, type: 2}
+  - {fileID: 2100000, guid: f3999c0dde2ff144ab653994aa8cf542, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
