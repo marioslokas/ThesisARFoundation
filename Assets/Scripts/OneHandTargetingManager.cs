@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEditor.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class OneHandTargetingManager : MonoBehaviour
 {
@@ -24,6 +28,7 @@ public class OneHandTargetingManager : MonoBehaviour
     // force values for the object
     private Vector2 xForceToObject = Vector2.one;
     
+    // Variables used when restarting
     private Vector3 movableObjectStartingPosition;
     private Quaternion lastAdjustedRotation;
 
@@ -36,9 +41,9 @@ public class OneHandTargetingManager : MonoBehaviour
 
     void Update()
     {
-
+            
         if (Input.touchCount <= 0) return;
-
+        
         if (Input.touchCount == 1)
         {
             Touch touch = Input.GetTouch(0);
@@ -50,34 +55,25 @@ public class OneHandTargetingManager : MonoBehaviour
             }
             else if (touch.phase.Equals((TouchPhase.Moved)))
             {
-
                 Vector2 touchDifferenceVector = touch.position - startingTouchPosition;
                 
                 if (adjustingMagnitude)
                 {
-                    
-//                    Vector2 xDifference = new Vector2( adjustableValue / Screen.width, 0);
-//                    AdjustLineRendererPosition(directionRenderer, xDifference, Vector2.right, out xForceToObject);
+                    // Y value is passed as X, to change magnitude
+                    float adjustableValue =  2 * touchDifferenceVector.y / Screen.height;
+                    Vector2 yDifference = new Vector2( adjustableValue, 0);
+                    AdjustLineRendererPosition(directionRenderer, yDifference, Vector2.right, out xForceToObject);
                 }
                 else if (adjustingDirection)
                 {
-                    float adjustableValue = Vector3.Cross(mainCamera.transform.forward, movableObject.right).y > 0
-                        ? touchDifferenceVector.x
-                        : -touchDifferenceVector.x;
-                    
-                    
+                    movableObject.Rotate(Vector3.up, touchDifferenceVector.x);
+                    lastAdjustedRotation = movableObject.rotation;
                 }
-                
-//                float adjustableValueX = Vector3.Cross(mainCamera.transform.forward, movableObject.right).y > 0
-//                    ? touch.position.x - previousTouchPosition.x
-//                    : previousTouchPosition.x - touch.position.x;
-//                
-//                Vector2 xDifference = new Vector2( adjustableValueX / xForceImageArea.sizeDelta.x, 0);
-//                AdjustLineRendererPosition(xForceRenderer, xDifference, Vector2.right, out xForceToObject);
+
                 
                 if (touchDifferenceVector.magnitude > touchDelta && !adjustingSet)
                 {
-                    if (touchDifferenceVector.x > touchDifferenceVector.y)
+                    if (Mathf.Abs(touchDifferenceVector.x) > Mathf.Abs(touchDifferenceVector.y))
                     {
                         adjustingDirection = true;
                         adjustingMagnitude = false;
@@ -140,8 +136,19 @@ public class OneHandTargetingManager : MonoBehaviour
     {
         Vector2 rendererPos1 = new Vector2(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y);
         
-        lineRenderer.SetPosition(1, difference + rendererPos1);
-        lineRenderer.SetPosition(2, direction + new Vector2(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y) );
+        // clamp values
+        Vector2 pos1 = difference + rendererPos1;
+        Vector2 pos2 = direction + new Vector2(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y);
+
+        // if the direction renderer is horizontal
+        if (direction.y == 0)
+        {
+            pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.y);
+            pos2 = new Vector2( Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.y);
+        }
+        
+        lineRenderer.SetPosition(1, pos1);
+        lineRenderer.SetPosition(2, pos2);
 
         forceValue = difference + rendererPos1;
     }
