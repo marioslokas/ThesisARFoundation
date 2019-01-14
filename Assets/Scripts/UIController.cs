@@ -1,18 +1,49 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private MessagesManager _messagesManager;
+    
+    [Header("Canvas references")] 
+    [SerializeField] private GameObject prepareGameCanvas;
+    [SerializeField] private GameObject messagesCanvas;
+    [SerializeField] private GameObject adjustForceCanvas;
+
+
+    private const int delayFrames = 1;
+
+    public void StartGameUI()
     {
+        prepareGameCanvas.SetActive(false);
         
+        ShowNextMessage();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowNextMessage()
     {
+        adjustForceCanvas.SetActive(false);   
+        messagesCanvas.SetActive(true);
+        _messagesManager.NextMessage();
+
+        StartCoroutine(PauseUpdatesDelayed());
+    }
+
+    public void BackToGame()
+    {
+        adjustForceCanvas.SetActive(true);
+        messagesCanvas.SetActive(false);
         
+        UpdateManager.instance.ResumeUpdates();
+    }
+
+    IEnumerator PauseUpdatesDelayed()
+    {
+        for (int i = 0; i < delayFrames; i++)
+        {
+            yield return null;
+        }
+        
+        UpdateManager.instance.PauseUpdates();
     }
 }

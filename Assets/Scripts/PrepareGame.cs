@@ -22,10 +22,7 @@ public class PrepareGame : MonoBehaviour
 
     [SerializeField] private EyeRaycaster _eyeRaycaster;
 
-    [Header("Canvas references")] 
-    [SerializeField] private GameObject prepareGameCanvas;
-
-    [SerializeField] private GameObject adjustForceCanvas;
+    [SerializeField] private UIController uiController;
     
     
     // Start is called before the first frame update
@@ -73,9 +70,7 @@ public class PrepareGame : MonoBehaviour
         
         spaceEnvironment.SetActive(true);
         
-        // switch UI around
-        prepareGameCanvas.SetActive(false);
-        adjustForceCanvas.SetActive(true);
+        uiController.StartGameUI();
         
         TogglePlaneDetection();
     }
