@@ -1,10 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
-using UnityEditor.Profiling.Memory.Experimental;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
@@ -66,7 +61,7 @@ public class OneHandTargetingManager : MonoBehaviour
                 }
                 else if (adjustingDirection)
                 {
-                    movableObject.Rotate(Vector3.up, touchDifferenceVector.x);
+                    movableObject.Rotate(Vector3.up, touchDifferenceVector.x / 2);
                     lastAdjustedRotation = movableObject.rotation;
                 }
 

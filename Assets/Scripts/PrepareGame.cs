@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.Profiling;
 
-[RequireComponent(typeof(ARPlaneManager))]
 public class PrepareGame : MonoBehaviour
 {
 
@@ -17,10 +17,16 @@ public class PrepareGame : MonoBehaviour
     
     [SerializeField] private Button startButton;
 
-    [SerializeField] private GameObject sphereAndGroundPrefab;
+    [SerializeField] private GameObject sphereAndGround;
     [SerializeField] private GameObject spaceEnvironment;
 
     [SerializeField] private EyeRaycaster _eyeRaycaster;
+
+    [Header("Canvas references")] 
+    [SerializeField] private GameObject prepareGameCanvas;
+
+    [SerializeField] private GameObject adjustForceCanvas;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -40,7 +46,7 @@ public class PrepareGame : MonoBehaviour
         _planeManager.planeAdded -= OnPlaneAdded;
     }
 
-    public void TogglePlaneDetection()
+    private void TogglePlaneDetection()
     {
         _planeManager.enabled = !_planeManager.enabled;
 
@@ -58,10 +64,20 @@ public class PrepareGame : MonoBehaviour
 
     }
     
-    public void SetEnvironment()
+    public void StartGame()
     {
-        Instantiate(sphereAndGroundPrefab, _eyeRaycaster.planeRaycastPoint, Quaternion.identity);
+
+        // set the environment
+        sphereAndGround.SetActive(true);
+        sphereAndGround.transform.position = _eyeRaycaster.planeRaycastPoint;
+        
         spaceEnvironment.SetActive(true);
+        
+        // switch UI around
+        prepareGameCanvas.SetActive(false);
+        adjustForceCanvas.SetActive(true);
+        
+        TogglePlaneDetection();
     }
     
     void SetAllPlanesActive(bool value)

@@ -274,7 +274,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2641537158983767808}
+      - m_Target: {fileID: 0}
         m_MethodName: FireObject
         m_Mode: 1
         m_Arguments:
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2641537158983767808}
+      - m_Target: {fileID: 0}
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -472,7 +472,6 @@ GameObject:
   - component: {fileID: 2641537158983767838}
   - component: {fileID: 2641537158983767839}
   - component: {fileID: 2641537158983767836}
-  - component: {fileID: 2641537158983767808}
   m_Layer: 5
   m_Name: AdjustForceOneDirectionCanvas
   m_TagString: Untagged
@@ -561,22 +560,3 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2641537158983767808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2641537158983767837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4df70a48c840984b9cc8e9f1a9d6414, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  movableObject: {fileID: 0}
-  xForceRenderer: {fileID: 0}
-  yForceRenderer: {fileID: 0}
-  xForceImageArea: {fileID: 0}
-  yForceImageArea: {fileID: 0}
-  pushForce: 1000

@@ -63,7 +63,6 @@
             </e>
           </e>
         </e>
-        <e p="PrepareGame.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="CallSphereOnTap.cs" t="Include" />
           <e p="DetectTouchMovement.cs" t="Include" />
@@ -72,9 +71,12 @@
             <e p="IUpdatable.cs" t="Include" />
           </e>
           <e p="ManualGravity.cs" t="Include" />
+          <e p="MessagesManager.cs" t="Include" />
           <e p="MyUpdatableBehaviour.cs" t="Include" />
           <e p="OneHandTargetingManager.cs" t="Include" />
+          <e p="PrepareGame.cs" t="Include" />
           <e p="TargetingManager.cs" t="Include" />
+          <e p="UIController.cs" t="Include" />
           <e p="UpdateManager.cs" t="Include" />
           <e p="UpdateTest.cs" t="Include" />
         </e>
