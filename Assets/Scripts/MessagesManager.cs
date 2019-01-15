@@ -13,6 +13,8 @@ public class MessagesManager : MonoBehaviour
     
     private int messageCounter;
 
+    private const int delayFrames = 1;
+
     public bool HasNextMessage()
     {
         return messageCounter < mainMessages.Length;
@@ -30,6 +32,18 @@ public class MessagesManager : MonoBehaviour
         messageTextArea.text = mainMessages[messageCounter];
         secondaryMessageArea.text = secondaryMessages[messageCounter];
         messageCounter++; 
+        
+        StartCoroutine(PauseUpdatesDelayed());
+    }
+    
+    IEnumerator PauseUpdatesDelayed()
+    {
+        for (int i = 0; i < delayFrames; i++)
+        {
+            yield return null;
+        }
+        
+        UpdateManager.instance.PauseUpdates();
     }
 
 }

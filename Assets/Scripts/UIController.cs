@@ -27,8 +27,6 @@ public class UIController : MonoBehaviour
             adjustForceCanvas.SetActive(false);   
             messagesCanvas.SetActive(true);
             _messagesManager.NextMessage();
-
-            StartCoroutine(PauseUpdatesDelayed());
         }
     }
 
@@ -40,13 +38,5 @@ public class UIController : MonoBehaviour
         UpdateManager.instance.ResumeUpdates();
     }
 
-    IEnumerator PauseUpdatesDelayed()
-    {
-        for (int i = 0; i < delayFrames; i++)
-        {
-            yield return null;
-        }
-        
-        UpdateManager.instance.PauseUpdates();
-    }
+    
 }

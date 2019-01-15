@@ -5,6 +5,7 @@ using WanzyeeStudio;
 
 public class UpdateManager : BaseSingleton<UpdateManager>
 {
+    [SerializeField]
     private bool pauseUpdating = false;
 
     private List<IUpdatable> updatables = new List<IUpdatable>();

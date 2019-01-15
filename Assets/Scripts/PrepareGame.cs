@@ -19,7 +19,7 @@ public class PrepareGame : MonoBehaviour
 
     [SerializeField] private EyeRaycaster _eyeRaycaster;
     [SerializeField] private ChallengeManager _challengeManager;
-    
+    [SerializeField] private GameObject _prepareGameCanvas;
     
     // Start is called before the first frame update
     void Start()
@@ -56,7 +56,7 @@ public class PrepareGame : MonoBehaviour
     
     public void StartGame()
     {
-
+        _prepareGameCanvas.SetActive(false);
         _challengeManager.centralGamePosition = _eyeRaycaster.planeRaycastPoint;
         _challengeManager.NextChallenge();
         

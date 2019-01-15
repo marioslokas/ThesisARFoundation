@@ -965,15 +965,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _challenges:
-  - firstEnabledUI: {fileID: 397975117}
-    secondEnabledUI: {fileID: 466273798}
+  - startWithMessage: 1
+    _messageManager: {fileID: 397975117}
+    _targetingManager: {fileID: 466273798}
     mainGameObject: {fileID: 160677551}
     _additionalChallengeObjects:
     - {fileID: 405992817}
-  - firstEnabledUI: {fileID: 0}
-    secondEnabledUI: {fileID: 0}
+  - startWithMessage: 0
+    _messageManager: {fileID: 0}
+    _targetingManager: {fileID: 0}
     mainGameObject: {fileID: 0}
     _additionalChallengeObjects: []
+  centralGamePosition: {x: 0, y: 0, z: 0}
 --- !u!1 &750077456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,10 +1094,9 @@ MonoBehaviour:
   planeFoundMsg: Surface found! Look at a surface and press start to begin.
   _planeManager: {fileID: 1127487259}
   startButton: {fileID: 1536658315}
-  sphereAndGround: {fileID: 160677551}
-  spaceEnvironment: {fileID: 405992817}
   _eyeRaycaster: {fileID: 553605771}
-  uiController: {fileID: 1822251479}
+  _challengeManager: {fileID: 583401016}
+  _prepareGameCanvas: {fileID: 1940341960}
 --- !u!1 &1127487255
 GameObject:
   m_ObjectHideFlags: 0

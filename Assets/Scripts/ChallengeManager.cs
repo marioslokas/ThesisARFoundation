@@ -12,16 +12,23 @@ public class ChallengeManager : MonoBehaviour
     [Serializable]
     class Challenge
     {
-        public GameObject firstEnabledUI;
-        public GameObject secondEnabledUI;
+        public bool startWithMessage = true;
+        public GameObject _messageManager;
+        public GameObject _targetingManager;
         public GameObject mainGameObject;
 
         public GameObject[] _additionalChallengeObjects;
 
         public void EnableChallengeObjects(Vector3 centralGamePosition)
         {
-            firstEnabledUI.SetActive(true);
-            secondEnabledUI.SetActive(false);
+            // enable managers accordingly with whether we are starting with a message or not
+            _messageManager.SetActive(startWithMessage);
+            if (startWithMessage)
+            {
+                _messageManager.GetComponent<MessagesManager>().NextMessage();
+            }
+            
+            _targetingManager.SetActive(!startWithMessage);
         
             mainGameObject.SetActive(true);
             mainGameObject.transform.position = centralGamePosition;
@@ -34,10 +41,10 @@ public class ChallengeManager : MonoBehaviour
 
         public void DisableChallengeObjects()
         {
-            firstEnabledUI.SetActive(false);
-            secondEnabledUI.SetActive(false);
-        
             mainGameObject.SetActive(false);
+            _messageManager.SetActive(false);
+            _targetingManager.SetActive(false);
+            
 
             for (int i = 0; i < _additionalChallengeObjects.Length; i++)
             {
