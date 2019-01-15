@@ -16,6 +16,7 @@ public class ChallengeManager : MonoBehaviour
         public GameObject _messageManager;
         public GameObject _targetingManager;
         public GameObject mainGameObject;
+        public GameObject mainObjectParent;
 
         public GameObject[] _additionalChallengeObjects;
 
@@ -25,8 +26,12 @@ public class ChallengeManager : MonoBehaviour
         
         public void EnableChallengeObjects(Vector3 centralGamePosition)
         {
+            mainObjectParent.SetActive(true);
+            mainObjectParent.transform.position = centralGamePosition;
+            
+            mainGameObject.SetActive(true);
             // initialize targeting manager
-            _targetingManager.GetComponent<OneHandTargetingManager>().Initialize(centralGamePosition,
+            _targetingManager.GetComponent<OneHandTargetingManager>().Initialize(mainGameObject.transform.position,
                 mainGameObject.transform,
                 mainGameObject.GetComponentInChildren<LineRenderer>()); // the manual gravity sphere has one active line renderer currently
             
@@ -41,9 +46,7 @@ public class ChallengeManager : MonoBehaviour
             }
             
             _targetingManager.SetActive(!startWithMessage);
-        
-            mainGameObject.SetActive(true);
-            mainGameObject.transform.position = centralGamePosition;
+
 
             for (int i = 0; i < _additionalChallengeObjects.Length; i++)
             {
@@ -56,7 +59,7 @@ public class ChallengeManager : MonoBehaviour
             mainGameObject.SetActive(false);
             _messageManager.SetActive(false);
             _targetingManager.SetActive(false);
-            
+            mainObjectParent.SetActive(false);
 
             for (int i = 0; i < _additionalChallengeObjects.Length; i++)
             {

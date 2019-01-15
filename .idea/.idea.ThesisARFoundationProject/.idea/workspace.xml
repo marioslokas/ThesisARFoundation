@@ -4,7 +4,7 @@
     <list default="true" id="d552ab52-1952-4766-9627-21f01fff0f88" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ARScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OneHandTargetingManager.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OneHandTargetingManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="143" column="77" selection-start-line="143" selection-start-column="77" selection-end-line="143" selection-end-column="77" />
+            <state relative-caret-position="105">
+              <caret line="11" column="35" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="35" />
               <folding>
                 <marker date="1547571925221" expanded="false" signature="6:161" ph="..." />
                 <marker date="1547571925221" expanded="true" signature="215:5030" ph="{...}" />
@@ -53,11 +53,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChallengeManager.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChallengeManager.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-273">
-              <caret line="30" column="139" selection-start-line="30" selection-start-column="139" selection-end-line="30" selection-end-column="139" />
+            <state relative-caret-position="77">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <marker date="1547573323368" expanded="false" signature="6:111" ph="..." />
+                <marker date="1547573323368" expanded="true" signature="158:3503" ph="{...}" />
+                <marker date="1547573323368" expanded="true" signature="165:300" ph="/// Challenge class has references to all the objects that need to be enabled to start a challenge ... " />
+                <marker date="1547573323368" expanded="true" signature="339:2511" ph="{...}" />
+                <marker date="1547573323368" expanded="true" signature="829:2085" ph="{...}" />
+                <marker date="1547573323368" expanded="true" signature="1728:1835" ph="{...}" />
+                <marker date="1547573323368" expanded="true" signature="1983:2075" ph="{...}" />
+                <marker date="1547573323368" expanded="true" signature="2132:2505" ph="{...}" />
+                <marker date="1547573323368" expanded="true" signature="2402:2495" ph="{...}" />
+                <marker date="1547573323368" expanded="true" signature="2674:2762" ph="/// Start the next challenge. Disable the previous. ... " />
+                <marker date="1547573323368" expanded="true" signature="2794:3500" ph="{...}" />
+                <marker date="1547573323368" expanded="true" signature="2853:3018" ph="{...}" />
+                <marker date="1547573323368" expanded="true" signature="3055:3216" ph="{...}" />
+                <marker date="1547573323368" expanded="true" signature="3229:3464" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,10 +121,11 @@
       <find>mainCamera</find>
       <find>false</find>
       <find>unitye</find>
-      <find>mainGameObject</find>
       <find>updatableVelocities</find>
       <find>pauseUpdating</find>
       <find>movableObjectStartingPosition</find>
+      <find>movableObject</find>
+      <find>mainGameObject</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,8 +185,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PrepareGame.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MessagesManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs" />
       </list>
     </option>
   </component>
@@ -248,12 +265,12 @@
       <workItem from="1547378449134" duration="7031000" />
       <workItem from="1547459044153" duration="3472000" />
       <workItem from="1547484924136" duration="9818000" />
-      <workItem from="1547550908028" duration="13978000" />
+      <workItem from="1547550908028" duration="15333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82145000" />
+    <option name="totallyTimeSpent" value="83500000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -671,17 +688,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-273">
-          <caret line="30" column="139" selection-start-line="30" selection-start-column="139" selection-end-line="30" selection-end-column="139" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="143" column="77" selection-start-line="143" selection-start-column="77" selection-end-line="143" selection-end-column="77" />
+        <state relative-caret-position="105">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="35" />
           <folding>
             <marker date="1547571925221" expanded="false" signature="6:161" ph="..." />
             <marker date="1547571925221" expanded="true" signature="215:5030" ph="{...}" />
@@ -701,6 +711,29 @@
             <marker date="1547571925221" expanded="true" signature="3863:3953" ph="{...}" />
             <marker date="1547571925221" expanded="true" signature="3980:4273" ph="{...}" />
             <marker date="1547571925221" expanded="true" signature="4408:5027" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <marker date="1547573323368" expanded="false" signature="6:111" ph="..." />
+            <marker date="1547573323368" expanded="true" signature="158:3503" ph="{...}" />
+            <marker date="1547573323368" expanded="true" signature="165:300" ph="/// Challenge class has references to all the objects that need to be enabled to start a challenge ... " />
+            <marker date="1547573323368" expanded="true" signature="339:2511" ph="{...}" />
+            <marker date="1547573323368" expanded="true" signature="829:2085" ph="{...}" />
+            <marker date="1547573323368" expanded="true" signature="1728:1835" ph="{...}" />
+            <marker date="1547573323368" expanded="true" signature="1983:2075" ph="{...}" />
+            <marker date="1547573323368" expanded="true" signature="2132:2505" ph="{...}" />
+            <marker date="1547573323368" expanded="true" signature="2402:2495" ph="{...}" />
+            <marker date="1547573323368" expanded="true" signature="2674:2762" ph="/// Start the next challenge. Disable the previous. ... " />
+            <marker date="1547573323368" expanded="true" signature="2794:3500" ph="{...}" />
+            <marker date="1547573323368" expanded="true" signature="2853:3018" ph="{...}" />
+            <marker date="1547573323368" expanded="true" signature="3055:3216" ph="{...}" />
+            <marker date="1547573323368" expanded="true" signature="3229:3464" ph="{...}" />
           </folding>
         </state>
       </provider>
