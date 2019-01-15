@@ -17,12 +17,8 @@ public class PrepareGame : MonoBehaviour
     
     [SerializeField] private Button startButton;
 
-    [SerializeField] private GameObject sphereAndGround;
-    [SerializeField] private GameObject spaceEnvironment;
-
     [SerializeField] private EyeRaycaster _eyeRaycaster;
-
-    [SerializeField] private UIController uiController;
+    [SerializeField] private ChallengeManager _challengeManager;
     
     
     // Start is called before the first frame update
@@ -47,15 +43,12 @@ public class PrepareGame : MonoBehaviour
     {
         _planeManager.enabled = !_planeManager.enabled;
 
-        string planeDetectionMessage = "";
         if (_planeManager.enabled)
         {
-            planeDetectionMessage = "Disable Plane Detection and Hide Existing";
             SetAllPlanesActive(true);
         }
         else
         {
-            planeDetectionMessage = "Enable Plane Detection and Show Existing";
             SetAllPlanesActive(false);
         }
 
@@ -64,13 +57,8 @@ public class PrepareGame : MonoBehaviour
     public void StartGame()
     {
 
-        // set the environment
-        sphereAndGround.SetActive(true);
-        sphereAndGround.transform.position = _eyeRaycaster.planeRaycastPoint;
-        
-        spaceEnvironment.SetActive(true);
-        
-        uiController.StartGameUI();
+        _challengeManager.centralGamePosition = _eyeRaycaster.planeRaycastPoint;
+        _challengeManager.NextChallenge();
         
         TogglePlaneDetection();
     }

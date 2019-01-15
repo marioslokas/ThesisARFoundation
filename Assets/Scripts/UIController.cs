@@ -22,11 +22,14 @@ public class UIController : MonoBehaviour
 
     public void ShowNextMessage()
     {
-        adjustForceCanvas.SetActive(false);   
-        messagesCanvas.SetActive(true);
-        _messagesManager.NextMessage();
+        if (_messagesManager.HasNextMessage())
+        {
+            adjustForceCanvas.SetActive(false);   
+            messagesCanvas.SetActive(true);
+            _messagesManager.NextMessage();
 
-        StartCoroutine(PauseUpdatesDelayed());
+            StartCoroutine(PauseUpdatesDelayed());
+        }
     }
 
     public void BackToGame()
