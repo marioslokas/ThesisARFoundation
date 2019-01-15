@@ -443,6 +443,16 @@ PrefabInstance:
       propertyPath: m_Parameters.widthMultiplier
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 3995463910702506256, guid: 2b1c28cb88656f7478c60f49edadeaa6,
+        type: 3}
+      propertyPath: m_Positions.Array.data[1].y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995463910702506256, guid: 2b1c28cb88656f7478c60f49edadeaa6,
+        type: 3}
+      propertyPath: m_Positions.Array.data[2].y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3995463910702506273, guid: 2b1c28cb88656f7478c60f49edadeaa6,
         type: 3}
       propertyPath: m_IsActive
@@ -643,6 +653,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AdjustForceOneDirectionCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641537158983767837, guid: 5e38f4f0d62aec7449463948207fad30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2641537158983767809, guid: 5e38f4f0d62aec7449463948207fad30,
         type: 3}
@@ -1507,6 +1522,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995463910702506256, guid: 2b1c28cb88656f7478c60f49edadeaa6,
+        type: 3}
+      propertyPath: m_Positions.Array.data[1].y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995463910702506256, guid: 2b1c28cb88656f7478c60f49edadeaa6,
+        type: 3}
+      propertyPath: m_Positions.Array.data[2].y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3995463910702506254, guid: 2b1c28cb88656f7478c60f49edadeaa6,
         type: 3}

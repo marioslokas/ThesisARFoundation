@@ -140,12 +140,9 @@ public class OneHandTargetingManager : MonoBehaviour
         Vector2 pos1 = difference + rendererPos1;
         Vector2 pos2 = direction + new Vector2(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y);
 
-        // if the direction renderer is horizontal
-        if (direction.y == 0)
-        {
-            pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.y);
-            pos2 = new Vector2( Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.y);
-        }
+      
+        pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.x);
+        pos2 = new Vector2( Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.x);
         
         lineRenderer.SetPosition(1, pos1);
         lineRenderer.SetPosition(2, pos2);
