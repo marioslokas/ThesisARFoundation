@@ -9,9 +9,8 @@ public class OneHandTargetingManager : MonoBehaviour
 
     [SerializeField] private Camera mainCamera;
     
-    [Header("Projectile references")]
-    [SerializeField] private Transform movableObject;
-    [SerializeField] private LineRenderer directionRenderer;
+    private Transform movableObject;
+    private LineRenderer directionRenderer;
 
 
     private Vector2 startingTouchPosition;
@@ -32,11 +31,7 @@ public class OneHandTargetingManager : MonoBehaviour
     [Header("UI references")] 
     [SerializeField] private GameObject _fireButton;
     [SerializeField] private GameObject _restartButton;
-    
-    void Start()
-    {
-        movableObjectStartingPosition = movableObject.position;
-    }
+
 
     void Update()
     {
@@ -100,6 +95,14 @@ public class OneHandTargetingManager : MonoBehaviour
         
     }
 
+    public void Initialize(Vector3 centralGamePosition, Transform projectile, LineRenderer forceLineRenderer )
+    {
+        movableObjectStartingPosition = centralGamePosition;
+        movableObject = projectile;
+        directionRenderer = forceLineRenderer;
+        
+        InitializeUI();
+    }
 
     public void FireObject()
     {
@@ -114,7 +117,7 @@ public class OneHandTargetingManager : MonoBehaviour
     }
 
     // for reseting the UI in between challenges
-    public void InitializeUI()
+    private void InitializeUI()
     {
         _fireButton.SetActive(true);
         _restartButton.SetActive(false);

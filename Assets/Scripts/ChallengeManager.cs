@@ -26,7 +26,10 @@ public class ChallengeManager : MonoBehaviour
         public void EnableChallengeObjects(Vector3 centralGamePosition)
         {
             // initialize targeting manager
-            _targetingManager.GetComponent<OneHandTargetingManager>().InitializeUI();
+            _targetingManager.GetComponent<OneHandTargetingManager>().Initialize(centralGamePosition,
+                mainGameObject.transform,
+                mainGameObject.GetComponentInChildren<LineRenderer>()); // the manual gravity sphere has one active line renderer currently
+            
             // provide messages to the message manager
             _messageManager.GetComponent<MessagesManager>().LoadMessages(mainMessages, secondaryMessages);
             
