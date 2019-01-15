@@ -77,9 +77,9 @@ public class ChallengeManager : MonoBehaviour
         }
         else
         {
+            _challenges[_challengeCounter - 1].DisableChallengeObjects();
             Challenge thisChallenge = _challenges[_challengeCounter];
             thisChallenge.EnableChallengeObjects(centralGamePosition);
-            _challenges[_challengeCounter - 1].DisableChallengeObjects();
         }
         
         
