@@ -29,6 +29,10 @@ public class OneHandTargetingManager : MonoBehaviour
 
     public float pushForce = 1000f;
 
+    [Header("UI references")] 
+    [SerializeField] private GameObject _fireButton;
+    [SerializeField] private GameObject _restartButton;
+    
     void Start()
     {
         movableObjectStartingPosition = movableObject.position;
@@ -92,23 +96,7 @@ public class OneHandTargetingManager : MonoBehaviour
             }
 
         }
-//        else if (Input.touchCount == 2)
-//        {
-//
-//            Quaternion desiredRotation = movableObject.rotation;
-//            DetectTouchMovement.Calculate();
-//
-//            if (Mathf.Abs(DetectTouchMovement.turnAngleDelta) > 0)
-//            {
-//                // rotate
-//                Vector3 rotationDeg = Vector3.zero;
-//                rotationDeg.z = -DetectTouchMovement.turnAngleDelta;
-//                desiredRotation *= Quaternion.Euler(rotationDeg);
-//            }
-//            
-//            movableObject.Rotate(Vector3.up, DetectTouchMovement.turnAngleDelta);
-//            lastAdjustedRotation = movableObject.rotation;
-//        }
+
         
     }
 
@@ -116,6 +104,20 @@ public class OneHandTargetingManager : MonoBehaviour
     public void FireObject()
     {
         movableObject.GetComponent<Rigidbody>().AddForce( (movableObject.rotation *  xForceToObject) * pushForce);
+    }
+
+    // switch fire and restart buttons around
+    public void ToggleFireUI()
+    {
+        _fireButton.SetActive(!_fireButton.activeSelf);
+        _restartButton.SetActive(!_restartButton.activeSelf);
+    }
+
+    // for reseting the UI in between challenges
+    public void InitializeUI()
+    {
+        _fireButton.SetActive(true);
+        _restartButton.SetActive(false);
     }
 
     public void Restart()

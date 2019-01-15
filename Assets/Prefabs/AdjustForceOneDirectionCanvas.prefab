@@ -192,11 +192,11 @@ RectTransform:
   m_Father: {fileID: 2641537158983767809}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -21.139893, y: -591}
-  m_SizeDelta: {x: 244.7, y: 77.1}
-  m_Pivot: {x: 1, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -25.48, y: 30.77}
+  m_SizeDelta: {x: 244.7, y: 77.099976}
+  m_Pivot: {x: 1, y: 0}
 --- !u!222 &1789807419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 466273799}
         m_MethodName: FireObject
         m_Mode: 1
         m_Arguments:
@@ -285,20 +285,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1850788789}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 0}
+        m_MethodName: ShowNextMessage
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1789807415}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 466273799}
+        m_MethodName: ToggleFireUI
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -343,11 +343,11 @@ RectTransform:
   m_Father: {fileID: 2641537158983767809}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -21.139893, y: -591}
-  m_SizeDelta: {x: 244.7, y: 77.1}
-  m_Pivot: {x: 1, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -25.48, y: 30.77}
+  m_SizeDelta: {x: 244.7, y: 77.099976}
+  m_Pivot: {x: 1, y: 0}
 --- !u!222 &1850788793
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 466273799}
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -436,20 +436,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1789807415}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1850788789}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 466273799}
+        m_MethodName: ToggleFireUI
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -472,6 +461,7 @@ GameObject:
   - component: {fileID: 2641537158983767838}
   - component: {fileID: 2641537158983767839}
   - component: {fileID: 2641537158983767836}
+  - component: {fileID: 466273799}
   m_Layer: 5
   m_Name: AdjustForceOneDirectionCanvas
   m_TagString: Untagged
@@ -538,7 +528,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 720, y: 1280}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -560,3 +550,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &466273799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2641537158983767837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf780148455bdb42a7661990258017e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  movableObject: {fileID: 0}
+  directionRenderer: {fileID: 0}
+  touchDelta: 10
+  pushForce: 100
+  _fireButton: {fileID: 1789807415}
+  _restartButton: {fileID: 1850788789}

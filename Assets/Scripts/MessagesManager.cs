@@ -5,22 +5,29 @@ using UnityEngine.UI;
 public class MessagesManager : MonoBehaviour
 {
 
-    public string[] mainMessages;
-    public string[] secondaryMessages;
+    private string[] mainMessages;
+    private string[] secondaryMessages;
     
     [SerializeField] private Text messageTextArea;
     [SerializeField] private Text secondaryMessageArea;
     
-    private int messageCounter;
+    private int _messageCounter;
 
-    private const int delayFrames = 1;
+    private const int DelayFrames = 1;
+
+    public void LoadMessages(string[] mainMessages, string[] secondaryMessages)
+    {
+        this.mainMessages = mainMessages;
+        this.secondaryMessages = secondaryMessages;
+        _messageCounter = 0;
+    }
 
     public bool HasNextMessage()
     {
-        return messageCounter < mainMessages.Length;
+        return _messageCounter < mainMessages.Length;
     }
 
-    public void NextMessage()
+    public void NextMessage(bool pauseUpdates = true)
     {
         if (!HasNextMessage())
         {
@@ -29,16 +36,20 @@ public class MessagesManager : MonoBehaviour
             return;
         }
         
-        messageTextArea.text = mainMessages[messageCounter];
-        secondaryMessageArea.text = secondaryMessages[messageCounter];
-        messageCounter++; 
+        messageTextArea.text = mainMessages[_messageCounter];
+        secondaryMessageArea.text = secondaryMessages[_messageCounter];
+        _messageCounter++;
+
+        if (pauseUpdates)
+        {
+            StartCoroutine(PauseUpdatesDelayed()); 
+        }
         
-        StartCoroutine(PauseUpdatesDelayed());
     }
     
     IEnumerator PauseUpdatesDelayed()
     {
-        for (int i = 0; i < delayFrames; i++)
+        for (int i = 0; i < DelayFrames; i++)
         {
             yield return null;
         }

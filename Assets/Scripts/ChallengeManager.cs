@@ -19,8 +19,17 @@ public class ChallengeManager : MonoBehaviour
 
         public GameObject[] _additionalChallengeObjects;
 
+        [Header("Messages to the player")] 
+        public string[] mainMessages;
+        public string[] secondaryMessages;
+        
         public void EnableChallengeObjects(Vector3 centralGamePosition)
         {
+            // initialize targeting manager
+            _targetingManager.GetComponent<OneHandTargetingManager>().InitializeUI();
+            // provide messages to the message manager
+            _messageManager.GetComponent<MessagesManager>().LoadMessages(mainMessages, secondaryMessages);
+            
             // enable managers accordingly with whether we are starting with a message or not
             _messageManager.SetActive(startWithMessage);
             if (startWithMessage)
@@ -81,8 +90,8 @@ public class ChallengeManager : MonoBehaviour
             Challenge thisChallenge = _challenges[_challengeCounter];
             thisChallenge.EnableChallengeObjects(centralGamePosition);
         }
-        
-        
+
+        _challengeCounter++;
     }
 
 }

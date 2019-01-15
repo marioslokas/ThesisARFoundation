@@ -555,12 +555,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 166cb086b8d2035468c2816e90400f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMessages:
-  - Welcome to this little simulation! Here you see a little ball floating in space.
-  - What will happen to this ball after a force has been applied to it?
-  secondaryMessages:
-  - Use your thumb to change the direction and magnitude of a force to be applied
-    on it. When you are ready, press Fire.
-  - Remember that there is no gravity or resistance from air in space.
   messageTextArea: {fileID: 1030664588}
   secondaryMessageArea: {fileID: 5815175752042911400}
