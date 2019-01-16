@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
@@ -7,8 +8,6 @@ using Vector3 = UnityEngine.Vector3;
 public class OneHandTargetingManager : MonoBehaviour
 {
 
-    [SerializeField] private Camera mainCamera;
-    
     private Transform movableObject;
     private LineRenderer directionRenderer;
 
@@ -20,7 +19,7 @@ public class OneHandTargetingManager : MonoBehaviour
     private bool adjustingMagnitude = false;
     
     // force values for the object
-    private Vector2 xForceToObject = Vector2.one;
+    private Vector2 _forceToObject = Vector2.one;
     
     // Variables used when restarting
     private Vector3 movableObjectStartingPosition;
@@ -31,7 +30,7 @@ public class OneHandTargetingManager : MonoBehaviour
     [Header("UI references")] 
     [SerializeField] private GameObject _fireButton;
     [SerializeField] private GameObject _restartButton;
-
+    [SerializeField] private Text forceValueText;
 
     void Update()
     {
@@ -53,10 +52,12 @@ public class OneHandTargetingManager : MonoBehaviour
                 
                 if (adjustingMagnitude)
                 {
+                    forceValueText.gameObject.SetActive(true);
                     // Y value is passed as X, to change magnitude
                     float adjustableValue =  2 * touchDifferenceVector.y / Screen.height;
                     Vector2 yDifference = new Vector2( adjustableValue, 0);
-                    AdjustLineRendererPosition(directionRenderer, yDifference, Vector2.right, out xForceToObject);
+                    AdjustLineRendererPosition(directionRenderer, yDifference, Vector2.right, out _forceToObject);
+                    forceValueText.text = "Force: " + _forceToObject.x.ToString("F1") + " N";
                 }
                 else if (adjustingDirection)
                 {
@@ -88,6 +89,7 @@ public class OneHandTargetingManager : MonoBehaviour
                 adjustingSet = false;
                 adjustingMagnitude = false;
                 adjustingDirection = false;
+                forceValueText.gameObject.SetActive(false);
             }
 
         }
@@ -106,7 +108,7 @@ public class OneHandTargetingManager : MonoBehaviour
 
     public void FireObject()
     {
-        movableObject.GetComponent<Rigidbody>().AddForce( (movableObject.rotation *  xForceToObject) * pushForce);
+        movableObject.GetComponent<Rigidbody>().AddForce( (movableObject.rotation *  _forceToObject) * pushForce, ForceMode.Force);
     }
 
     // switch fire and restart buttons around
@@ -139,7 +141,6 @@ public class OneHandTargetingManager : MonoBehaviour
         // clamp values
         Vector2 pos1 = difference + rendererPos1;
         Vector2 pos2 = direction + new Vector2(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y);
-
       
         pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.x);
         pos2 = new Vector2( Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.x);
