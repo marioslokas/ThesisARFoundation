@@ -10,6 +10,7 @@ public class OneHandTargetingManager : MonoBehaviour
 
     private Transform movableObject;
     private LineRenderer directionRenderer;
+    private Rigidbody _movableObjectRigidbody;
 
 
     private Vector2 startingTouchPosition;
@@ -31,6 +32,11 @@ public class OneHandTargetingManager : MonoBehaviour
     [SerializeField] private GameObject _fireButton;
     [SerializeField] private GameObject _restartButton;
     [SerializeField] private Text forceValueText;
+
+    void Start()
+    {
+        _movableObjectRigidbody = movableObject.GetComponent<Rigidbody>();
+    }
 
     void Update()
     {
@@ -57,7 +63,7 @@ public class OneHandTargetingManager : MonoBehaviour
                     float adjustableValue =  2 * touchDifferenceVector.y / Screen.height;
                     Vector2 yDifference = new Vector2( adjustableValue, 0);
                     AdjustLineRendererPosition(directionRenderer, yDifference, Vector2.right, out _forceToObject);
-                    forceValueText.text = "Force: " + _forceToObject.x.ToString("F1") + " N";
+                    forceValueText.text = "Force: " + (_forceToObject.x * pushForce).ToString("F1") + " N";
                 }
                 else if (adjustingDirection)
                 {
@@ -102,6 +108,7 @@ public class OneHandTargetingManager : MonoBehaviour
         movableObjectStartingPosition = centralGamePosition;
         movableObject = projectile;
         directionRenderer = forceLineRenderer;
+        _movableObjectRigidbody = projectile.GetComponent<Rigidbody>();
         
         InitializeUI();
     }
@@ -142,8 +149,9 @@ public class OneHandTargetingManager : MonoBehaviour
         Vector2 pos1 = difference + rendererPos1;
         Vector2 pos2 = direction + new Vector2(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y);
       
-        pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.x);
-        pos2 = new Vector2( Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.x);
+        // the arrow heads are adjusted based on F = m * a, a = F/m
+        pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.x) / new Vector2(_movableObjectRigidbody.mass, _movableObjectRigidbody.mass);
+        pos2 = new Vector2( Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.x) / new Vector2(_movableObjectRigidbody.mass, _movableObjectRigidbody.mass);
         
         lineRenderer.SetPosition(1, pos1);
         lineRenderer.SetPosition(2, pos2);
