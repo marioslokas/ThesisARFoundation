@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d552ab52-1952-4766-9627-21f01fff0f88" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ARScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,27 +19,27 @@
       <file leaf-file-name="OneHandTargetingManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="62" column="89" selection-start-line="62" selection-start-column="89" selection-end-line="62" selection-end-column="89" />
+            <state relative-caret-position="450">
+              <caret line="130" column="58" selection-start-line="130" selection-start-column="58" selection-end-line="130" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlinkText.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BlinkText.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BlinkText.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="645">
+              <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
               <folding>
-                <marker date="1547663403831" expanded="false" signature="6:100" ph="..." />
-                <marker date="1547663403831" expanded="true" signature="140:1027" ph="{...}" />
-                <marker date="1547663403831" expanded="true" signature="344:394" ph="{...}" />
-                <marker date="1547663403831" expanded="true" signature="424:1025" ph="{...}" />
-                <marker date="1547663403831" expanded="true" signature="488:1019" ph="{...}" />
-                <marker date="1547663403831" expanded="true" signature="668:733" ph="{...}" />
-                <marker date="1547663403831" expanded="true" signature="750:815" ph="{...}" />
-                <marker date="1547663403831" expanded="true" signature="845:910" ph="{...}" />
-                <marker date="1547663403831" expanded="true" signature="944:1008" ph="{...}" />
+                <marker date="1547663423981" expanded="false" signature="6:100" ph="..." />
+                <marker date="1547663423981" expanded="true" signature="140:1058" ph="{...}" />
+                <marker date="1547663423981" expanded="true" signature="344:394" ph="{...}" />
+                <marker date="1547663423981" expanded="true" signature="424:1056" ph="{...}" />
+                <marker date="1547663423981" expanded="true" signature="488:1050" ph="{...}" />
+                <marker date="1547663423981" expanded="true" signature="668:733" ph="{...}" />
+                <marker date="1547663423981" expanded="true" signature="750:815" ph="{...}" />
+                <marker date="1547663423981" expanded="true" signature="845:910" ph="{...}" />
+                <marker date="1547663423981" expanded="true" signature="944:1008" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -47,9 +47,7 @@
       </file>
       <file leaf-file-name="EyeRaycaster.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Imported/GazeUI For Canvas/Scripts/UI/EyeRaycaster.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1050" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="MessagesManager.cs" pinned="false" current-in-tab="false">
@@ -61,26 +59,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChallengeManager.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChallengeManager.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="180">
+              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
               <folding>
-                <marker date="1547573323368" expanded="false" signature="6:111" ph="..." />
-                <marker date="1547573323368" expanded="true" signature="158:3503" ph="{...}" />
-                <marker date="1547573323368" expanded="true" signature="165:300" ph="/// Challenge class has references to all the objects that need to be enabled to start a challenge ... " />
-                <marker date="1547573323368" expanded="true" signature="339:2511" ph="{...}" />
-                <marker date="1547573323368" expanded="true" signature="829:2085" ph="{...}" />
-                <marker date="1547573323368" expanded="true" signature="1728:1835" ph="{...}" />
-                <marker date="1547573323368" expanded="true" signature="1983:2075" ph="{...}" />
-                <marker date="1547573323368" expanded="true" signature="2132:2505" ph="{...}" />
-                <marker date="1547573323368" expanded="true" signature="2402:2495" ph="{...}" />
-                <marker date="1547573323368" expanded="true" signature="2674:2762" ph="/// Start the next challenge. Disable the previous. ... " />
-                <marker date="1547573323368" expanded="true" signature="2794:3500" ph="{...}" />
-                <marker date="1547573323368" expanded="true" signature="2853:3018" ph="{...}" />
-                <marker date="1547573323368" expanded="true" signature="3055:3216" ph="{...}" />
-                <marker date="1547573323368" expanded="true" signature="3229:3464" ph="{...}" />
+                <marker date="1547737161325" expanded="false" signature="6:111" ph="..." />
+                <marker date="1547737161325" expanded="true" signature="158:4113" ph="{...}" />
+                <marker date="1547737161325" expanded="true" signature="165:300" ph="/// Challenge class has references to all the objects that need to be enabled to start a challenge ... " />
+                <marker date="1547737161325" expanded="true" signature="339:3121" ph="{...}" />
+                <marker date="1547737161325" expanded="true" signature="941:2607" ph="{...}" />
+                <marker date="1547737161325" expanded="true" signature="1266:1515" ph="{...}" />
+                <marker date="1547737161325" expanded="true" signature="2250:2357" ph="{...}" />
+                <marker date="1547737161325" expanded="true" signature="2505:2597" ph="{...}" />
+                <marker date="1547737161325" expanded="true" signature="2654:3115" ph="{...}" />
+                <marker date="1547737161325" expanded="true" signature="3012:3105" ph="{...}" />
+                <marker date="1547737161325" expanded="true" signature="3284:3372" ph="/// Start the next challenge. Disable the previous. ... " />
+                <marker date="1547737161325" expanded="true" signature="3404:4110" ph="{...}" />
+                <marker date="1547737161325" expanded="true" signature="3463:3628" ph="{...}" />
+                <marker date="1547737161325" expanded="true" signature="3665:3826" ph="{...}" />
+                <marker date="1547737161325" expanded="true" signature="3839:4074" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -136,6 +135,7 @@
       <find>xForceToObject</find>
       <find>mainCamera</find>
       <find>direction</find>
+      <find>_movableObjectRigidbody</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -196,9 +196,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PrepareGame.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MessagesManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BlinkText.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MirrorGravitySphere.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs" />
       </list>
     </option>
   </component>
@@ -278,12 +279,13 @@
       <workItem from="1547459044153" duration="3472000" />
       <workItem from="1547484924136" duration="9818000" />
       <workItem from="1547550908028" duration="15923000" />
-      <workItem from="1547655777007" duration="6224000" />
+      <workItem from="1547655777007" duration="6275000" />
+      <workItem from="1547733161974" duration="3525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90314000" />
+    <option name="totallyTimeSpent" value="93890000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -302,15 +304,15 @@
       <window_info anchor="right" id="Errors In Solution" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Unit Tests" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11195159" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.113464445" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unity" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3970346" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3970346" />
       <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -398,13 +400,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ManualGravity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CallSphereOnTap.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -677,55 +672,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Imported/GazeUI For Canvas/Scripts/UI/EyeRaycaster.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BlinkText.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="645">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
           <folding>
-            <marker date="1547573323368" expanded="false" signature="6:111" ph="..." />
-            <marker date="1547573323368" expanded="true" signature="158:3503" ph="{...}" />
-            <marker date="1547573323368" expanded="true" signature="165:300" ph="/// Challenge class has references to all the objects that need to be enabled to start a challenge ... " />
-            <marker date="1547573323368" expanded="true" signature="339:2511" ph="{...}" />
-            <marker date="1547573323368" expanded="true" signature="829:2085" ph="{...}" />
-            <marker date="1547573323368" expanded="true" signature="1728:1835" ph="{...}" />
-            <marker date="1547573323368" expanded="true" signature="1983:2075" ph="{...}" />
-            <marker date="1547573323368" expanded="true" signature="2132:2505" ph="{...}" />
-            <marker date="1547573323368" expanded="true" signature="2402:2495" ph="{...}" />
-            <marker date="1547573323368" expanded="true" signature="2674:2762" ph="/// Start the next challenge. Disable the previous. ... " />
-            <marker date="1547573323368" expanded="true" signature="2794:3500" ph="{...}" />
-            <marker date="1547573323368" expanded="true" signature="2853:3018" ph="{...}" />
-            <marker date="1547573323368" expanded="true" signature="3055:3216" ph="{...}" />
-            <marker date="1547573323368" expanded="true" signature="3229:3464" ph="{...}" />
+            <marker date="1547663423981" expanded="false" signature="6:100" ph="..." />
+            <marker date="1547663423981" expanded="true" signature="140:1058" ph="{...}" />
+            <marker date="1547663423981" expanded="true" signature="344:394" ph="{...}" />
+            <marker date="1547663423981" expanded="true" signature="424:1056" ph="{...}" />
+            <marker date="1547663423981" expanded="true" signature="488:1050" ph="{...}" />
+            <marker date="1547663423981" expanded="true" signature="668:733" ph="{...}" />
+            <marker date="1547663423981" expanded="true" signature="750:815" ph="{...}" />
+            <marker date="1547663423981" expanded="true" signature="845:910" ph="{...}" />
+            <marker date="1547663423981" expanded="true" signature="944:1008" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MirrorGravitySphere.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="62" column="89" selection-start-line="62" selection-start-column="89" selection-end-line="62" selection-end-column="89" />
+        <state relative-caret-position="450">
+          <caret line="130" column="58" selection-start-line="130" selection-start-column="58" selection-end-line="130" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Imported/GazeUI For Canvas/Scripts/UI/EyeRaycaster.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1050" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BlinkText.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="180">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
           <folding>
-            <marker date="1547663403831" expanded="false" signature="6:100" ph="..." />
-            <marker date="1547663403831" expanded="true" signature="140:1027" ph="{...}" />
-            <marker date="1547663403831" expanded="true" signature="344:394" ph="{...}" />
-            <marker date="1547663403831" expanded="true" signature="424:1025" ph="{...}" />
-            <marker date="1547663403831" expanded="true" signature="488:1019" ph="{...}" />
-            <marker date="1547663403831" expanded="true" signature="668:733" ph="{...}" />
-            <marker date="1547663403831" expanded="true" signature="750:815" ph="{...}" />
-            <marker date="1547663403831" expanded="true" signature="845:910" ph="{...}" />
-            <marker date="1547663403831" expanded="true" signature="944:1008" ph="{...}" />
+            <marker date="1547737161325" expanded="false" signature="6:111" ph="..." />
+            <marker date="1547737161325" expanded="true" signature="158:4113" ph="{...}" />
+            <marker date="1547737161325" expanded="true" signature="165:300" ph="/// Challenge class has references to all the objects that need to be enabled to start a challenge ... " />
+            <marker date="1547737161325" expanded="true" signature="339:3121" ph="{...}" />
+            <marker date="1547737161325" expanded="true" signature="941:2607" ph="{...}" />
+            <marker date="1547737161325" expanded="true" signature="1266:1515" ph="{...}" />
+            <marker date="1547737161325" expanded="true" signature="2250:2357" ph="{...}" />
+            <marker date="1547737161325" expanded="true" signature="2505:2597" ph="{...}" />
+            <marker date="1547737161325" expanded="true" signature="2654:3115" ph="{...}" />
+            <marker date="1547737161325" expanded="true" signature="3012:3105" ph="{...}" />
+            <marker date="1547737161325" expanded="true" signature="3284:3372" ph="/// Start the next challenge. Disable the previous. ... " />
+            <marker date="1547737161325" expanded="true" signature="3404:4110" ph="{...}" />
+            <marker date="1547737161325" expanded="true" signature="3463:3628" ph="{...}" />
+            <marker date="1547737161325" expanded="true" signature="3665:3826" ph="{...}" />
+            <marker date="1547737161325" expanded="true" signature="3839:4074" ph="{...}" />
           </folding>
         </state>
       </provider>

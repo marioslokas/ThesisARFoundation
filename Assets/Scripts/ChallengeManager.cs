@@ -15,8 +15,11 @@ public class ChallengeManager : MonoBehaviour
         public bool startWithMessage = true;
         public GameObject _messageManager;
         public GameObject _targetingManager;
+        
+        [Header("Main game object for the simulation")]
         public GameObject mainGameObject;
         public GameObject mainObjectParent;
+        public GameObject secondaryGameObject;
 
         public GameObject[] _additionalChallengeObjects;
 
@@ -30,10 +33,21 @@ public class ChallengeManager : MonoBehaviour
             mainObjectParent.transform.position = centralGamePosition;
             
             mainGameObject.SetActive(true);
+            LineRenderer secondaryLineRenderer = null;
+            Transform secondaryTransform = null;
+            if (secondaryGameObject)
+            {
+                secondaryGameObject.SetActive(true);
+                secondaryLineRenderer = secondaryGameObject.GetComponentInChildren<LineRenderer>();
+                secondaryTransform = secondaryGameObject.transform;
+            }
+            
             // initialize targeting manager
             _targetingManager.GetComponent<OneHandTargetingManager>().Initialize(mainGameObject.transform.position,
                 mainGameObject.transform,
-                mainGameObject.GetComponentInChildren<LineRenderer>()); // the manual gravity sphere has one active line renderer currently
+                mainGameObject.GetComponentInChildren<LineRenderer>(),
+                secondaryTransform,
+                secondaryLineRenderer);
             
             // provide messages to the message manager
             _messageManager.GetComponent<MessagesManager>().LoadMessages(mainMessages, secondaryMessages);
@@ -57,6 +71,8 @@ public class ChallengeManager : MonoBehaviour
         public void DisableChallengeObjects()
         {
             mainGameObject.SetActive(false);
+            if (secondaryGameObject) secondaryGameObject.SetActive(false);
+            
             _messageManager.SetActive(false);
             _targetingManager.SetActive(false);
             mainObjectParent.SetActive(false);

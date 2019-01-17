@@ -7,11 +7,20 @@ using Vector3 = UnityEngine.Vector3;
 
 public class OneHandTargetingManager : MonoBehaviour
 {
-
+    //TODO: Instead of having multiple if checks, make the main game object a list
+    // required references for a movable object
     private Transform movableObject;
     private LineRenderer directionRenderer;
     private Rigidbody _movableObjectRigidbody;
+    // Variables used when restarting
+    private Vector3 movableObjectStartingPosition;
+    private Quaternion lastAdjustedRotation;
 
+    // secondary object
+    private Transform _secondaryMovableObject;
+    private Rigidbody _secondaryObjectRigidbody;
+    private Vector3 _secondaryObjectStartingPosition;
+    private LineRenderer _secondaryObjectLineRenderer;
 
     private Vector2 startingTouchPosition;
     [SerializeField] private float touchDelta = 20f;
@@ -21,10 +30,6 @@ public class OneHandTargetingManager : MonoBehaviour
     
     // force values for the object
     private Vector2 _forceToObject = Vector2.one;
-    
-    // Variables used when restarting
-    private Vector3 movableObjectStartingPosition;
-    private Quaternion lastAdjustedRotation;
 
     public float pushForce = 1000f;
 
@@ -36,6 +41,8 @@ public class OneHandTargetingManager : MonoBehaviour
     void Start()
     {
         _movableObjectRigidbody = movableObject.GetComponent<Rigidbody>();
+        
+        if(_secondaryMovableObject) _secondaryObjectRigidbody = _secondaryMovableObject.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -62,12 +69,21 @@ public class OneHandTargetingManager : MonoBehaviour
                     // Y value is passed as X, to change magnitude
                     float adjustableValue =  2 * touchDifferenceVector.y / Screen.height;
                     Vector2 yDifference = new Vector2( adjustableValue, 0);
+                    
                     AdjustLineRendererPosition(directionRenderer, yDifference, Vector2.right, out _forceToObject);
+
+                    if (_secondaryMovableObject) AdjustLineRendererPosition(_secondaryObjectLineRenderer, yDifference, Vector2.right, out _forceToObject);
+                    
+                    
                     forceValueText.text = "Force: " + (_forceToObject.x * pushForce).ToString("F1") + " N";
+                    
                 }
                 else if (adjustingDirection)
                 {
                     movableObject.Rotate(Vector3.up, touchDifferenceVector.x / 2);
+
+                    if (_secondaryMovableObject) _secondaryMovableObject.Rotate(Vector3.up, touchDifferenceVector.x / 2);
+
                     lastAdjustedRotation = movableObject.rotation;
                 }
 
@@ -97,25 +113,35 @@ public class OneHandTargetingManager : MonoBehaviour
                 adjustingDirection = false;
                 forceValueText.gameObject.SetActive(false);
             }
-
         }
-
-        
     }
 
-    public void Initialize(Vector3 centralGamePosition, Transform projectile, LineRenderer forceLineRenderer )
+    public void Initialize(Vector3 centralGamePosition, Transform projectile,
+        LineRenderer forceLineRenderer,
+        Transform secondaryProjectile = null,
+        LineRenderer secondaryLineRenderer = null)
     {
         movableObjectStartingPosition = centralGamePosition;
         movableObject = projectile;
         directionRenderer = forceLineRenderer;
         _movableObjectRigidbody = projectile.GetComponent<Rigidbody>();
+
+        if (secondaryProjectile && secondaryLineRenderer)
+        {
+            _secondaryMovableObject = secondaryProjectile;
+            _secondaryObjectRigidbody = secondaryProjectile.GetComponent<Rigidbody>();
+            _secondaryObjectStartingPosition = secondaryProjectile.position;
+            _secondaryObjectLineRenderer = secondaryLineRenderer;
+        }
         
         InitializeUI();
     }
 
     public void FireObject()
     {
-        movableObject.GetComponent<Rigidbody>().AddForce( (movableObject.rotation *  _forceToObject) * pushForce, ForceMode.Force);
+        _movableObjectRigidbody.AddForce( (movableObject.rotation *  _forceToObject) * pushForce, ForceMode.Force);
+        if (_secondaryObjectRigidbody) _secondaryObjectRigidbody.AddForce( (movableObject.rotation *  _forceToObject) * pushForce, ForceMode.Force);
+
     }
 
     // switch fire and restart buttons around
@@ -134,11 +160,20 @@ public class OneHandTargetingManager : MonoBehaviour
 
     public void Restart()
     {
-        movableObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        movableObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        _movableObjectRigidbody.velocity = Vector3.zero;
+        _movableObjectRigidbody.angularVelocity = Vector3.zero;
         movableObject.rotation = lastAdjustedRotation;
         
         movableObject.position = movableObjectStartingPosition;
+
+        if (_secondaryMovableObject)
+        {
+            _secondaryObjectRigidbody.velocity = Vector3.zero;
+            _secondaryObjectRigidbody.angularVelocity = Vector3.zero;
+            _secondaryMovableObject.rotation = lastAdjustedRotation;
+        
+            _secondaryMovableObject.position = _secondaryObjectStartingPosition; 
+        }
     }
 
     private void AdjustLineRendererPosition(LineRenderer lineRenderer, Vector2 difference, Vector2 direction, out Vector2 forceValue)
