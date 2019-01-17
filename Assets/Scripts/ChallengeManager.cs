@@ -13,6 +13,7 @@ public class ChallengeManager : MonoBehaviour
     class Challenge
     {
         public bool startWithMessage = true;
+        public bool playMessageOnFire = true; // show a message when firing the object. if false, let the collisions take care of the messages
         public GameObject _messageManager;
         public GameObject _targetingManager;
         
@@ -46,6 +47,7 @@ public class ChallengeManager : MonoBehaviour
             _targetingManager.GetComponent<OneHandTargetingManager>().Initialize(mainGameObject.transform.position,
                 mainGameObject.transform,
                 mainGameObject.GetComponentInChildren<LineRenderer>(),
+                playMessageOnFire,
                 secondaryTransform,
                 secondaryLineRenderer);
             

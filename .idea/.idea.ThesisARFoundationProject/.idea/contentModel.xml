@@ -73,6 +73,7 @@
             <e p="IUpdatable.cs" t="Include" />
           </e>
           <e p="ManualGravity.cs" t="Include" />
+          <e p="MessageOnCollision.cs" t="Include" />
           <e p="MessagesManager.cs" t="Include" />
           <e p="MyUpdatableBehaviour.cs" t="Include" />
           <e p="OneHandTargetingManager.cs" t="Include" />

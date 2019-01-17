@@ -27,6 +27,8 @@ public class OneHandTargetingManager : MonoBehaviour
     private bool adjustingSet = false;
     private bool adjustingDirection = false;
     private bool adjustingMagnitude = false;
+
+    private bool messageOnFire = false;
     
     // force values for the object
     private Vector2 _forceToObject = Vector2.one;
@@ -36,7 +38,8 @@ public class OneHandTargetingManager : MonoBehaviour
     [Header("UI references")] 
     [SerializeField] private GameObject _fireButton;
     [SerializeField] private GameObject _restartButton;
-    [SerializeField] private Text forceValueText;
+    [SerializeField] private Text _forceValueText;
+    [SerializeField] private UIController _uiController;
 
     void Start()
     {
@@ -65,7 +68,7 @@ public class OneHandTargetingManager : MonoBehaviour
                 
                 if (adjustingMagnitude)
                 {
-                    forceValueText.gameObject.SetActive(true);
+                    _forceValueText.gameObject.SetActive(true);
                     // Y value is passed as X, to change magnitude
                     float adjustableValue =  2 * touchDifferenceVector.y / Screen.height;
                     Vector2 yDifference = new Vector2( adjustableValue, 0);
@@ -75,7 +78,7 @@ public class OneHandTargetingManager : MonoBehaviour
                     if (_secondaryMovableObject) AdjustLineRendererPosition(_secondaryObjectLineRenderer, yDifference, Vector2.right, out _forceToObject);
                     
                     
-                    forceValueText.text = "Force: " + (_forceToObject.x * pushForce).ToString("F1") + " N";
+                    _forceValueText.text = "Force: " + (_forceToObject.x * pushForce).ToString("F1") + " N";
                     
                 }
                 else if (adjustingDirection)
@@ -111,21 +114,24 @@ public class OneHandTargetingManager : MonoBehaviour
                 adjustingSet = false;
                 adjustingMagnitude = false;
                 adjustingDirection = false;
-                forceValueText.gameObject.SetActive(false);
+                _forceValueText.gameObject.SetActive(false);
             }
         }
     }
 
     public void Initialize(Vector3 centralGamePosition, Transform projectile,
         LineRenderer forceLineRenderer,
+        bool messageOnFire,
         Transform secondaryProjectile = null,
-        LineRenderer secondaryLineRenderer = null)
+        LineRenderer secondaryLineRenderer = null
+        )
     {
         movableObjectStartingPosition = centralGamePosition;
         movableObject = projectile;
         directionRenderer = forceLineRenderer;
         _movableObjectRigidbody = projectile.GetComponent<Rigidbody>();
 
+        //TODO: This is why you make them to lists! Else you need to null the reference every restart. Dumb.
         if (secondaryProjectile && secondaryLineRenderer)
         {
             _secondaryMovableObject = secondaryProjectile;
@@ -133,6 +139,16 @@ public class OneHandTargetingManager : MonoBehaviour
             _secondaryObjectStartingPosition = secondaryProjectile.position;
             _secondaryObjectLineRenderer = secondaryLineRenderer;
         }
+        else
+        {
+            _secondaryMovableObject = null;
+            _secondaryObjectRigidbody = null;
+            _secondaryObjectStartingPosition = Vector3.zero;
+            _secondaryObjectLineRenderer = null;
+        }
+
+        _forceToObject = Vector2.one;
+        this.messageOnFire = messageOnFire;
         
         InitializeUI();
     }
@@ -142,6 +158,10 @@ public class OneHandTargetingManager : MonoBehaviour
         _movableObjectRigidbody.AddForce( (movableObject.rotation *  _forceToObject) * pushForce, ForceMode.Force);
         if (_secondaryObjectRigidbody) _secondaryObjectRigidbody.AddForce( (movableObject.rotation *  _forceToObject) * pushForce, ForceMode.Force);
 
+        if (messageOnFire)
+        {
+            _uiController.ShowNextMessage();
+        }
     }
 
     // switch fire and restart buttons around
@@ -180,13 +200,23 @@ public class OneHandTargetingManager : MonoBehaviour
     {
         Vector2 rendererPos1 = new Vector2(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y);
         
-        // clamp values
         Vector2 pos1 = difference + rendererPos1;
         Vector2 pos2 = direction + new Vector2(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y);
-      
-        // the arrow heads are adjusted based on F = m * a, a = F/m
-        pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.x) / new Vector2(_movableObjectRigidbody.mass, _movableObjectRigidbody.mass);
-        pos2 = new Vector2( Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.x) / new Vector2(_movableObjectRigidbody.mass, _movableObjectRigidbody.mass);
+
+
+        // the renderer is flat
+        if (rendererPos1.y == 0f)
+        {
+            pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.y) / new Vector2(_movableObjectRigidbody.mass, _movableObjectRigidbody.mass);
+            pos2 = new Vector2( Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.y) / new Vector2(_movableObjectRigidbody.mass, _movableObjectRigidbody.mass);
+        }
+        else
+        {
+            // the arrow heads are adjusted based on F = m * a, a = F/m
+            pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.x) / new Vector2(_movableObjectRigidbody.mass, _movableObjectRigidbody.mass);
+            pos2 = new Vector2( Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.x) / new Vector2(_movableObjectRigidbody.mass, _movableObjectRigidbody.mass);
+        }
+       
         
         lineRenderer.SetPosition(1, pos1);
         lineRenderer.SetPosition(2, pos2);
