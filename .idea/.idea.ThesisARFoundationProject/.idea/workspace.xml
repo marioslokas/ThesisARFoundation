@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d552ab52-1952-4766-9627-21f01fff0f88" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Planets.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Planets.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ARScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,14 +75,8 @@
       <file leaf-file-name="GravityForceDisplay.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
-              <folding>
-                <marker date="1548092117278" expanded="true" signature="6:78" ph="..." />
-                <marker date="1548092117278" expanded="true" signature="128:1172" ph="{...}" />
-                <marker date="1548092117278" expanded="true" signature="511:784" ph="{...}" />
-                <marker date="1548092117278" expanded="true" signature="842:1170" ph="{...}" />
-              </folding>
+            <state relative-caret-position="266">
+              <caret line="44" column="114" selection-start-line="44" selection-start-column="114" selection-end-line="44" selection-end-column="114" />
             </state>
           </provider>
         </entry>
@@ -223,7 +215,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="240" />
     <option name="y" value="77" />
     <option name="width" value="1026" />
@@ -301,12 +293,12 @@
       <workItem from="1547550908028" duration="15923000" />
       <workItem from="1547655777007" duration="6275000" />
       <workItem from="1547733161974" duration="9289000" />
-      <workItem from="1548090093520" duration="1692000" />
+      <workItem from="1548090093520" duration="4164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101346000" />
+    <option name="totallyTimeSpent" value="103818000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -318,7 +310,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -364,21 +356,8 @@
           </properties>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs</url>
-          <line>22</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs" initialLine="19">
-            <startOffsets>
-              <startOffset value="583" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="657" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="32" />
+      <option name="time" value="36" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -685,14 +664,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
-          <folding>
-            <marker date="1548092117278" expanded="true" signature="6:78" ph="..." />
-            <marker date="1548092117278" expanded="true" signature="128:1172" ph="{...}" />
-            <marker date="1548092117278" expanded="true" signature="511:784" ph="{...}" />
-            <marker date="1548092117278" expanded="true" signature="842:1170" ph="{...}" />
-          </folding>
+        <state relative-caret-position="266">
+          <caret line="44" column="114" selection-start-line="44" selection-start-column="114" selection-end-line="44" selection-end-column="114" />
         </state>
       </provider>
     </entry>

@@ -175,7 +175,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32c7a87a36c72e84b96c968a01bf7dd0, type: 2}
+  - {fileID: 2100000, guid: a92649e578cab9e4f8ee584d9706a00d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -192,8 +192,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1881704717
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 1638705164}
   - component: {fileID: 1638705163}
   - component: {fileID: 1638705162}
+  - component: {fileID: 5684993464822175867}
   m_Layer: 0
   m_Name: NeptuneNoGravity
   m_TagString: GameBall
@@ -410,7 +411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638705160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 0, z: 0}
+  m_LocalPosition: {x: -16.19, y: 0, z: 0}
   m_LocalScale: {x: 3.9, y: 3.9, z: 3.9}
   m_Children:
   - {fileID: 673388978}
@@ -485,7 +486,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638705160}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 17
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -508,6 +509,21 @@ MonoBehaviour:
   earthG: 0
   gravitySwitch: 0
   gravityPaused: 0
+--- !u!114 &5684993464822175867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638705160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c32033f155e074392ac888e623c91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gravityForceRenderer: {fileID: 786025891}
+  _otherObject: {fileID: 7312597587705938576}
+  _minDistance: 2
 --- !u!1 &1829418597
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,8 +589,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1881704717
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -649,6 +665,7 @@ GameObject:
   - component: {fileID: 5689203156914635758}
   - component: {fileID: 6083364300707795102}
   - component: {fileID: 6341085308414068064}
+  - component: {fileID: 152084962913047054}
   m_Layer: 0
   m_Name: EarthNoGravity
   m_TagString: GameBall
@@ -739,7 +756,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152084962913047053}
   serializedVersion: 2
-  m_Mass: 17
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -762,6 +779,21 @@ MonoBehaviour:
   earthG: 0
   gravitySwitch: 0
   gravityPaused: 0
+--- !u!114 &152084962913047054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152084962913047053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c32033f155e074392ac888e623c91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gravityForceRenderer: {fileID: 1829418599}
+  _otherObject: {fileID: 1638705161}
+  _minDistance: 2
 --- !u!1 &1928678638196628233
 GameObject:
   m_ObjectHideFlags: 0

@@ -1415,12 +1415,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1797377422}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1638705161 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1638705161, guid: 3218733221cf0d847ba0bc799effe1e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 2839018977733906481}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1713806026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1745,12 +1739,6 @@ MonoBehaviour:
   _messagesCanvas: {fileID: 397975117}
   _adjustForceCanvas: {fileID: 466273798}
   _toNextChallengeCanvas: {fileID: 8935098572666291275}
---- !u!120 &1829418599 stripped
-LineRenderer:
-  m_CorrespondingSourceObject: {fileID: 1829418599, guid: 3218733221cf0d847ba0bc799effe1e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 2839018977733906481}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1939602623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2230,26 +2218,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2142139467}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &152084962913047053 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 152084962913047053, guid: 3218733221cf0d847ba0bc799effe1e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 2839018977733906481}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &152084962913047054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152084962913047053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85c32033f155e074392ac888e623c91f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gravityForceRenderer: {fileID: 1829418599}
-  _otherObject: {fileID: 1638705161}
 --- !u!1001 &975492571528817278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2450,18 +2418,6 @@ PrefabInstance:
     - target: {fileID: 7503831275378746444, guid: 3218733221cf0d847ba0bc799effe1e2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1829418599, guid: 3218733221cf0d847ba0bc799effe1e2, type: 3}
-      propertyPath: m_Positions.Array.data[2].y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1829418599, guid: 3218733221cf0d847ba0bc799effe1e2, type: 3}
-      propertyPath: m_Positions.Array.data[1].y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1829418599, guid: 3218733221cf0d847ba0bc799effe1e2, type: 3}
-      propertyPath: m_Positions.Array.data[0].y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
