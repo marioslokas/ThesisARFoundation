@@ -69,6 +69,7 @@
           <e p="ChallengeManager.cs" t="Include" />
           <e p="DetectTouchMovement.cs" t="Include" />
           <e p="GameSetup.cs" t="Include" />
+          <e p="GravityForceDisplay.cs" t="Include" />
           <e p="Interfaces" t="Include">
             <e p="IUpdatable.cs" t="Include" />
           </e>
