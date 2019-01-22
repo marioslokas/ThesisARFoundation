@@ -9,6 +9,13 @@ public class GravityForceDisplay : MonoBehaviour
     [SerializeField] private Transform _otherObject;
 
     private Vector3 _directionToOtherObject;
+
+    public Vector3 DirectionToOtherObject
+    {
+        get { return _directionToOtherObject; }
+        private set { _directionToOtherObject = value; }
+    }
+
     private Vector3 _normalizedDirection;
     private Vector3 _normalizedDirectionUnit;
     private float distance;
@@ -18,25 +25,24 @@ public class GravityForceDisplay : MonoBehaviour
     private float x, y, z;
     private float _otherObjectMass;
 
-    [SerializeField] private float _minDistance = 2f;
     private Vector3 _minValue;
-    private float gravitationalPull = 0f;
+    public float gravitationalPull = 0f;
     
     // Start is called before the first frame update
-    void Start()
+    public void Initialize()
     {
-        _thisTransform = this.GetComponent<Transform>();
+        _thisTransform = this.gameObject.GetComponent<Transform>();
         _otherObjectMass = _otherObject.GetComponent<Rigidbody>().mass;
     }
 
     // Update is called once per frame
-    void Update()
+    public void UpdateForce()
     {
         _directionToOtherObject = _otherObject.position - _thisTransform.position;
         distance = _directionToOtherObject.magnitude;
         _normalizedDirection = _directionToOtherObject / distance;
 
-        gravitationalPull = (_otherObjectMass / Mathf.Pow(distance, 2) / 10f);
+        gravitationalPull = (_otherObjectMass / Mathf.Pow(distance, 2) / 1f);
 
         _minValue = _normalizedDirection * 3f;
         

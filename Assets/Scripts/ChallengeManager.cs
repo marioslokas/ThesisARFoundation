@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class ChallengeManager : MonoBehaviour
 {
+
+    [SerializeField] private UIController _uiController;
+    
     /// <summary>
     /// Challenge class has references to all the objects that need to be enabled to start a challenge
     /// </summary>
@@ -32,8 +35,10 @@ public class ChallengeManager : MonoBehaviour
         private LineRenderer[] mainGameObjectLineRenderers;
         private Rigidbody[] mainGameObjectsRigidbodies;
         
-        public void EnableChallengeObjects(Vector3 centralGamePosition)
+        public void EnableChallengeObjects(Vector3 centralGamePosition, UIController uiController)
         {
+            
+            uiController.Initialize(_messageManager, _targetingManager);
             
             mainObjectParent.SetActive(true);
             mainObjectParent.transform.position = centralGamePosition;
@@ -55,7 +60,7 @@ public class ChallengeManager : MonoBehaviour
             
             
             // initialize targeting manager
-            _targetingManager.GetComponent<OneHandTargetingManager>().Initialize(mainGameObjectPositions,
+            _targetingManager.GetComponent<ITransformHandler>().Initialize(mainGameObjectPositions,
                 mainGameObjectTransforms,
                 mainGameObjectLineRenderers,
                 mainGameObjectsRigidbodies,
@@ -118,13 +123,13 @@ public class ChallengeManager : MonoBehaviour
         if (_challengeCounter == 0)
         {
             Challenge thisChallenge = _challenges[_challengeCounter];
-            thisChallenge.EnableChallengeObjects(centralGamePosition);
+            thisChallenge.EnableChallengeObjects(centralGamePosition, _uiController);
         }
         else
         {
             _challenges[_challengeCounter - 1].DisableChallengeObjects();
             Challenge thisChallenge = _challenges[_challengeCounter];
-            thisChallenge.EnableChallengeObjects(centralGamePosition);
+            thisChallenge.EnableChallengeObjects(centralGamePosition, _uiController);
         }
 
         _challengeCounter++;

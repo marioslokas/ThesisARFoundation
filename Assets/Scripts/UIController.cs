@@ -8,10 +8,16 @@ public class UIController : MonoBehaviour
     [Header("Canvas references")] 
     [SerializeField] private GameObject _prepareGameCanvas;
     [SerializeField] private GameObject _messagesCanvas;
-    [SerializeField] private GameObject _adjustForceCanvas;
+    [SerializeField] private GameObject _adjustSimulationCanvas;
     [SerializeField] private GameObject _toNextChallengeCanvas;
 
     private const int delayFrames = 1;
+
+    public void Initialize(GameObject messagesCanvas,  GameObject adjustSimulationCanvas)
+    {
+        _messagesCanvas = messagesCanvas;
+        _adjustSimulationCanvas = adjustSimulationCanvas;
+    }
 
     public void StartGameUI()
     {
@@ -24,7 +30,7 @@ public class UIController : MonoBehaviour
     {
         if (_messagesManager.HasNextMessage())
         {
-            _adjustForceCanvas.SetActive(false);   
+            _adjustSimulationCanvas.SetActive(false);   
             _messagesCanvas.SetActive(true);
             _messagesManager.NextMessage();
         }
@@ -36,7 +42,7 @@ public class UIController : MonoBehaviour
 
     public void BackToGame()
     {
-        _adjustForceCanvas.SetActive(true);
+        _adjustSimulationCanvas.SetActive(true);
         _messagesCanvas.SetActive(false);
         
         UpdateManager.instance.ResumeUpdates();

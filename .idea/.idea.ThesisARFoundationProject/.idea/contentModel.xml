@@ -71,12 +71,14 @@
           <e p="GameSetup.cs" t="Include" />
           <e p="GravityForceDisplay.cs" t="Include" />
           <e p="Interfaces" t="Include">
+            <e p="ITransformHandler.cs" t="Include" />
             <e p="IUpdatable.cs" t="Include" />
           </e>
           <e p="ManualGravity.cs" t="Include" />
           <e p="MessageOnCollision.cs" t="Include" />
           <e p="MessagesManager.cs" t="Include" />
           <e p="MyUpdatableBehaviour.cs" t="Include" />
+          <e p="OneHandPositionChangeManager.cs" t="Include" />
           <e p="OneHandTargetingManager.cs" t="Include" />
           <e p="PrepareGame.cs" t="Include" />
           <e p="TargetingManager.cs" t="Include" />

@@ -5,9 +5,8 @@ using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
-public class OneHandTargetingManager : MonoBehaviour
+public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
 {
-    //TODO: Instead of having multiple if checks, make the main game object a list
     // required references for a movable object
     private Transform[] movableObjects;
     private LineRenderer[] directionRenderers;
@@ -71,7 +70,6 @@ public class OneHandTargetingManager : MonoBehaviour
 
                     for (int i = 0; i < directionRenderers.Length; i++)
                     {
-                        Debug.Log("Object number: " + i);
                         AdjustLineRendererPosition(directionRenderers[i], _movableObjectRigidbodies[i], yDifference, Vector2.right, out _forceToObjects[i]);
                     }
                     
@@ -122,14 +120,14 @@ public class OneHandTargetingManager : MonoBehaviour
     }
 
     public void Initialize(Vector3[] centralGamePositions, 
-        Transform[] projectiles,
+        Transform[] objectTransforms,
         LineRenderer[] forceLineRenderers,
         Rigidbody[] projectileRigidbodies,
         bool messageOnFire
         )
     {
         movableObjectStartingPositions = centralGamePositions;
-        movableObjects = projectiles;
+        movableObjects = objectTransforms;
         directionRenderers = forceLineRenderers;
 
         _movableObjectRigidbodies = projectileRigidbodies;
@@ -212,8 +210,6 @@ public class OneHandTargetingManager : MonoBehaviour
         lineRenderer.SetPosition(2, pos2);
 
         forceValue = difference + rendererPos1;
-        Debug.Log(forceValue);
     }
-
 }
 
