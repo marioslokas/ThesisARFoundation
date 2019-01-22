@@ -18,38 +18,48 @@ public class ChallengeManager : MonoBehaviour
         public GameObject _targetingManager;
         
         [Header("Main game object for the simulation")]
-        public GameObject mainGameObject;
+        public GameObject[] mainGameObjects;
         public GameObject mainObjectParent;
-        public GameObject secondaryGameObject;
 
         public GameObject[] _additionalChallengeObjects;
 
         [Header("Messages to the player")] 
         public string[] mainMessages;
         public string[] secondaryMessages;
+
+        private Vector3[] mainGameObjectPositions;
+        private Transform[] mainGameObjectTransforms;
+        private LineRenderer[] mainGameObjectLineRenderers;
+        private Rigidbody[] mainGameObjectsRigidbodies;
         
         public void EnableChallengeObjects(Vector3 centralGamePosition)
         {
+            
             mainObjectParent.SetActive(true);
             mainObjectParent.transform.position = centralGamePosition;
             
-            mainGameObject.SetActive(true);
-            LineRenderer secondaryLineRenderer = null;
-            Transform secondaryTransform = null;
-            if (secondaryGameObject)
+            mainGameObjectPositions = new Vector3[mainGameObjects.Length];
+            mainGameObjectTransforms = new Transform[mainGameObjects.Length];
+            mainGameObjectLineRenderers = new LineRenderer[mainGameObjects.Length];
+            mainGameObjectsRigidbodies = new Rigidbody[mainGameObjects.Length];
+            
+            for (int i = 0; i < mainGameObjects.Length; i++)
             {
-                secondaryGameObject.SetActive(true);
-                secondaryLineRenderer = secondaryGameObject.GetComponentInChildren<LineRenderer>();
-                secondaryTransform = secondaryGameObject.transform;
+                mainGameObjectPositions[i] = mainGameObjects[i].transform.position;
+                mainGameObjectTransforms[i] = mainGameObjects[i].transform;
+                mainGameObjectLineRenderers[i] = mainGameObjects[i].GetComponentInChildren<LineRenderer>();
+                mainGameObjectsRigidbodies[i] = mainGameObjects[i].GetComponent<Rigidbody>();
+                // activate main game objects
+                mainGameObjects[i].SetActive(true);
             }
             
+            
             // initialize targeting manager
-            _targetingManager.GetComponent<OneHandTargetingManager>().Initialize(mainGameObject.transform.position,
-                mainGameObject.transform,
-                mainGameObject.GetComponentInChildren<LineRenderer>(),
-                playMessageOnFire,
-                secondaryTransform,
-                secondaryLineRenderer);
+            _targetingManager.GetComponent<OneHandTargetingManager>().Initialize(mainGameObjectPositions,
+                mainGameObjectTransforms,
+                mainGameObjectLineRenderers,
+                mainGameObjectsRigidbodies,
+                playMessageOnFire);
             
             // provide messages to the message manager
             _messageManager.GetComponent<MessagesManager>().LoadMessages(mainMessages, secondaryMessages);
@@ -72,8 +82,10 @@ public class ChallengeManager : MonoBehaviour
 
         public void DisableChallengeObjects()
         {
-            mainGameObject.SetActive(false);
-            if (secondaryGameObject) secondaryGameObject.SetActive(false);
+            for (int i = 0; i < mainGameObjects.Length; i++)
+            {
+                mainGameObjects[i].SetActive(false);  
+            }
             
             _messageManager.SetActive(false);
             _targetingManager.SetActive(false);

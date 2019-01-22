@@ -9,18 +9,12 @@ public class OneHandTargetingManager : MonoBehaviour
 {
     //TODO: Instead of having multiple if checks, make the main game object a list
     // required references for a movable object
-    private Transform movableObject;
-    private LineRenderer directionRenderer;
-    private Rigidbody _movableObjectRigidbody;
+    private Transform[] movableObjects;
+    private LineRenderer[] directionRenderers;
+    private Rigidbody[] _movableObjectRigidbodies;
     // Variables used when restarting
-    private Vector3 movableObjectStartingPosition;
+    private Vector3[] movableObjectStartingPositions;
     private Quaternion lastAdjustedRotation;
-
-    // secondary object
-    private Transform _secondaryMovableObject;
-    private Rigidbody _secondaryObjectRigidbody;
-    private Vector3 _secondaryObjectStartingPosition;
-    private LineRenderer _secondaryObjectLineRenderer;
 
     private Vector2 startingTouchPosition;
     [SerializeField] private float touchDelta = 20f;
@@ -31,7 +25,7 @@ public class OneHandTargetingManager : MonoBehaviour
     private bool messageOnFire = false;
     
     // force values for the object
-    private Vector2 _forceToObject = Vector2.one;
+    private Vector2[] _forceToObjects;
 
     public float pushForce = 1000f;
 
@@ -43,9 +37,11 @@ public class OneHandTargetingManager : MonoBehaviour
 
     void Start()
     {
-        _movableObjectRigidbody = movableObject.GetComponent<Rigidbody>();
+//        for (int i = 0; i < _movableObjectRigidbodies.Length; i++)
+//        {
+//            _movableObjectRigidbodies[i] = movableObjects[i].GetComponent<Rigidbody>();
+//        }
         
-        if(_secondaryMovableObject) _secondaryObjectRigidbody = _secondaryMovableObject.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -72,22 +68,28 @@ public class OneHandTargetingManager : MonoBehaviour
                     // Y value is passed as X, to change magnitude
                     float adjustableValue =  2 * touchDifferenceVector.y / Screen.height;
                     Vector2 yDifference = new Vector2( adjustableValue, 0);
-                    
-                    AdjustLineRendererPosition(directionRenderer, yDifference, Vector2.right, out _forceToObject);
 
-                    if (_secondaryMovableObject) AdjustLineRendererPosition(_secondaryObjectLineRenderer, yDifference, Vector2.right, out _forceToObject);
+                    for (int i = 0; i < directionRenderers.Length; i++)
+                    {
+                        Debug.Log("Object number: " + i);
+                        AdjustLineRendererPosition(directionRenderers[i], _movableObjectRigidbodies[i], yDifference, Vector2.right, out _forceToObjects[i]);
+                    }
+                    
+
+//                    if (_secondaryMovableObject) AdjustLineRendererPosition(_secondaryObjectLineRenderer, yDifference, Vector2.right, out _forceToObject);
                     
                     
-                    _forceValueText.text = "Force: " + (_forceToObject.x * pushForce).ToString("F1") + " N";
+                    _forceValueText.text = "Force: " + (_forceToObjects[0].x * pushForce).ToString("F1") + " N";
                     
                 }
                 else if (adjustingDirection)
                 {
-                    movableObject.Rotate(Vector3.up, touchDifferenceVector.x / 2);
+                    for (int i = 0; i < movableObjects.Length; i++)
+                    {
+                        movableObjects[i].Rotate(Vector3.up, touchDifferenceVector.x / 2); 
+                    }
 
-                    if (_secondaryMovableObject) _secondaryMovableObject.Rotate(Vector3.up, touchDifferenceVector.x / 2);
-
-                    lastAdjustedRotation = movableObject.rotation;
+                    lastAdjustedRotation = movableObjects[0].rotation;
                 }
 
                 
@@ -119,35 +121,26 @@ public class OneHandTargetingManager : MonoBehaviour
         }
     }
 
-    public void Initialize(Vector3 centralGamePosition, Transform projectile,
-        LineRenderer forceLineRenderer,
-        bool messageOnFire,
-        Transform secondaryProjectile = null,
-        LineRenderer secondaryLineRenderer = null
+    public void Initialize(Vector3[] centralGamePositions, 
+        Transform[] projectiles,
+        LineRenderer[] forceLineRenderers,
+        Rigidbody[] projectileRigidbodies,
+        bool messageOnFire
         )
     {
-        movableObjectStartingPosition = centralGamePosition;
-        movableObject = projectile;
-        directionRenderer = forceLineRenderer;
-        _movableObjectRigidbody = projectile.GetComponent<Rigidbody>();
+        movableObjectStartingPositions = centralGamePositions;
+        movableObjects = projectiles;
+        directionRenderers = forceLineRenderers;
 
-        //TODO: This is why you make them to lists! Else you need to null the reference every restart. Dumb.
-        if (secondaryProjectile && secondaryLineRenderer)
-        {
-            _secondaryMovableObject = secondaryProjectile;
-            _secondaryObjectRigidbody = secondaryProjectile.GetComponent<Rigidbody>();
-            _secondaryObjectStartingPosition = secondaryProjectile.position;
-            _secondaryObjectLineRenderer = secondaryLineRenderer;
-        }
-        else
-        {
-            _secondaryMovableObject = null;
-            _secondaryObjectRigidbody = null;
-            _secondaryObjectStartingPosition = Vector3.zero;
-            _secondaryObjectLineRenderer = null;
-        }
+        _movableObjectRigidbodies = projectileRigidbodies;
 
-        _forceToObject = Vector2.one;
+        _forceToObjects = new Vector2[forceLineRenderers.Length];
+
+        for (int i = 0; i < _forceToObjects.Length; i++)
+        {
+            _forceToObjects[i] = Vector2.one;
+        }
+        
         this.messageOnFire = messageOnFire;
         
         InitializeUI();
@@ -155,8 +148,10 @@ public class OneHandTargetingManager : MonoBehaviour
 
     public void FireObject()
     {
-        _movableObjectRigidbody.AddForce( (movableObject.rotation *  _forceToObject) * pushForce, ForceMode.Force);
-        if (_secondaryObjectRigidbody) _secondaryObjectRigidbody.AddForce( (movableObject.rotation *  _forceToObject) * pushForce, ForceMode.Force);
+        for (int i = 0; i < _movableObjectRigidbodies.Length; i++)
+        {
+            _movableObjectRigidbodies[i].AddForce( (movableObjects[0].rotation *  _forceToObjects[i]) * pushForce, ForceMode.Force); 
+        }
 
         if (messageOnFire)
         {
@@ -180,23 +175,18 @@ public class OneHandTargetingManager : MonoBehaviour
 
     public void Restart()
     {
-        _movableObjectRigidbody.velocity = Vector3.zero;
-        _movableObjectRigidbody.angularVelocity = Vector3.zero;
-        movableObject.rotation = lastAdjustedRotation;
-        
-        movableObject.position = movableObjectStartingPosition;
-
-        if (_secondaryMovableObject)
+        for (int i = 0; i < movableObjects.Length; i++)
         {
-            _secondaryObjectRigidbody.velocity = Vector3.zero;
-            _secondaryObjectRigidbody.angularVelocity = Vector3.zero;
-            _secondaryMovableObject.rotation = lastAdjustedRotation;
+            _movableObjectRigidbodies[i].velocity = Vector3.zero;
+            _movableObjectRigidbodies[i].angularVelocity = Vector3.zero;
+            movableObjects[i].rotation = lastAdjustedRotation;
         
-            _secondaryMovableObject.position = _secondaryObjectStartingPosition; 
+            movableObjects[i].position = movableObjectStartingPositions[i]; 
         }
+
     }
 
-    private void AdjustLineRendererPosition(LineRenderer lineRenderer, Vector2 difference, Vector2 direction, out Vector2 forceValue)
+    private void AdjustLineRendererPosition(LineRenderer lineRenderer, Rigidbody myRigidbody, Vector2 difference, Vector2 direction, out Vector2 forceValue)
     {
         Vector2 rendererPos1 = new Vector2(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y);
         
@@ -207,14 +197,14 @@ public class OneHandTargetingManager : MonoBehaviour
         // the renderer is flat
         if (rendererPos1.y == 0f)
         {
-            pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.y) / new Vector2(_movableObjectRigidbody.mass, _movableObjectRigidbody.mass);
-            pos2 = new Vector2( Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.y) / new Vector2(_movableObjectRigidbody.mass, _movableObjectRigidbody.mass);
+            pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.y);
+            pos2 = new Vector2(Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.y);
         }
         else
         {
             // the arrow heads are adjusted based on F = m * a, a = F/m
-            pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.x) / new Vector2(_movableObjectRigidbody.mass, _movableObjectRigidbody.mass);
-            pos2 = new Vector2( Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.x) / new Vector2(_movableObjectRigidbody.mass, _movableObjectRigidbody.mass);
+            pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.x);
+            pos2 = new Vector2( Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.x);
         }
        
         
@@ -222,6 +212,7 @@ public class OneHandTargetingManager : MonoBehaviour
         lineRenderer.SetPosition(2, pos2);
 
         forceValue = difference + rendererPos1;
+        Debug.Log(forceValue);
     }
 
 }
