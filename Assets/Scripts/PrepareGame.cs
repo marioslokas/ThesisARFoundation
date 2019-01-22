@@ -28,6 +28,15 @@ public class PrepareGame : MonoBehaviour
         informationText.text = lookingForPlanesMsg;
     }
 
+    void Update()
+    {
+        if (Input.touchCount > 3)
+        {
+            startButton.gameObject.SetActive(true);
+            _eyeRaycaster.gameObject.SetActive(false);
+        }
+    }
+
     void OnPlaneAdded(ARPlaneAddedEventArgs eventArgs)
     {
         informationText.text = planeFoundMsg;
