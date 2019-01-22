@@ -20,9 +20,12 @@ public class OneHandPositionChangeManager : MonoBehaviour, ITransformHandler
     
     [SerializeField] private Text _gravityValueFirstPlanetText;
     [SerializeField] private Text _gravityValueSecondPlanetText;
+    [SerializeField] private Text _debugText;
 
-    [Range(20f,90f)]
-    [SerializeField] private float distanceLimitsPercentage;
+    [Range(5f,15f)]
+    [SerializeField] private float distanceLimitsPercentageMin;
+    [Range(15f,50f)]
+    [SerializeField] private float distanceLimitsPercentageMax;
 
     private Vector3 firstPlanetMaxPosition, firstPlanetMinPosition;
     private Vector3 secondPlanetMaxPosition, secondPlanetMinPosition;
@@ -65,6 +68,7 @@ public class OneHandPositionChangeManager : MonoBehaviour, ITransformHandler
                 secondPlanetGravityForce.UpdateForce();
                 
                 startingTouchPosition = touch.position;
+//                _debugText.text = Vector3.Distance(_firstPlanetTransform.position, _secondPlanetTransform.position).ToString();
             }
             else if (touch.phase.Equals(TouchPhase.Ended))
             {
@@ -92,11 +96,16 @@ public class OneHandPositionChangeManager : MonoBehaviour, ITransformHandler
         secondPlanetGravityForce.UpdateForce();
 
         //calculate min-max positions
-        firstPlanetMinPosition = secondPlanetGravityForce.DirectionToOtherObject * (100f - distanceLimitsPercentage)/100f;
-        firstPlanetMaxPosition = secondPlanetGravityForce.DirectionToOtherObject * (100f + distanceLimitsPercentage)/100f;
+        firstPlanetMinPosition = _firstPlanetPosition + firstPlanetGravityForce.NormalizedDirection * (100f - distanceLimitsPercentageMin)/100f;
+        firstPlanetMaxPosition = _firstPlanetPosition + firstPlanetGravityForce.NormalizedDirection * (100f - distanceLimitsPercentageMax)/100f;
         
-        secondPlanetMinPosition = firstPlanetGravityForce.DirectionToOtherObject * (100f - distanceLimitsPercentage)/100f;
-        secondPlanetMaxPosition = firstPlanetGravityForce.DirectionToOtherObject * (100f + distanceLimitsPercentage)/100f;
+        secondPlanetMinPosition = _secondPlanetPosition + secondPlanetGravityForce.NormalizedDirection * (100f - distanceLimitsPercentageMin)/100f;
+        secondPlanetMaxPosition = _secondPlanetPosition + secondPlanetGravityForce.NormalizedDirection * (100f - distanceLimitsPercentageMax)/100f;
+
+        _firstPlanetTransform.position = firstPlanetMinPosition;
+        _secondPlanetTransform.position = secondPlanetMinPosition;
         
+        firstPlanetGravityForce.UpdateForce();
+        secondPlanetGravityForce.UpdateForce();
     }
 }

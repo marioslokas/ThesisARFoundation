@@ -8,12 +8,12 @@ public class GravityForceDisplay : MonoBehaviour
     [SerializeField] private LineRenderer _gravityForceRenderer;
     [SerializeField] private Transform _otherObject;
 
-    private Vector3 _directionToOtherObject;
+    public Vector3 DirectionToOtherObject { get; private set; }
 
-    public Vector3 DirectionToOtherObject
+    public Vector3 NormalizedDirection
     {
-        get { return _directionToOtherObject; }
-        private set { _directionToOtherObject = value; }
+        get { return _normalizedDirection; }
+        private set { _normalizedDirection = value; }
     }
 
     private Vector3 _normalizedDirection;
@@ -27,22 +27,29 @@ public class GravityForceDisplay : MonoBehaviour
 
     private Vector3 _minValue;
     public float gravitationalPull = 0f;
-    
-    // Start is called before the first frame update
+
+    void Start()
+    {
+        _thisTransform = this.gameObject.GetComponent<Transform>();
+        _otherObjectMass = _otherObject.GetComponent<Rigidbody>().mass;
+    }
+
     public void Initialize()
     {
         _thisTransform = this.gameObject.GetComponent<Transform>();
         _otherObjectMass = _otherObject.GetComponent<Rigidbody>().mass;
     }
 
-    // Update is called once per frame
     public void UpdateForce()
     {
-        _directionToOtherObject = _otherObject.position - _thisTransform.position;
-        distance = _directionToOtherObject.magnitude;
-        _normalizedDirection = _directionToOtherObject / distance;
+        
+        DirectionToOtherObject = _otherObject.position - _thisTransform.position;
+        distance = DirectionToOtherObject.magnitude;
+        _normalizedDirection = DirectionToOtherObject / distance;
 
         gravitationalPull = (_otherObjectMass / Mathf.Pow(distance, 2) / 1f);
+        
+//        Debug.DrawRay(this.transform.position, DirectionToOtherObject, Color.red);
 
         _minValue = _normalizedDirection * 3f;
         

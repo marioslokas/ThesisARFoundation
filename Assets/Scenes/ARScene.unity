@@ -964,9 +964,9 @@ MonoBehaviour:
     _additionalChallengeObjects:
     - {fileID: 672119066}
     mainMessages:
-    - Lorem
+    - Use your finger to adjust the distance between the 2 planets.
     secondaryMessages:
-    - Again Lorem
+    - Observe what happens to the gravitational force vector.
   centralGamePosition: {x: 0, y: 0, z: 0}
 --- !u!1 &672119066
 GameObject:
@@ -2423,6 +2423,24 @@ PrefabInstance:
       propertyPath: m_Parameters.widthMultiplier
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 1638705161, guid: 3218733221cf0d847ba0bc799effe1e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638705164, guid: 3218733221cf0d847ba0bc799effe1e2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689203156914635758, guid: 3218733221cf0d847ba0bc799effe1e2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005647535266934667, guid: 3218733221cf0d847ba0bc799effe1e2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3218733221cf0d847ba0bc799effe1e2, type: 3}
 --- !u!1001 &3557304230803652992
@@ -2518,6 +2536,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AdjustPositionOneHandManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2263781384623094813, guid: c86401498a0317e458cbab1d507cc932,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 265542712955365143, guid: c86401498a0317e458cbab1d507cc932,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2536,17 +2559,17 @@ PrefabInstance:
     - target: {fileID: 265542712955365143, guid: c86401498a0317e458cbab1d507cc932,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 265542712955365143, guid: c86401498a0317e458cbab1d507cc932,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 265542712955365143, guid: c86401498a0317e458cbab1d507cc932,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 265542712955365143, guid: c86401498a0317e458cbab1d507cc932,
         type: 3}
@@ -2625,13 +2648,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4769021966096759516, guid: c86401498a0317e458cbab1d507cc932,
         type: 3}
-      propertyPath: _gravityValueFirstPlanetText
-      value: 
-      objectReference: {fileID: 7925086020607865866}
+      propertyPath: distanceLimitsPercentage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4769021966096759516, guid: c86401498a0317e458cbab1d507cc932,
         type: 3}
-      propertyPath: distanceLimitsPercentage
-      value: 70
+      propertyPath: distanceLimitsPercentageMin
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769021966096759516, guid: c86401498a0317e458cbab1d507cc932,
+        type: 3}
+      propertyPath: distanceLimitsPercentageMax
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296061859, guid: c86401498a0317e458cbab1d507cc932, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296061859, guid: c86401498a0317e458cbab1d507cc932, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296061859, guid: c86401498a0317e458cbab1d507cc932, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 266512771, guid: c86401498a0317e458cbab1d507cc932, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 266512771, guid: c86401498a0317e458cbab1d507cc932, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 266512771, guid: c86401498a0317e458cbab1d507cc932, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 266512771, guid: c86401498a0317e458cbab1d507cc932, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 266512771, guid: c86401498a0317e458cbab1d507cc932, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 266512771, guid: c86401498a0317e458cbab1d507cc932, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 266512771, guid: c86401498a0317e458cbab1d507cc932, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 340.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 266512771, guid: c86401498a0317e458cbab1d507cc932, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 184.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 266512772, guid: c86401498a0317e458cbab1d507cc932, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 266512772, guid: c86401498a0317e458cbab1d507cc932, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 266512772, guid: c86401498a0317e458cbab1d507cc932, type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c86401498a0317e458cbab1d507cc932, type: 3}
@@ -2996,18 +3080,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2839018977733906481}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7925086020607865866 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7925086020607865866, guid: c86401498a0317e458cbab1d507cc932,
-    type: 3}
-  m_PrefabInstance: {fileID: 4904610760418444657}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8935098572666291275 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8935098572666291275, guid: 241e7d437afa2ba4e871e6c8b0d2768d,

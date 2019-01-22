@@ -136,7 +136,15 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
 
         for (int i = 0; i < _forceToObjects.Length; i++)
         {
-            _forceToObjects[i] = Vector2.one;
+            // only way to find out if the renderer is pointing diagonally or straight
+            if (directionRenderers[i].GetPosition(1).y > 0f)
+            {
+                _forceToObjects[i] = Vector2.one;
+            }
+            else
+            {
+                _forceToObjects[i] = new Vector2(1f, 0f);
+            }
         }
         
         this.messageOnFire = messageOnFire;
