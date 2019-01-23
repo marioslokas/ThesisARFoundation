@@ -135,16 +135,22 @@ public class ChallengeManager : MonoBehaviour
         {
             Challenge thisChallenge = _challenges[_challengeCounter];
             thisChallenge.EnableChallengeObjects(centralGamePosition, _uiController);
-            _toNextChallengeCanvas.SetActive(false);
         }
         else
         {
             _challenges[_challengeCounter - 1].DisableChallengeObjects();
             Challenge thisChallenge = _challenges[_challengeCounter];
             thisChallenge.EnableChallengeObjects(centralGamePosition, _uiController);
-            _toNextChallengeCanvas.SetActive(false);
+            
         }
 
+        // last challenge, disable the next button
+        if (_challengeCounter == _challenges.Length - 1)
+        {
+            _toNextChallengeButton.SetActive(false);
+        }
+        
+        _toNextChallengeCanvas.SetActive(false);
         _challengeCounter++;
     }
 

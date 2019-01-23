@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d552ab52-1952-4766-9627-21f01fff0f88" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GravityARScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GravityARScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/IntroScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IntroScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/MovieTutorialTexture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/MovieTutorialTexture.renderTexture" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewtonARScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewtonARScene.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,19 +43,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChallengeManager.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChallengeManager.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="128" selection-start-line="128" selection-end-line="128" />
+            <state relative-caret-position="330">
+              <caret line="136" column="85" selection-start-line="136" selection-start-column="85" selection-end-line="136" selection-end-column="85" />
+              <folding>
+                <marker date="1548258654166" expanded="false" signature="6:111" ph="..." />
+                <marker date="1548258654166" expanded="true" signature="158:5727" ph="{...}" />
+                <marker date="1548258654166" expanded="true" signature="356:491" ph="/// Challenge class has references to all the objects that need to be enabled to start a challenge ... " />
+                <marker date="1548258654166" expanded="true" signature="530:4520" ph="{...}" />
+                <marker date="1548258654166" expanded="true" signature="1566:3982" ph="{...}" />
+                <marker date="1548258654166" expanded="true" signature="2274:2874" ph="{...}" />
+                <marker date="1548258654166" expanded="true" signature="3625:3732" ph="{...}" />
+                <marker date="1548258654166" expanded="true" signature="3880:3972" ph="{...}" />
+                <marker date="1548258654166" expanded="true" signature="4029:4514" ph="{...}" />
+                <marker date="1548258654166" expanded="true" signature="4100:4183" ph="{...}" />
+                <marker date="1548258654166" expanded="true" signature="4411:4504" ph="{...}" />
+                <marker date="1548258654166" expanded="true" signature="4683:4771" ph="/// Start the next challenge. Disable the previous. ... " />
+                <marker date="1548258654166" expanded="true" signature="4803:5724" ph="{...}" />
+                <marker date="1548258654166" expanded="true" signature="4862:5106" ph="{...}" />
+                <marker date="1548258654166" expanded="true" signature="5143:5372" ph="{...}" />
+                <marker date="1548258654166" expanded="true" signature="5385:5688" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameSetup.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameSetup.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="147">
               <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
             </state>
           </provider>
@@ -304,12 +319,12 @@
       <workItem from="1547733161974" duration="9289000" />
       <workItem from="1548090093520" duration="4640000" />
       <workItem from="1548155748124" duration="16677000" />
-      <workItem from="1548245132782" duration="10387000" />
+      <workItem from="1548245132782" duration="10865000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131358000" />
+    <option name="totallyTimeSpent" value="131836000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -655,17 +670,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        <state relative-caret-position="147">
+          <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
+        <state relative-caret-position="330">
+          <caret line="136" column="85" selection-start-line="136" selection-start-column="85" selection-end-line="136" selection-end-column="85" />
+          <folding>
+            <marker date="1548258654166" expanded="false" signature="6:111" ph="..." />
+            <marker date="1548258654166" expanded="true" signature="158:5727" ph="{...}" />
+            <marker date="1548258654166" expanded="true" signature="356:491" ph="/// Challenge class has references to all the objects that need to be enabled to start a challenge ... " />
+            <marker date="1548258654166" expanded="true" signature="530:4520" ph="{...}" />
+            <marker date="1548258654166" expanded="true" signature="1566:3982" ph="{...}" />
+            <marker date="1548258654166" expanded="true" signature="2274:2874" ph="{...}" />
+            <marker date="1548258654166" expanded="true" signature="3625:3732" ph="{...}" />
+            <marker date="1548258654166" expanded="true" signature="3880:3972" ph="{...}" />
+            <marker date="1548258654166" expanded="true" signature="4029:4514" ph="{...}" />
+            <marker date="1548258654166" expanded="true" signature="4100:4183" ph="{...}" />
+            <marker date="1548258654166" expanded="true" signature="4411:4504" ph="{...}" />
+            <marker date="1548258654166" expanded="true" signature="4683:4771" ph="/// Start the next challenge. Disable the previous. ... " />
+            <marker date="1548258654166" expanded="true" signature="4803:5724" ph="{...}" />
+            <marker date="1548258654166" expanded="true" signature="4862:5106" ph="{...}" />
+            <marker date="1548258654166" expanded="true" signature="5143:5372" ph="{...}" />
+            <marker date="1548258654166" expanded="true" signature="5385:5688" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

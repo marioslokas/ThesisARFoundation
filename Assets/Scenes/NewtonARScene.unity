@@ -905,12 +905,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransformToFollow: {fileID: 1344377014}
---- !u!1 &495609597 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8429816221594188900, guid: 3218733221cf0d847ba0bc799effe1e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 2839018977733906481}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &507556046 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 507556046, guid: ca3c6e9b4e202b64aabd644790d92634,
@@ -1053,21 +1047,6 @@ MonoBehaviour:
     - Remember that the meteorite has many times the sphere's mass.
     - The meteorite mass is really big compared to the sphere. What will happen to
       both objects?
-  - startWithMessage: 1
-    playMessageOnFire: 0
-    _messageManager: {fileID: 397975117}
-    _targetingManager: {fileID: 2263781384623094813}
-    mainGameObjects:
-    - {fileID: 1324216458}
-    - {fileID: 2012547890}
-    mainObjectParent: {fileID: 495609597}
-    _additionalChallengeObjects:
-    - {fileID: 672119066}
-    mainMessages:
-    - Swipe up and down to adjust the distance between the 2 planets.
-    secondaryMessages:
-    - Observe what happens to the gravitational force vector. Explain why the attraction
-      is different for each planet.
   centralGamePosition: {x: 0, y: 0, z: 0}
 --- !u!1 &672119066
 GameObject:
@@ -1524,12 +1503,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2120941415}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1324216458 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 152084962913047053, guid: 3218733221cf0d847ba0bc799effe1e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 2839018977733906481}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1344377008 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3995463910702506273, guid: 2b1c28cb88656f7478c60f49edadeaa6,
@@ -1855,6 +1828,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneAnd2Spheres-Space
       objectReference: {fileID: 0}
+    - target: {fileID: 453917230, guid: 6049ff13d2ff10c42a8fb054ba61acbd, type: 3}
+      propertyPath: m_Name
+      value: Velocity-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053342055, guid: 6049ff13d2ff10c42a8fb054ba61acbd, type: 3}
+      propertyPath: m_Name
+      value: Velocity-2
+      objectReference: {fileID: 0}
     - target: {fileID: 1797377423, guid: 6049ff13d2ff10c42a8fb054ba61acbd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1899,10 +1880,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 453917230, guid: 6049ff13d2ff10c42a8fb054ba61acbd, type: 3}
-      propertyPath: m_Name
-      value: Velocity-1
-      objectReference: {fileID: 0}
     - target: {fileID: 453917231, guid: 6049ff13d2ff10c42a8fb054ba61acbd, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.9
@@ -1934,10 +1911,6 @@ PrefabInstance:
     - target: {fileID: 453917231, guid: 6049ff13d2ff10c42a8fb054ba61acbd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0.76500005
-      objectReference: {fileID: 0}
-    - target: {fileID: 1053342055, guid: 6049ff13d2ff10c42a8fb054ba61acbd, type: 3}
-      propertyPath: m_Name
-      value: Velocity-2
       objectReference: {fileID: 0}
     - target: {fileID: 1053342056, guid: 6049ff13d2ff10c42a8fb054ba61acbd, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2280,12 +2253,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1942391366}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2012547890 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1638705160, guid: 3218733221cf0d847ba0bc799effe1e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 2839018977733906481}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2120941415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2541,12 +2508,6 @@ PrefabInstance:
       objectReference: {fileID: 1822251479}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
---- !u!1 &2263781384623094813 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2263781384623094813, guid: c86401498a0317e458cbab1d507cc932,
-    type: 3}
-  m_PrefabInstance: {fileID: 4904610760418444657}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2707232242704024975 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2707232242704024975, guid: b882e7b5b7df3474e9936865f438376c,
