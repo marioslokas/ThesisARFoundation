@@ -43,36 +43,46 @@ public class GameSetup : MonoBehaviour
     private ArEnvironment[] _environmentValues;
     private BallProjectile[] _projectileValues;
 
-    public string ArSceneName;
+    private string sceneToLoad;
+
+    [SerializeField]
+    private string newtonARScene;
+    [SerializeField]
+    private string gravityARScene;
 
 
     void Start()
     {
-        _options = new GameOptions(ArEnvironment.Earth, BallProjectile.GolfBall);
-
-        _environmentValues = new ArEnvironment[]
-            {ArEnvironment.Earth, ArEnvironment.Space, ArEnvironment.None};
-        _projectileValues = new BallProjectile[]
-            {BallProjectile.GolfBall, BallProjectile.Meteor, BallProjectile.None};
-
-        // dropdown delegates
-        environmentDropdown.onValueChanged.AddListener(
-            delegate { EnvironmentDropdownValueChanged(environmentDropdown); }
-        );
-
-        ballDropdown.onValueChanged.AddListener(delegate { BallDropdownValueChanged(ballDropdown); });
+//        _options = new GameOptions(ArEnvironment.Earth, BallProjectile.GolfBall);
+//
+//        _environmentValues = new ArEnvironment[]
+//            {ArEnvironment.Earth, ArEnvironment.Space, ArEnvironment.None};
+//        _projectileValues = new BallProjectile[]
+//            {BallProjectile.GolfBall, BallProjectile.Meteor, BallProjectile.None};
+//
+//        // dropdown delegates
+//        environmentDropdown.onValueChanged.AddListener(
+//            delegate { EnvironmentDropdownValueChanged(environmentDropdown); }
+//        );
+//
+//        ballDropdown.onValueChanged.AddListener(delegate { BallDropdownValueChanged(ballDropdown); });
     }
 
-    void EnvironmentDropdownValueChanged(Dropdown envDropdown)
-    {
-        _options._arEnvironment = _environmentValues[envDropdown.value];
-        Debug.Log("New Options:" + _options._arEnvironment + " " + _options._ballProjectile);
-    }
+//    void EnvironmentDropdownValueChanged(Dropdown envDropdown)
+//    {
+//        _options._arEnvironment = _environmentValues[envDropdown.value];
+//        Debug.Log("New Options:" + _options._arEnvironment + " " + _options._ballProjectile);
+//    }
+//
+//    void BallDropdownValueChanged(Dropdown ballDropdown)
+//    {
+//        _options._ballProjectile = _projectileValues[ballDropdown.value];
+//        Debug.Log("New Options:" + _options._arEnvironment + " " + _options._ballProjectile);
+//    }
 
-    void BallDropdownValueChanged(Dropdown ballDropdown)
+    public void SetSceneToLoad(string sceneName)
     {
-        _options._ballProjectile = _projectileValues[ballDropdown.value];
-        Debug.Log("New Options:" + _options._arEnvironment + " " + _options._ballProjectile);
+        sceneToLoad = sceneName;
     }
 
     public void ToInfoView()
@@ -91,7 +101,7 @@ public class GameSetup : MonoBehaviour
 
     public void LoadArScene()
     {
-        SceneManager.LoadScene(ArSceneName);
+        SceneManager.LoadScene(sceneToLoad);
     }
 
 }

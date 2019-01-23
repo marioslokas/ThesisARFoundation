@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroScene.unity
     guid: 13c5e51bc5de8ea48a55feb4390226d9
   - enabled: 1
-    path: Assets/Scenes/ARScene.unity
+    path: Assets/Scenes/NewtonARScene.unity
     guid: c5fea2131bd2be64ebae91929179a8a2
+  - enabled: 1
+    path: Assets/Scenes/GravityARScene.unity
+    guid: 6a7232fb3adbb764e8eb796c0fec14eb
   m_configObjects:
     com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: f760c2aca4dc76247aaef4f584c08bb4,
       type: 2}
