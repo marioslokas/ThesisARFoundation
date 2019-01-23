@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject _messagesCanvas;
     [SerializeField] private GameObject _adjustSimulationCanvas;
     [SerializeField] private GameObject _toNextChallengeCanvas;
+    [SerializeField] private string introSceneName;
 
     private const int delayFrames = 1;
 
@@ -48,5 +50,10 @@ public class UIController : MonoBehaviour
         UpdateManager.instance.ResumeUpdates();
     }
 
-    
+    public void ToMainMenu()
+    {
+        SceneManager.LoadScene(introSceneName);
+    }
+
+
 }

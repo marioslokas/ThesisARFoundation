@@ -1747,6 +1747,7 @@ MonoBehaviour:
   _messagesCanvas: {fileID: 397975117}
   _adjustSimulationCanvas: {fileID: 0}
   _toNextChallengeCanvas: {fileID: 8935098572666291275}
+  introSceneName: IntroScene
 --- !u!1001 &1939602623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2170,6 +2171,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ToNextChallengeCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8935098572666291275, guid: 241e7d437afa2ba4e871e6c8b0d2768d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5142570568912184598, guid: 241e7d437afa2ba4e871e6c8b0d2768d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2279,6 +2285,83 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 583401016}
+    - target: {fileID: 1766445151, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766445151, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766445151, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766445151, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766445151, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 24.02991
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766445151, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -22.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766445151, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766445151, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766445153, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 01e584fc9ff6d4a969400e68b97befc4,
+        type: 3}
+    - target: {fileID: 1766445152, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766445152, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8935098572666291275}
+    - target: {fileID: 1766445152, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766445152, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766445152, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1822251479}
+    - target: {fileID: 1766445152, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ToMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766445152, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766445152, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955435178, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955435178, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 241e7d437afa2ba4e871e6c8b0d2768d, type: 3}
 --- !u!1 &2263781384623094813 stripped
@@ -2371,48 +2454,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1638705163, guid: 3218733221cf0d847ba0bc799effe1e2, type: 3}
-      propertyPath: m_Mass
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 152084962913047054, guid: 3218733221cf0d847ba0bc799effe1e2,
-        type: 3}
-      propertyPath: lineRendererDevisionValue
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5684993464822175867, guid: 3218733221cf0d847ba0bc799effe1e2,
-        type: 3}
-      propertyPath: gravityTextDisplay
-      value: 
-      objectReference: {fileID: 7902853397921765063}
-    - target: {fileID: 5684993464822175867, guid: 3218733221cf0d847ba0bc799effe1e2,
-        type: 3}
-      propertyPath: lineRendererDevisionValue
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1726498538, guid: 3218733221cf0d847ba0bc799effe1e2, type: 3}
-      propertyPath: m_Name
-      value: GravityWorldCanvas
-      objectReference: {fileID: 0}
     - target: {fileID: 1726498542, guid: 3218733221cf0d847ba0bc799effe1e2, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 126853984}
-    - target: {fileID: 4658735157254083930, guid: 3218733221cf0d847ba0bc799effe1e2,
-        type: 3}
-      propertyPath: m_Name
-      value: GravityWorldCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7350995943840974377, guid: 3218733221cf0d847ba0bc799effe1e2,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7350995943840974377, guid: 3218733221cf0d847ba0bc799effe1e2,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.61
-      objectReference: {fileID: 0}
     - target: {fileID: 6923082974946252820, guid: 3218733221cf0d847ba0bc799effe1e2,
         type: 3}
       propertyPath: m_Camera
@@ -2713,6 +2758,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MessagesCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642522170423181579, guid: b882e7b5b7df3474e9936865f438376c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5642522170423181576, guid: b882e7b5b7df3474e9936865f438376c,
         type: 3}
@@ -3057,18 +3107,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2839018977733906481}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7902853397921765063 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7902853397921765063, guid: 3218733221cf0d847ba0bc799effe1e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 2839018977733906481}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8935098572666291275 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8935098572666291275, guid: 241e7d437afa2ba4e871e6c8b0d2768d,
