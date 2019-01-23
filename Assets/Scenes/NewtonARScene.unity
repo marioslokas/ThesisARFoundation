@@ -496,6 +496,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0.76500005
       objectReference: {fileID: 0}
+    - target: {fileID: 3995463910844327810, guid: 2b1c28cb88656f7478c60f49edadeaa6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1344377009, guid: 2b1c28cb88656f7478c60f49edadeaa6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2b1c28cb88656f7478c60f49edadeaa6, type: 3}
@@ -1956,6 +1961,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0.76500005
       objectReference: {fileID: 0}
+    - target: {fileID: 1354694735, guid: 6049ff13d2ff10c42a8fb054ba61acbd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6049ff13d2ff10c42a8fb054ba61acbd, type: 3}
 --- !u!4 &1797377423 stripped
@@ -2245,6 +2254,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0.76500005
       objectReference: {fileID: 0}
+    - target: {fileID: 907349846, guid: 0b31cd5373e1ce945b57b7176dc9d4d7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b31cd5373e1ce945b57b7176dc9d4d7, type: 3}
 --- !u!4 &1942391367 stripped
@@ -2263,6 +2276,10 @@ PrefabInstance:
     - target: {fileID: 507556046, guid: ca3c6e9b4e202b64aabd644790d92634, type: 3}
       propertyPath: m_Name
       value: SpherePlaneWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 507556046, guid: ca3c6e9b4e202b64aabd644790d92634, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2120941416, guid: ca3c6e9b4e202b64aabd644790d92634, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2335,6 +2352,25 @@ PrefabInstance:
     - target: {fileID: 732712437, guid: ca3c6e9b4e202b64aabd644790d92634, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0.76500005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466147677955410662, guid: ca3c6e9b4e202b64aabd644790d92634,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466147677955410662, guid: ca3c6e9b4e202b64aabd644790d92634,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466147677955410662, guid: ca3c6e9b4e202b64aabd644790d92634,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 447232752, guid: ca3c6e9b4e202b64aabd644790d92634, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca3c6e9b4e202b64aabd644790d92634, type: 3}
@@ -2604,6 +2640,11 @@ PrefabInstance:
       propertyPath: cameraToLookAt
       value: 
       objectReference: {fileID: 126853984}
+    - target: {fileID: 2760353254483027801, guid: 3218733221cf0d847ba0bc799effe1e2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3218733221cf0d847ba0bc799effe1e2, type: 3}
 --- !u!1001 &3557304230803652992
