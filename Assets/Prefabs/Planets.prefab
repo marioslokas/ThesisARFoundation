@@ -538,6 +538,7 @@ GameObject:
   - component: {fileID: 1716405824}
   - component: {fileID: 1716405826}
   - component: {fileID: 1716405825}
+  - component: {fileID: 487715957}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -606,6 +607,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Gravitational Attraction: 10'
+--- !u!114 &487715957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716405823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 971ea2ea5e028ed4aac348d2b225a766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraToLookAt: {fileID: 0}
 --- !u!1 &1726498538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,6 +1222,7 @@ GameObject:
   - component: {fileID: 7650284697080185642}
   - component: {fileID: 934946145616854507}
   - component: {fileID: 7902853397921765063}
+  - component: {fileID: 1879798670}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -1276,6 +1291,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Gravitational Attraction: 10'
+--- !u!114 &1879798670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3891771612436197428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 971ea2ea5e028ed4aac348d2b225a766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraToLookAt: {fileID: 0}
 --- !u!1 &4658735157254083930
 GameObject:
   m_ObjectHideFlags: 0

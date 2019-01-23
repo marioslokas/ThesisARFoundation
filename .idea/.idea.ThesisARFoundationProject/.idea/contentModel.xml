@@ -53,6 +53,7 @@
             </e>
           </e>
         </e>
+        <e p="LookAtCamera.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Simple UI" t="Include">
             <e p="Fonts" t="Include">
