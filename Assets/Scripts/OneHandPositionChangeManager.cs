@@ -29,6 +29,8 @@ public class OneHandPositionChangeManager : MonoBehaviour, ITransformHandler
     private Vector3 secondPlanetMaxPosition, secondPlanetMinPosition;
 
     private float adjustPositionValue = 0f, adjustPositionValueNormalized;
+
+    [SerializeField] private UIController _uiController;
     
     void Start()
     {
@@ -54,6 +56,13 @@ public class OneHandPositionChangeManager : MonoBehaviour, ITransformHandler
                 
                 adjustPositionValue += touchDifferenceVector.y;
                 adjustPositionValue = Mathf.Clamp(adjustPositionValue, 0f, Screen.height);
+
+                if (adjustPositionValue==Screen.height)
+                {
+                    // there won't be any message, just to enable the next challenge canvas
+                    _uiController.ShowNextMessage();
+                }
+                
                 adjustPositionValueNormalized = adjustPositionValue / Screen.height;
 
                 _firstPlanetTransform.position = Vector3.Lerp(firstPlanetMinPosition, firstPlanetMaxPosition,

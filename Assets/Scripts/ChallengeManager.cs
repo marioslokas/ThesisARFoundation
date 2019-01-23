@@ -8,6 +8,8 @@ public class ChallengeManager : MonoBehaviour
 {
 
     [SerializeField] private UIController _uiController;
+    [SerializeField] private GameObject _toNextChallengeCanvas;
+    [SerializeField] private GameObject _toNextChallengeButton;
     
     /// <summary>
     /// Challenge class has references to all the objects that need to be enabled to start a challenge
@@ -123,6 +125,9 @@ public class ChallengeManager : MonoBehaviour
         {
             Debug.LogError("No more challenges.");
             _challenges[_challengeCounter - 1].DisableChallengeObjects();
+            
+            _toNextChallengeButton.SetActive(false);
+            
             return;
         }
 
@@ -130,12 +135,14 @@ public class ChallengeManager : MonoBehaviour
         {
             Challenge thisChallenge = _challenges[_challengeCounter];
             thisChallenge.EnableChallengeObjects(centralGamePosition, _uiController);
+            _toNextChallengeCanvas.SetActive(false);
         }
         else
         {
             _challenges[_challengeCounter - 1].DisableChallengeObjects();
             Challenge thisChallenge = _challenges[_challengeCounter];
             thisChallenge.EnableChallengeObjects(centralGamePosition, _uiController);
+            _toNextChallengeCanvas.SetActive(false);
         }
 
         _challengeCounter++;
