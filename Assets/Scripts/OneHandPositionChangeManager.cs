@@ -17,9 +17,7 @@ public class OneHandPositionChangeManager : MonoBehaviour, ITransformHandler
     
     private Vector2 startingTouchPosition;
     [SerializeField] private float touchDelta = 20f;
-    
-    [SerializeField] private Text _gravityValueFirstPlanetText;
-    [SerializeField] private Text _gravityValueSecondPlanetText;
+
     [SerializeField] private Text _debugText;
 
     [Range(5f,15f)]

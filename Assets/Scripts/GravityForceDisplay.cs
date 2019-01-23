@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GravityForceDisplay : MonoBehaviour
 {
 
     [SerializeField] private LineRenderer _gravityForceRenderer;
     [SerializeField] private Transform _otherObject;
+    [SerializeField] private Text gravityTextDisplay;
+
+    [SerializeField] private float lineRendererDevisionValue = 1f;
 
     public Vector3 DirectionToOtherObject { get; private set; }
 
@@ -47,13 +51,14 @@ public class GravityForceDisplay : MonoBehaviour
         distance = DirectionToOtherObject.magnitude;
         _normalizedDirection = DirectionToOtherObject / distance;
 
-        gravitationalPull = (_otherObjectMass / Mathf.Pow(distance, 2) / 1f);
+        gravitationalPull = (_otherObjectMass / Mathf.Pow(distance, 2));
+        gravityTextDisplay.text = "Gravitational Attraction : " + gravitationalPull.ToString("F1");
         
 //        Debug.DrawRay(this.transform.position, DirectionToOtherObject, Color.red);
 
         _minValue = _normalizedDirection * 3f;
         
-        _gravityForceRenderer.SetPosition(1, _normalizedDirection * gravitationalPull);
-        _gravityForceRenderer.SetPosition(2, _normalizedDirection * gravitationalPull  + _normalizedDirection * 2f);
+        _gravityForceRenderer.SetPosition(1, _normalizedDirection * gravitationalPull / lineRendererDevisionValue);
+        _gravityForceRenderer.SetPosition(2, (_normalizedDirection * gravitationalPull / lineRendererDevisionValue)  + _normalizedDirection * 2f);
     }
 }
