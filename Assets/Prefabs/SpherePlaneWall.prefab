@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2120941416
 Transform:
   m_ObjectHideFlags: 0
@@ -28,12 +28,13 @@ Transform:
   m_LocalScale: {x: 0.049999997, y: 0.049999997, z: 0.049999997}
   m_Children:
   - {fileID: 1887762505}
+  - {fileID: 732712437}
   - {fileID: 1053220913}
   - {fileID: 6466147677955410662}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &611840977
+--- !u!1 &732712436
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,36 +42,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 611840978}
-  - component: {fileID: 611840979}
-  m_Layer: 9
-  m_Name: YForce
+  - component: {fileID: 732712437}
+  - component: {fileID: 732712438}
+  m_Layer: 0
+  m_Name: Velocity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &611840978
+  m_IsActive: 1
+--- !u!4 &732712437
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611840977}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 732712436}
+  m_LocalRotation: {x: -0, y: 0.0066758175, z: -0, w: 0.9999777}
+  m_LocalPosition: {x: 0, y: 0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1053220913}
+  m_Father: {fileID: 2120941416}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!120 &611840979
+--- !u!120 &732712438
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611840977}
+  m_GameObject: {fileID: 732712436}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -81,7 +82,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32c7a87a36c72e84b96c968a01bf7dd0, type: 2}
+  - {fileID: 2100000, guid: 6a6b9c0c7ee2ead4196ce045a64c826c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,17 +104,17 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 1, z: 0}
-  - {x: 0, y: 2, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.25
+    widthMultiplier: 0.05
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.03824997
-        value: 0.5138931
+        time: 0
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -125,8 +126,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.039215688, g: 0.9254902, b: 0.12941177, a: 1}
+      key1: {r: 0.039215688, g: 0.9254902, b: 0.12941177, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -155,8 +156,8 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 2
-    shadowBias: 0.5
+    textureMode: 0
+    shadowBias: 0
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0
@@ -301,6 +302,7 @@ GameObject:
   - component: {fileID: 1053220910}
   - component: {fileID: 1053220909}
   - component: {fileID: 1053220908}
+  - component: {fileID: 8406082297308996091}
   m_Layer: 0
   m_Name: SphereNoGravity
   m_TagString: GameBall
@@ -320,9 +322,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 891130460}
-  - {fileID: 611840978}
   m_Father: {fileID: 2120941416}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0.76500005, z: 0}
 --- !u!33 &1053220912
 MeshFilter:
@@ -413,6 +414,20 @@ MonoBehaviour:
   earthG: 0
   gravitySwitch: 0
   gravityPaused: 0
+--- !u!114 &8406082297308996091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053220907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 406838da6e7ba4c47a97e9cd102bacd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereRigidbody: {fileID: 1053220909}
+  velocityVector: {fileID: 732712438}
 --- !u!1 &1309623448
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +687,7 @@ Transform:
   - {fileID: 1309623449}
   - {fileID: 447719120}
   m_Father: {fileID: 2120941416}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &447331408
 PrefabInstance:

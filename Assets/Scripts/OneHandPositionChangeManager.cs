@@ -75,7 +75,10 @@ public class OneHandPositionChangeManager : MonoBehaviour, ITransformHandler
         }
     }
 
-    public void Initialize(Vector3[] centralGamePositions, Transform[] objectTransforms, LineRenderer[] forceLineRenderers,
+    public void Initialize(Vector3[] centralGamePositions, 
+        Transform[] objectTransforms, 
+        GameObject[] lineRendererGameObjects,
+        LineRenderer[] forceLineRenderers,
         Rigidbody[] projectileRigidbodies, bool messageOnFire)
     {
         _firstPlanetTransform = objectTransforms[0];

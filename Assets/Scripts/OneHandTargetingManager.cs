@@ -9,6 +9,7 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
 {
     // required references for a movable object
     private Transform[] movableObjects;
+    private GameObject[] directionRendererGameObjects;
     private LineRenderer[] directionRenderers;
     private Rigidbody[] _movableObjectRigidbodies;
     // Variables used when restarting
@@ -121,6 +122,7 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
 
     public void Initialize(Vector3[] centralGamePositions, 
         Transform[] objectTransforms,
+        GameObject[] lineRendererGameObjects,
         LineRenderer[] forceLineRenderers,
         Rigidbody[] projectileRigidbodies,
         bool messageOnFire
@@ -128,6 +130,7 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
     {
         movableObjectStartingPositions = centralGamePositions;
         movableObjects = objectTransforms;
+        directionRendererGameObjects = lineRendererGameObjects;
         directionRenderers = forceLineRenderers;
 
         _movableObjectRigidbodies = projectileRigidbodies;
@@ -163,6 +166,12 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
         {
             _uiController.ShowNextMessage();
         }
+        
+        // disable force renderer while the object travels
+        for (int i = 0; i < directionRendererGameObjects.Length; i++)
+        {
+            directionRendererGameObjects[i].SetActive(false);
+        }
     }
 
     // switch fire and restart buttons around
@@ -188,6 +197,12 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
             movableObjects[i].rotation = lastAdjustedRotation;
         
             movableObjects[i].position = movableObjectStartingPositions[i]; 
+        }
+        
+        // re-enable line renderers
+        for (int i = 0; i < directionRendererGameObjects.Length; i++)
+        {
+            directionRendererGameObjects[i].SetActive(true);
         }
 
     }

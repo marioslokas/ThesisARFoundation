@@ -53,7 +53,6 @@
             </e>
           </e>
         </e>
-        <e p="LookAtCamera.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Simple UI" t="Include">
             <e p="Fonts" t="Include">
@@ -69,12 +68,15 @@
           <e p="CallSphereOnTap.cs" t="Include" />
           <e p="ChallengeManager.cs" t="Include" />
           <e p="DetectTouchMovement.cs" t="Include" />
+          <e p="DisplayVelocity.cs" t="Include" />
+          <e p="FollowObject.cs" t="Include" />
           <e p="GameSetup.cs" t="Include" />
           <e p="GravityForceDisplay.cs" t="Include" />
           <e p="Interfaces" t="Include">
             <e p="ITransformHandler.cs" t="Include" />
             <e p="IUpdatable.cs" t="Include" />
           </e>
+          <e p="LookAtCamera.cs" t="Include" />
           <e p="ManualGravity.cs" t="Include" />
           <e p="MessageOnCollision.cs" t="Include" />
           <e p="MessagesManager.cs" t="Include" />

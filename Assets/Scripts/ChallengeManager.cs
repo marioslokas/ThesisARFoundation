@@ -32,6 +32,8 @@ public class ChallengeManager : MonoBehaviour
 
         private Vector3[] mainGameObjectPositions;
         private Transform[] mainGameObjectTransforms;
+        // for switching on/off
+        private GameObject[] lineRendererGameObjects;
         private LineRenderer[] mainGameObjectLineRenderers;
         private Rigidbody[] mainGameObjectsRigidbodies;
         
@@ -45,6 +47,7 @@ public class ChallengeManager : MonoBehaviour
             
             mainGameObjectPositions = new Vector3[mainGameObjects.Length];
             mainGameObjectTransforms = new Transform[mainGameObjects.Length];
+            lineRendererGameObjects = new GameObject[mainGameObjects.Length];
             mainGameObjectLineRenderers = new LineRenderer[mainGameObjects.Length];
             mainGameObjectsRigidbodies = new Rigidbody[mainGameObjects.Length];
             
@@ -52,7 +55,9 @@ public class ChallengeManager : MonoBehaviour
             {
                 mainGameObjectPositions[i] = mainGameObjects[i].transform.position;
                 mainGameObjectTransforms[i] = mainGameObjects[i].transform;
-                mainGameObjectLineRenderers[i] = mainGameObjects[i].GetComponentInChildren<LineRenderer>();
+                lineRendererGameObjects[i] = mainGameObjectTransforms[i].GetChild(0).gameObject;
+                
+                mainGameObjectLineRenderers[i] = lineRendererGameObjects[i].GetComponent<LineRenderer>();
                 mainGameObjectsRigidbodies[i] = mainGameObjects[i].GetComponent<Rigidbody>();
                 // activate main game objects
                 mainGameObjects[i].SetActive(true);
@@ -62,6 +67,7 @@ public class ChallengeManager : MonoBehaviour
             // initialize targeting manager
             _targetingManager.GetComponent<ITransformHandler>().Initialize(mainGameObjectPositions,
                 mainGameObjectTransforms,
+                lineRendererGameObjects,
                 mainGameObjectLineRenderers,
                 mainGameObjectsRigidbodies,
                 playMessageOnFire);
