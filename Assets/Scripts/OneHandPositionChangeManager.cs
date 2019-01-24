@@ -36,7 +36,7 @@ public class OneHandPositionChangeManager : MonoBehaviour, ITransformHandler
     
     private void CalculateGuidingArrowPosition()
     {
-        Vector3 targetPosition = (_firstPlanetTransform.position + _secondPlanetTransform.position)/2;
+        Vector3 targetPosition = (_firstPlanetTransform.position);
         
         // is the object visible?
         Vector3 targetViewportPosition = mainCamera.WorldToViewportPoint(targetPosition);

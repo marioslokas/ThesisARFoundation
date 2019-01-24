@@ -667,14 +667,15 @@ PrefabInstance:
     - target: {fileID: 2109168530289459953, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 65
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 2109168530289459953, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6,
         type: 3}
       propertyPath: m_Text
-      value: To play this game, use your phone to 'scan' your surroundings. Move the
-        phone until a surface has been located. Also, make sure you are in a place
-        with good lighting. The video below shows an example of how to find a surface.
+      value: To play this simulation, use your phone to 'scan' your surroundings.
+        Look around with the camera until a surface has been located. Make sure you
+        are holding the device upright, and when ready press start. See the video
+        below for an example of how to find a surface.
       objectReference: {fileID: 0}
     - target: {fileID: 1152755807, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6, type: 3}
       propertyPath: m_Name

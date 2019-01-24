@@ -955,7 +955,7 @@ MonoBehaviour:
     mainMessages:
     - What will happen if you do the same now?
     secondaryMessages:
-    - 'On Earth, there is both friction and gravity. Also, the ball is '
+    - On Earth, there is both air friction and gravity.
   - startWithMessage: 1
     playMessageOnFire: 1
     _messageManager: {fileID: 397975117}
