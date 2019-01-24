@@ -31,14 +31,35 @@ public class OneHandPositionChangeManager : MonoBehaviour, ITransformHandler
     private float adjustPositionValue = 0f, adjustPositionValueNormalized;
 
     [SerializeField] private UIController _uiController;
+    [SerializeField] private Camera mainCamera;
+    [SerializeField] private RectTransform _arrowPointer;
     
-    void Start()
+    private void CalculateGuidingArrowPosition()
     {
+        Vector3 targetPosition = (_firstPlanetTransform.position + _secondPlanetTransform.position)/2;
         
+        // is the object visible?
+        Vector3 targetViewportPosition = mainCamera.WorldToViewportPoint(targetPosition);
+
+        if (targetViewportPosition.x > 0f 
+            && targetViewportPosition.x < 1f 
+            && targetViewportPosition.y > 0f && targetViewportPosition.y < 1f && targetViewportPosition.z > 0f)
+        {
+            _arrowPointer.gameObject.SetActive(false);
+        }
+        else
+        {
+            _arrowPointer.gameObject.SetActive(true);
+            var targetPosLocal = mainCamera.transform.InverseTransformPoint(targetPosition);
+            var targetAngle = -Mathf.Atan2(targetPosLocal.x, targetPosLocal.y) * Mathf.Rad2Deg - 90;
+            _arrowPointer.eulerAngles = new Vector3(0, 0, targetAngle);
+        }
     }
 
     void Update()
     {
+        CalculateGuidingArrowPosition();
+        
         if (Input.touchCount <= 0) return;
         
         if (Input.touchCount == 1)

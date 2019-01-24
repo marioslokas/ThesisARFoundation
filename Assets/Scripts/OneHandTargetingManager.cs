@@ -49,9 +49,6 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
 
     private void CalculateGuidingArrowPosition()
     {
-
-        
-        
         Vector3 targetPosition = Vector3.zero;
         if (movableObjects.Length == 1)
         {
@@ -84,8 +81,6 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
             var targetAngle = -Mathf.Atan2(targetPosLocal.x, targetPosLocal.y) * Mathf.Rad2Deg - 90;
             _arrowPointer.eulerAngles = new Vector3(0, 0, targetAngle);
         }
-        
-        
     }
 
     void Update()
