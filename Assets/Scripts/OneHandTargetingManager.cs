@@ -35,6 +35,9 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
     [SerializeField] private Text _forceValueText;
     [SerializeField] private UIController _uiController;
 
+    [SerializeField] private RectTransform _arrowPointer;
+    [SerializeField] private Camera mainCamera;
+
     void Start()
     {
 //        for (int i = 0; i < _movableObjectRigidbodies.Length; i++)
@@ -44,9 +47,51 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
         
     }
 
+    private void CalculateGuidingArrowPosition()
+    {
+
+        
+        
+        Vector3 targetPosition = Vector3.zero;
+        if (movableObjects.Length == 1)
+        {
+            targetPosition = movableObjects[0].position;
+        }
+        else
+        {
+            for (int i = 0; i < movableObjects.Length; i++)
+            {
+                targetPosition += movableObjects[i].position;
+            }
+
+            targetPosition /= movableObjects.Length;
+
+        }
+        
+        // is the object visible?
+        Vector3 targetViewportPosition = mainCamera.WorldToViewportPoint(targetPosition);
+
+        if (targetViewportPosition.x > 0f 
+            && targetViewportPosition.x < 1f 
+            && targetViewportPosition.y > 0f && targetViewportPosition.y < 1f && targetViewportPosition.z > 0f)
+        {
+            _arrowPointer.gameObject.SetActive(false);
+        }
+        else
+        {
+            _arrowPointer.gameObject.SetActive(true);
+            var targetPosLocal = mainCamera.transform.InverseTransformPoint(targetPosition);
+            var targetAngle = -Mathf.Atan2(targetPosLocal.x, targetPosLocal.y) * Mathf.Rad2Deg - 90;
+            _arrowPointer.eulerAngles = new Vector3(0, 0, targetAngle);
+        }
+        
+        
+    }
+
     void Update()
     {
-            
+        CalculateGuidingArrowPosition();
+        
         if (Input.touchCount <= 0) return;
         
         if (Input.touchCount == 1)
@@ -118,6 +163,8 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
                 _forceValueText.gameObject.SetActive(false);
             }
         }
+        
+        
     }
 
     public void Initialize(Vector3[] centralGamePositions, 
