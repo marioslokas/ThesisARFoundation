@@ -1180,6 +1180,9 @@ MonoBehaviour:
   _eyeRaycaster: {fileID: 553605771}
   _challengeManager: {fileID: 583401016}
   _prepareGameCanvas: {fileID: 1940341960}
+  _helpMessage: Try to stand up and look down and around.
+  _additionalhelpText: {fileID: 6877756619325314679}
+  waitingTime: 8
 --- !u!54 &985711710 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 985711710, guid: 0b31cd5373e1ce945b57b7176dc9d4d7,
@@ -3133,6 +3136,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa72a3736b96b840a3f1ecb264ef6a6, type: 3}
+--- !u!114 &6877756619325314679 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 959162786, guid: 1aa72a3736b96b840a3f1ecb264ef6a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 6877756619325314678}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7503831275378746444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7503831275378746444, guid: 3218733221cf0d847ba0bc799effe1e2,
