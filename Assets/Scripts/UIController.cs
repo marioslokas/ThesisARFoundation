@@ -27,16 +27,30 @@ public class UIController : MonoBehaviour
         
         ShowNextMessage();
     }
+    
+    
 
     public void ShowNextMessage()
     {
+        // play message if there are still messages
         if (_messagesManager.HasNextMessage())
         {
             _adjustSimulationCanvas.SetActive(false);   
             _messagesCanvas.SetActive(true);
+            
+            // raises the message counter
             _messagesManager.NextMessage();
         }
         else
+        {
+            _toNextChallengeCanvas.SetActive(true);
+        }
+        
+    }
+
+    public void EnableNextChallengeIfNoMessages()
+    {
+        if (!_messagesManager.HasNextMessage())
         {
             _toNextChallengeCanvas.SetActive(true);
         }
@@ -48,6 +62,7 @@ public class UIController : MonoBehaviour
         _messagesCanvas.SetActive(false);
         
         UpdateManager.instance.ResumeUpdates();
+
     }
 
     public void ToMainMenu()

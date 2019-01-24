@@ -79,6 +79,7 @@
           <e p="LookAtCamera.cs" t="Include" />
           <e p="ManualGravity.cs" t="Include" />
           <e p="MessageOnCollision.cs" t="Include" />
+          <e p="MessageOnTriggerExit.cs" t="Include" />
           <e p="MessagesManager.cs" t="Include" />
           <e p="MyUpdatableBehaviour.cs" t="Include" />
           <e p="OneHandPositionChangeManager.cs" t="Include" />

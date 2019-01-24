@@ -472,37 +472,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 494065585, guid: 2b1c28cb88656f7478c60f49edadeaa6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.81
+    - target: {fileID: 827637413, guid: 2b1c28cb88656f7478c60f49edadeaa6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 494065585, guid: 2b1c28cb88656f7478c60f49edadeaa6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 494065585, guid: 2b1c28cb88656f7478c60f49edadeaa6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.0066758175
-      objectReference: {fileID: 0}
-    - target: {fileID: 494065585, guid: 2b1c28cb88656f7478c60f49edadeaa6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 494065585, guid: 2b1c28cb88656f7478c60f49edadeaa6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9999777
-      objectReference: {fileID: 0}
-    - target: {fileID: 494065585, guid: 2b1c28cb88656f7478c60f49edadeaa6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.76500005
-      objectReference: {fileID: 0}
-    - target: {fileID: 3995463910844327810, guid: 2b1c28cb88656f7478c60f49edadeaa6,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1344377009, guid: 2b1c28cb88656f7478c60f49edadeaa6, type: 3}
+    - target: {fileID: 827637412, guid: 2b1c28cb88656f7478c60f49edadeaa6, type: 3}
+      propertyPath: _uiController
+      value: 
+      objectReference: {fileID: 1822251479}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b1c28cb88656f7478c60f49edadeaa6, type: 3}
 --- !u!4 &160677550 stripped
 Transform:
@@ -871,45 +849,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 466273797}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &494065584 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 494065584, guid: 2b1c28cb88656f7478c60f49edadeaa6,
-    type: 3}
-  m_PrefabInstance: {fileID: 160677549}
-  m_PrefabAsset: {fileID: 0}
---- !u!120 &494065586 stripped
-LineRenderer:
-  m_CorrespondingSourceObject: {fileID: 494065586, guid: 2b1c28cb88656f7478c60f49edadeaa6,
-    type: 3}
-  m_PrefabInstance: {fileID: 160677549}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &494065587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 494065584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 406838da6e7ba4c47a97e9cd102bacd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sphereRigidbody: {fileID: 1344377010}
-  velocityVector: {fileID: 494065586}
---- !u!114 &494065588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 494065584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bac4d8ab9a35504cad552d03aab2658, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TransformToFollow: {fileID: 1344377014}
 --- !u!1 &507556046 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 507556046, guid: ca3c6e9b4e202b64aabd644790d92634,
@@ -1020,7 +959,7 @@ MonoBehaviour:
     mainMessages:
     - What will happen if you do the same now?
     secondaryMessages:
-    - On Earth, there is both air resistance and gravity.
+    - 'On Earth, there is both friction and gravity. Also, the ball is '
   - startWithMessage: 1
     playMessageOnFire: 1
     _messageManager: {fileID: 397975117}
@@ -1047,11 +986,8 @@ MonoBehaviour:
     - {fileID: 672119066}
     mainMessages:
     - Try and aim for that meteorite you can see.
-    - The sphere collided with the meteorite's surface.
     secondaryMessages:
     - Remember that the meteorite has many times the sphere's mass.
-    - The meteorite mass is really big compared to the sphere. What will happen to
-      both objects?
   centralGamePosition: {x: 0, y: 0, z: 0}
 --- !u!1 &672119066
 GameObject:
@@ -1511,18 +1447,6 @@ GameObject:
 --- !u!1 &1344377008 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3995463910702506273, guid: 2b1c28cb88656f7478c60f49edadeaa6,
-    type: 3}
-  m_PrefabInstance: {fileID: 160677549}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1344377010 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 3995463910702506259, guid: 2b1c28cb88656f7478c60f49edadeaa6,
-    type: 3}
-  m_PrefabInstance: {fileID: 160677549}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1344377014 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3995463910702506266, guid: 2b1c28cb88656f7478c60f49edadeaa6,
     type: 3}
   m_PrefabInstance: {fileID: 160677549}
   m_PrefabAsset: {fileID: 0}

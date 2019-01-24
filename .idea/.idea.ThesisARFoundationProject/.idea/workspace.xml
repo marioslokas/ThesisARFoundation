@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d552ab52-1952-4766-9627-21f01fff0f88" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GravityARScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GravityARScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/IntroScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IntroScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewtonARScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewtonARScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,7 +18,7 @@
       <file leaf-file-name="ITransformHandler.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/ITransformHandler.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="120">
               <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
             </state>
           </provider>
@@ -29,43 +28,16 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandPositionChangeManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+              <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GravityForceDisplay.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="54" column="98" selection-start-line="54" selection-start-column="98" selection-end-line="54" selection-end-column="98" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChallengeManager.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChallengeManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="136" column="85" selection-start-line="136" selection-start-column="85" selection-end-line="136" selection-end-column="85" />
-              <folding>
-                <marker date="1548258654166" expanded="false" signature="6:111" ph="..." />
-                <marker date="1548258654166" expanded="true" signature="158:5727" ph="{...}" />
-                <marker date="1548258654166" expanded="true" signature="356:491" ph="/// Challenge class has references to all the objects that need to be enabled to start a challenge ... " />
-                <marker date="1548258654166" expanded="true" signature="530:4520" ph="{...}" />
-                <marker date="1548258654166" expanded="true" signature="1566:3982" ph="{...}" />
-                <marker date="1548258654166" expanded="true" signature="2274:2874" ph="{...}" />
-                <marker date="1548258654166" expanded="true" signature="3625:3732" ph="{...}" />
-                <marker date="1548258654166" expanded="true" signature="3880:3972" ph="{...}" />
-                <marker date="1548258654166" expanded="true" signature="4029:4514" ph="{...}" />
-                <marker date="1548258654166" expanded="true" signature="4100:4183" ph="{...}" />
-                <marker date="1548258654166" expanded="true" signature="4411:4504" ph="{...}" />
-                <marker date="1548258654166" expanded="true" signature="4683:4771" ph="/// Start the next challenge. Disable the previous. ... " />
-                <marker date="1548258654166" expanded="true" signature="4803:5724" ph="{...}" />
-                <marker date="1548258654166" expanded="true" signature="4862:5106" ph="{...}" />
-                <marker date="1548258654166" expanded="true" signature="5143:5372" ph="{...}" />
-                <marker date="1548258654166" expanded="true" signature="5385:5688" ph="{...}" />
-              </folding>
+            <state relative-caret-position="417">
+              <caret line="146" column="50" selection-start-line="146" selection-start-column="50" selection-end-line="146" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -73,7 +45,7 @@
       <file leaf-file-name="GameSetup.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
+            <state relative-caret-position="1260">
               <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
             </state>
           </provider>
@@ -82,8 +54,23 @@
       <file leaf-file-name="MessageOnCollision.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/MessageOnCollision.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+            <state relative-caret-position="105">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageOnTriggerExit.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/MessageOnTriggerExit.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+              <folding>
+                <marker date="1548343832929" expanded="false" signature="6:78" ph="..." />
+                <marker date="1548343832929" expanded="true" signature="129:369" ph="{...}" />
+                <marker date="1548343832929" expanded="true" signature="237:366" ph="{...}" />
+                <marker date="1548343832929" expanded="true" signature="295:360" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,17 +78,17 @@
       <file leaf-file-name="UIController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UIController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+            <state relative-caret-position="372">
+              <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OneHandTargetingManager.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs">
+      <file leaf-file-name="MessagesManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/MessagesManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="66" column="35" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="35" />
+            <state relative-caret-position="255">
+              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -109,7 +96,7 @@
       <file leaf-file-name="BaseSingleton.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Imported/WanzyeeStudio/Scripts/Runtime/Component/Common/BaseSingleton.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
+            <state relative-caret-position="765">
               <caret line="51" column="41" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="41" />
             </state>
           </provider>
@@ -118,7 +105,7 @@
       <file leaf-file-name="DisplayVelocity.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/DisplayVelocity.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
+            <state relative-caret-position="480">
               <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
             </state>
           </provider>
@@ -128,9 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>currentTouchPosition</find>
-      <find>lastAdjustedRotation</find>
-      <find>turnAngleDelta</find>
       <find>false</find>
       <find>unitye</find>
       <find>updatableVelocities</find>
@@ -158,6 +142,9 @@
       <find>autoDestroy</find>
       <find>ch</find>
       <find>_gravityValueSecondPlanetText</find>
+      <find>ShowNextMessage</find>
+      <find>uico</find>
+      <find>_uiController</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,6 +154,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CallSphereOnTap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UpdateTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Imported/GazeUI For Canvas/Scripts/UI/EyeRaycaster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessageOnTriggerExit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.arfoundation@1.0.0-preview.22/Runtime/AR/ARSessionOrigin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Imported/ARFoundation/Scripts/DisableVerticalPlanes.cs" root0="FORCE_HIGHLIGHTING" />
@@ -188,7 +176,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TargetingManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.arfoundation@1.0.0-preview.22/Runtime/AR/ARPointCloudManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessagesManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs" root0="FORCE_HIGHLIGHTING" />
@@ -220,11 +208,9 @@
         <option value="$PROJECT_DIR$/Assets/PrepareGame.cs" />
         <option value="$PROJECT_DIR$/Assets/Imported/GazeUI For Canvas/Scripts/UI/EyeRaycaster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UpdateManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MessagesManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BlinkText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MirrorGravitySphere.cs" />
         <option value="$PROJECT_DIR$/Assets/MessageOnCollision.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MessageOnCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PrepareGame.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs" />
         <option value="$PROJECT_DIR$/Assets/LookAtCamera.cs" />
@@ -233,9 +219,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FollowObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DisplayVelocity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OneHandPositionChangeManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UIController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSetup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MessagesManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MessageOnCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MessageOnTriggerExit.cs" />
       </list>
     </option>
   </component>
@@ -250,10 +239,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-file-system" value="false" />
-        <option name="show-all-items" value="false" />
-      </pane>
       <pane id="Scratches" />
       <pane id="UnityExplorer">
         <subPane>
@@ -272,11 +257,15 @@
         </subPane>
         <option name="show-hidden-items" value="false" />
       </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="gamese&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/GameSetup.cs&#10;cha&#9;null&#9;null&#10;i&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/Interfaces/ITransformHandler.cs&#10;messa&#9;null&#9;null&#10;prep&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;up&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/UpdateManager.cs&#10;prepa&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;setta&#9;null&#9;null&#10;pre&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;detect&#9;null&#9;null&#10;base&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="messa&#9;null&#9;null&#10;gamese&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/GameSetup.cs&#10;cha&#9;null&#9;null&#10;i&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/Interfaces/ITransformHandler.cs&#10;prep&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;up&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/UpdateManager.cs&#10;prepa&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;setta&#9;null&#9;null&#10;pre&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;detect&#9;null&#9;null&#10;base&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -319,12 +308,13 @@
       <workItem from="1547733161974" duration="9289000" />
       <workItem from="1548090093520" duration="4640000" />
       <workItem from="1548155748124" duration="16677000" />
-      <workItem from="1548245132782" duration="10865000" />
+      <workItem from="1548245132782" duration="11552000" />
+      <workItem from="1548342735764" duration="1091000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131836000" />
+    <option name="totallyTimeSpent" value="133614000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -346,9 +336,10 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08623298" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08698941" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unity" order="7" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.31466228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3970346" />
@@ -359,7 +350,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.31466228" />
     </layout>
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
@@ -387,13 +377,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Imported/ARFoundation/Scripts/PlaceOnPlane.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -573,13 +556,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MirrorGravitySphere.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/MessageOnCollision.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MessagesManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/UpdateManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
@@ -594,23 +570,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/LookAtCamera.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LookAtCamera.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="810">
           <caret line="54" column="98" selection-start-line="54" selection-start-column="98" selection-end-line="54" selection-end-column="98" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/ITransformHandler.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="120">
           <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
         </state>
       </provider>
@@ -619,85 +589,115 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <marker date="1548255698344" expanded="false" signature="6:78" ph="..." />
-            <marker date="1548255698344" expanded="true" signature="122:717" ph="{...}" />
-            <marker date="1548255698344" expanded="true" signature="282:567" ph="{...}" />
-            <marker date="1548255698344" expanded="true" signature="627:715" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/DisplayVelocity.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
+        <state relative-caret-position="480">
           <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="66" column="35" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Imported/WanzyeeStudio/Scripts/Runtime/Component/Common/BaseSingleton.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
+        <state relative-caret-position="765">
           <caret line="51" column="41" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MessageOnCollision.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UIController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandPositionChangeManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
+        <state relative-caret-position="1260">
           <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="136" column="85" selection-start-line="136" selection-start-column="85" selection-end-line="136" selection-end-column="85" />
+        <state relative-caret-position="417">
+          <caret line="146" column="50" selection-start-line="146" selection-start-column="50" selection-end-line="146" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandPositionChangeManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MessagesManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UIController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1588">
+          <caret line="35" column="55" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="55" />
           <folding>
-            <marker date="1548258654166" expanded="false" signature="6:111" ph="..." />
-            <marker date="1548258654166" expanded="true" signature="158:5727" ph="{...}" />
-            <marker date="1548258654166" expanded="true" signature="356:491" ph="/// Challenge class has references to all the objects that need to be enabled to start a challenge ... " />
-            <marker date="1548258654166" expanded="true" signature="530:4520" ph="{...}" />
-            <marker date="1548258654166" expanded="true" signature="1566:3982" ph="{...}" />
-            <marker date="1548258654166" expanded="true" signature="2274:2874" ph="{...}" />
-            <marker date="1548258654166" expanded="true" signature="3625:3732" ph="{...}" />
-            <marker date="1548258654166" expanded="true" signature="3880:3972" ph="{...}" />
-            <marker date="1548258654166" expanded="true" signature="4029:4514" ph="{...}" />
-            <marker date="1548258654166" expanded="true" signature="4100:4183" ph="{...}" />
-            <marker date="1548258654166" expanded="true" signature="4411:4504" ph="{...}" />
-            <marker date="1548258654166" expanded="true" signature="4683:4771" ph="/// Start the next challenge. Disable the previous. ... " />
-            <marker date="1548258654166" expanded="true" signature="4803:5724" ph="{...}" />
-            <marker date="1548258654166" expanded="true" signature="4862:5106" ph="{...}" />
-            <marker date="1548258654166" expanded="true" signature="5143:5372" ph="{...}" />
-            <marker date="1548258654166" expanded="true" signature="5385:5688" ph="{...}" />
+            <marker date="1548249876904" expanded="false" signature="6:183" ph="..." />
+            <marker date="1548249876904" expanded="true" signature="256:8166" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="1286:1490" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="1293:1475" ph="/* for (int i = 0; i &lt; _movableObjectRigidbodies.Length; i++) ... */" />
+            <marker date="1548249876904" expanded="true" signature="1509:4372" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="1615:4366" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="1725:1860" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="1921:4082" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="2080:3042" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="2468:2669" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="3087:3399" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="3173:3309" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="3500:3995" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="3615:3762" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="3787:3934" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="4141:4356" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="4640:5491" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="5050:5399" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="5208:5286" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="5303:5389" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="5521:6067" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="5594:5748" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="5776:5841" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="5979:6061" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="6145:6275" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="6357:6447" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="6474:7047" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="6536:6844" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="6959:7040" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="7205:8164" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="7554:7737" ph="{...}" />
+            <marker date="1548249876904" expanded="true" signature="7750:8006" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MessageOnCollision.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MessageOnTriggerExit.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <marker date="1548343832929" expanded="false" signature="6:78" ph="..." />
+            <marker date="1548343832929" expanded="true" signature="129:369" ph="{...}" />
+            <marker date="1548343832929" expanded="true" signature="237:366" ph="{...}" />
+            <marker date="1548343832929" expanded="true" signature="295:360" ph="{...}" />
           </folding>
         </state>
       </provider>
