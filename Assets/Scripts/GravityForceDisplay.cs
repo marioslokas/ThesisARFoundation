@@ -52,7 +52,7 @@ public class GravityForceDisplay : MonoBehaviour
         _normalizedDirection = DirectionToOtherObject / distance;
 
         gravitationalPull = (_otherObjectMass / Mathf.Pow(distance, 2));
-        gravityTextDisplay.text = "Gravitational Attraction : " + gravitationalPull.ToString("F1");
+//        gravityTextDisplay.text = "Gravitational Attraction : " + gravitationalPull.ToString("F1");
         
 //        Debug.DrawRay(this.transform.position, DirectionToOtherObject, Color.red);
 

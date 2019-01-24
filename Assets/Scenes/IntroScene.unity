@@ -672,7 +672,7 @@ PrefabInstance:
     - target: {fileID: 2109168530289459953, guid: 3dfee3ff6080bd1429dd5d0f07ef19c6,
         type: 3}
       propertyPath: m_Text
-      value: To play this game, use your phone to 'scan' your surroundings. Pan the
+      value: To play this game, use your phone to 'scan' your surroundings. Move the
         phone until a surface has been located. Also, make sure you are in a place
         with good lighting. The video below shows an example of how to find a surface.
       objectReference: {fileID: 0}

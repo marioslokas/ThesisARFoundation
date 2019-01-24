@@ -417,6 +417,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneAndSphere
       objectReference: {fileID: 0}
+    - target: {fileID: 3995463911354102791, guid: 2b1c28cb88656f7478c60f49edadeaa6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3995463911354102790, guid: 2b1c28cb88656f7478c60f49edadeaa6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -947,7 +952,7 @@ MonoBehaviour:
     secondaryMessages:
     - Use your thumb to change the direction and magnitude of a force to be applied
       on it. When you are ready, press Fire.
-    - Remember that there is no gravity or resistance from air in space.
+    - Remember that there is no gravity or air friction in space.
   - startWithMessage: 1
     playMessageOnFire: 1
     _messageManager: {fileID: 397975117}
@@ -2110,6 +2115,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneAndSphere-withGravity
       objectReference: {fileID: 0}
+    - target: {fileID: 189887358, guid: 0b31cd5373e1ce945b57b7176dc9d4d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 985711710, guid: 0b31cd5373e1ce945b57b7176dc9d4d7, type: 3}
+      propertyPath: m_Drag
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1942391367, guid: 0b31cd5373e1ce945b57b7176dc9d4d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2182,6 +2195,32 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 985711711, guid: 0b31cd5373e1ce945b57b7176dc9d4d7, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: c3d093887dcc1cb47b1a036217e09a1b,
+        type: 2}
+    - target: {fileID: 985711709, guid: 0b31cd5373e1ce945b57b7176dc9d4d7, type: 3}
+      propertyPath: earthG
+      value: 1.962
+      objectReference: {fileID: 0}
+    - target: {fileID: 907349847, guid: 0b31cd5373e1ce945b57b7176dc9d4d7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 907349847, guid: 0b31cd5373e1ce945b57b7176dc9d4d7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 907349847, guid: 0b31cd5373e1ce945b57b7176dc9d4d7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 907349848, guid: 0b31cd5373e1ce945b57b7176dc9d4d7, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: c3d093887dcc1cb47b1a036217e09a1b,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b31cd5373e1ce945b57b7176dc9d4d7, type: 3}
 --- !u!4 &1942391367 stripped

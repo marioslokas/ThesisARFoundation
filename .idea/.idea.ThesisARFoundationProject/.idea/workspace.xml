@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d552ab52-1952-4766-9627-21f01fff0f88" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ARFoundation/Materials/PhysicsMaterials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ARFoundation/Materials/PhysicsMaterials/Bouncy.physicMaterial" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ARFoundation/Materials/PhysicsMaterials/Bouncy.physicMaterial.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GravityARScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GravityARScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/IntroScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IntroScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewtonARScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewtonARScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,20 +19,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ITransformHandler.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/ITransformHandler.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="OneHandPositionChangeManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandPositionChangeManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
               <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GravityForceDisplay.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManualGravity.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ManualGravity.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-33">
+              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+              <folding>
+                <marker date="1546612768594" expanded="false" signature="6:78" ph="..." />
+                <marker date="1546612768594" expanded="true" signature="129:964" ph="{...}" />
+                <marker date="1546612768594" expanded="true" signature="415:552" ph="{...}" />
+                <marker date="1546612768594" expanded="true" signature="578:904" ph="{...}" />
+                <marker date="1546612768594" expanded="true" signature="607:768" ph="{...}" />
+                <marker date="1546612768594" expanded="true" signature="796:836" ph="{...}" />
+                <marker date="1546612768594" expanded="true" signature="941:962" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,17 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageOnTriggerExit.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MessageOnTriggerExit.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/MessageOnTriggerExit.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-              <folding>
-                <marker date="1548343832929" expanded="false" signature="6:78" ph="..." />
-                <marker date="1548343832929" expanded="true" signature="129:369" ph="{...}" />
-                <marker date="1548343832929" expanded="true" signature="237:366" ph="{...}" />
-                <marker date="1548343832929" expanded="true" signature="295:360" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -98,15 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="765">
               <caret line="51" column="41" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DisplayVelocity.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/DisplayVelocity.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -176,7 +183,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TargetingManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.arfoundation@1.0.0-preview.22/Runtime/AR/ARPointCloudManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessagesManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs" root0="FORCE_HIGHLIGHTING" />
@@ -212,7 +219,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MirrorGravitySphere.cs" />
         <option value="$PROJECT_DIR$/Assets/MessageOnCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PrepareGame.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs" />
         <option value="$PROJECT_DIR$/Assets/LookAtCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/ITransformHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs" />
@@ -225,10 +231,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MessageOnCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MessageOnTriggerExit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="170" />
     <option name="y" value="91" />
     <option name="width" value="1026" />
@@ -265,7 +272,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="messa&#9;null&#9;null&#10;gamese&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/GameSetup.cs&#10;cha&#9;null&#9;null&#10;i&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/Interfaces/ITransformHandler.cs&#10;prep&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;up&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/UpdateManager.cs&#10;prepa&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;setta&#9;null&#9;null&#10;pre&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;detect&#9;null&#9;null&#10;base&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="manua&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/ManualGravity.cs&#10;messa&#9;null&#9;null&#10;gamese&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/GameSetup.cs&#10;cha&#9;null&#9;null&#10;i&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/Interfaces/ITransformHandler.cs&#10;prep&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;up&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/UpdateManager.cs&#10;prepa&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;setta&#9;null&#9;null&#10;pre&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;detect&#9;null&#9;null&#10;base&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -309,12 +316,12 @@
       <workItem from="1548090093520" duration="4640000" />
       <workItem from="1548155748124" duration="16677000" />
       <workItem from="1548245132782" duration="11552000" />
-      <workItem from="1548342735764" duration="1091000" />
+      <workItem from="1548342735764" duration="2293000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133614000" />
+    <option name="totallyTimeSpent" value="134816000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -326,7 +333,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -530,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ManualGravity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Imported/ARFoundation/Scripts/SetTargetFramerate.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -571,13 +571,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/LookAtCamera.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="98" selection-start-line="54" selection-start-column="98" selection-end-line="54" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/ITransformHandler.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -693,11 +686,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ManualGravity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
           <folding>
-            <marker date="1548343832929" expanded="false" signature="6:78" ph="..." />
-            <marker date="1548343832929" expanded="true" signature="129:369" ph="{...}" />
-            <marker date="1548343832929" expanded="true" signature="237:366" ph="{...}" />
-            <marker date="1548343832929" expanded="true" signature="295:360" ph="{...}" />
+            <marker date="1546612768594" expanded="false" signature="6:78" ph="..." />
+            <marker date="1546612768594" expanded="true" signature="129:964" ph="{...}" />
+            <marker date="1546612768594" expanded="true" signature="415:552" ph="{...}" />
+            <marker date="1546612768594" expanded="true" signature="578:904" ph="{...}" />
+            <marker date="1546612768594" expanded="true" signature="607:768" ph="{...}" />
+            <marker date="1546612768594" expanded="true" signature="796:836" ph="{...}" />
+            <marker date="1546612768594" expanded="true" signature="941:962" ph="{...}" />
           </folding>
         </state>
       </provider>
