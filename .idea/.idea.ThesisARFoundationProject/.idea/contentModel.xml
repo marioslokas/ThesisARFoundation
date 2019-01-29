@@ -70,6 +70,7 @@
           <e p="ChangeColor.cs" t="Include" />
           <e p="DetectTouchMovement.cs" t="Include" />
           <e p="DisplayVelocity.cs" t="Include" />
+          <e p="DoubleDirectionTargetingManager.cs" t="Include" />
           <e p="FollowObject.cs" t="Include" />
           <e p="GameSetup.cs" t="Include" />
           <e p="GravityForceDisplay.cs" t="Include" />

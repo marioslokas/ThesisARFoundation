@@ -1,12 +1,13 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Quaternion = UnityEngine.Quaternion;
-using Vector2 = UnityEngine.Vector2;
-using Vector3 = UnityEngine.Vector3;
 
-public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
+public class DoubleDirectionTargetingManager : MonoBehaviour, ITransformHandler
 {
+    // secondary force renderer
+    private LineRenderer secondaryForceRenderer;
+    
     // required references for a movable object
     private Transform[] movableObjects;
     private GameObject[] directionRendererGameObjects;
@@ -125,11 +126,13 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
 
                     for (int i = 0; i < directionRenderers.Length; i++)
                     {
-                        AdjustLineRendererPosition(directionRenderers[i], _movableObjectRigidbodies[i], yDifference, Vector2.right, out _forceToObjects[i]);
+                        AdjustLineRendererPosition(directionRenderers[i], yDifference, Vector2.right, out _forceToObjects[i]);
                     }
-                    
 
-//                    if (_secondaryMovableObject) AdjustLineRendererPosition(_secondaryObjectLineRenderer, yDifference, Vector2.right, out _forceToObject);
+                    if (secondaryForceRenderer != null)
+                    {
+                        AdjustSecondaryRendererPosition(secondaryForceRenderer,  yDifference, Vector2.right);
+                    }
                     
                     
                     _forceValueText.text = "Force: " + (_forceToObjects[0].x * pushForce).ToString("F1") + " N";
@@ -190,6 +193,10 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
         directionRenderers = forceLineRenderers;
 
         _movableObjectRigidbodies = projectileRigidbodies;
+        
+        // double direction: objectTransform[0] has two line renderers
+        LineRenderer[] renderers = movableObjects[0].GetComponentsInChildren<LineRenderer>();
+        secondaryForceRenderer = renderers[1];
 
         _forceToObjects = new Vector2[forceLineRenderers.Length];
 
@@ -213,6 +220,12 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
 
     public void FireObject()
     {
+        // apply the same force on both axis
+        if (secondaryForceRenderer)
+        {
+            _forceToObjects[0] = new Vector2(_forceToObjects[0].x,_forceToObjects[0].x);
+        }
+        
         for (int i = 0; i < _movableObjectRigidbodies.Length; i++)
         {
             _movableObjectRigidbodies[i].AddForce( (movableObjects[0].rotation *  _forceToObjects[i]) * pushForce, ForceMode.Force); 
@@ -227,6 +240,11 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
         for (int i = 0; i < directionRendererGameObjects.Length; i++)
         {
             directionRendererGameObjects[i].SetActive(false);
+        }
+        
+        if (secondaryForceRenderer)
+        {
+            secondaryForceRenderer.gameObject.SetActive(false);
         }
     }
 
@@ -260,22 +278,43 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
         {
             directionRendererGameObjects[i].SetActive(true);
         }
+        
+        if (secondaryForceRenderer)
+        {
+            secondaryForceRenderer.gameObject.SetActive(true);
+        }
 
     }
 
-    private void AdjustLineRendererPosition(LineRenderer lineRenderer, Rigidbody myRigidbody, Vector2 difference, Vector2 direction, out Vector2 forceValue)
+    private void AdjustSecondaryRendererPosition(LineRenderer lineRenderer, Vector2 difference, Vector2 direction)
+    {
+        Vector2 rendererPos1 = new Vector2(lineRenderer.GetPosition(1).y, lineRenderer.GetPosition(1).x);
+        
+        Vector2 pos1 = difference + rendererPos1;
+        Vector2 pos2 = direction + new Vector2(lineRenderer.GetPosition(1).y, lineRenderer.GetPosition(1).x);
+        
+        pos1 = new Vector2( 0, Mathf.Clamp(pos1.x, 1f, float.MaxValue));
+        pos2 = new Vector2( 0, Mathf.Clamp(pos2.x, 2f, float.MaxValue));
+        
+        lineRenderer.SetPosition(1, pos1);
+        lineRenderer.SetPosition(2, pos2);
+    }
+
+    private void AdjustLineRendererPosition(LineRenderer lineRenderer, Vector2 difference, Vector2 direction, out Vector2 forceValue)
     {
         Vector2 rendererPos1 = new Vector2(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y);
         
         Vector2 pos1 = difference + rendererPos1;
         Vector2 pos2 = direction + new Vector2(lineRenderer.GetPosition(1).x, lineRenderer.GetPosition(1).y);
 
+        pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.y);
+        pos2 = new Vector2( Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.y);
 
         // the renderer is flat
         if (rendererPos1.y == 0f)
         {
             pos1 = new Vector2( Mathf.Clamp(pos1.x, 1f, float.MaxValue), pos1.y);
-            pos2 = new Vector2(Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.y);
+            pos2 = new Vector2( Mathf.Clamp(pos2.x, 2f, float.MaxValue), pos2.y);
         }
         else
         {
@@ -291,4 +330,3 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
         forceValue = difference + rendererPos1;
     }
 }
-
