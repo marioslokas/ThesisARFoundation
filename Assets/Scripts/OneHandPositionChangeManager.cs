@@ -34,6 +34,8 @@ public class OneHandPositionChangeManager : MonoBehaviour, ITransformHandler
     [SerializeField] private Camera mainCamera;
     [SerializeField] private RectTransform _arrowPointer;
     
+    private bool pauseUpdating = false;
+    
     private void CalculateGuidingArrowPosition()
     {
         Vector3 targetPosition = (_firstPlanetTransform.position);
@@ -55,9 +57,21 @@ public class OneHandPositionChangeManager : MonoBehaviour, ITransformHandler
             _arrowPointer.eulerAngles = new Vector3(0, 0, targetAngle);
         }
     }
+    
+    public void PauseUpdating()
+    {
+        pauseUpdating = true;
+    }
+
+    public void ResumeUpdating()
+    {
+        pauseUpdating = false;
+    }
 
     void Update()
     {
+        if (pauseUpdating) return;
+        
         CalculateGuidingArrowPosition();
         
         if (Input.touchCount <= 0) return;
