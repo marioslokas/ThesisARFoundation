@@ -10,6 +10,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject _prepareGameCanvas;
     [SerializeField] private GameObject _messagesCanvas;
     [SerializeField] private GameObject _adjustSimulationCanvas;
+    [SerializeField] private GameObject _pauseGameCanvas;
     [SerializeField] private GameObject _toNextChallengeCanvas;
     [SerializeField] private string introSceneName;
 
@@ -27,15 +28,26 @@ public class UIController : MonoBehaviour
         
         ShowNextMessage();
     }
-    
-    
+
+    public void PauseUI()
+    {
+        _adjustSimulationCanvas.SetActive(false);
+    }
+
+    public void UnPauseUI()
+    {
+        _adjustSimulationCanvas.SetActive(true);
+    }
+
 
     public void ShowNextMessage()
     {
         // play message if there are still messages
         if (_messagesManager.HasNextMessage())
         {
-            _adjustSimulationCanvas.SetActive(false);   
+            _adjustSimulationCanvas.SetActive(false);
+            _pauseGameCanvas.SetActive(false);
+            
             _messagesCanvas.SetActive(true);
             
             // raises the message counter
@@ -59,6 +71,7 @@ public class UIController : MonoBehaviour
     public void BackToGame()
     {
         _adjustSimulationCanvas.SetActive(true);
+        _pauseGameCanvas.SetActive(true);
         _messagesCanvas.SetActive(false);
         
         UpdateManager.instance.ResumeUpdates();

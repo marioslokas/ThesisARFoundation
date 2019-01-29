@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 5642522169968441408}
   - component: {fileID: 5642522169968441411}
   m_Layer: 0
-  m_Name: Image
+  m_Name: DarkOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -557,3 +557,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messageTextArea: {fileID: 1030664588}
   secondaryMessageArea: {fileID: 5815175752042911400}
+  pauseCanvasMessageTextArea: {fileID: 0}
+  pauseCanvasSecondaryMessageArea: {fileID: 0}

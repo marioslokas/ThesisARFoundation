@@ -38,6 +38,8 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
     [SerializeField] private RectTransform _arrowPointer;
     [SerializeField] private Camera mainCamera;
 
+    private bool pauseUpdating = false;
+
     void Start()
     {
 //        for (int i = 0; i < _movableObjectRigidbodies.Length; i++)
@@ -45,6 +47,16 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
 //            _movableObjectRigidbodies[i] = movableObjects[i].GetComponent<Rigidbody>();
 //        }
         
+    }
+
+    public void PauseUpdating()
+    {
+        pauseUpdating = true;
+    }
+
+    public void ResumeUpdating()
+    {
+        pauseUpdating = false;
     }
 
     private void CalculateGuidingArrowPosition()
@@ -85,6 +97,8 @@ public class OneHandTargetingManager : MonoBehaviour, ITransformHandler
 
     void Update()
     {
+        if (pauseUpdating) return;
+
         CalculateGuidingArrowPosition();
         
         if (Input.touchCount <= 0) return;

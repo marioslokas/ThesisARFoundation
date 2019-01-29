@@ -11,6 +11,9 @@ public class MessagesManager : MonoBehaviour
     [SerializeField] private Text messageTextArea;
     [SerializeField] private Text secondaryMessageArea;
     
+    [SerializeField] private Text pauseCanvasMessageTextArea;
+    [SerializeField] private Text pauseCanvasSecondaryMessageArea;
+    
     private int _messageCounter;
 
     private const int DelayFrames = 1;
@@ -19,6 +22,8 @@ public class MessagesManager : MonoBehaviour
     {
         this.mainMessages = mainMessages;
         this.secondaryMessages = secondaryMessages;
+        
+        
         _messageCounter = 0;
     }
 
@@ -38,6 +43,10 @@ public class MessagesManager : MonoBehaviour
         
         messageTextArea.text = mainMessages[_messageCounter];
         secondaryMessageArea.text = secondaryMessages[_messageCounter];
+        
+        pauseCanvasMessageTextArea.text = mainMessages[_messageCounter];
+        pauseCanvasSecondaryMessageArea.text = secondaryMessages[_messageCounter];
+            
         _messageCounter++;
 
         if (pauseUpdates)

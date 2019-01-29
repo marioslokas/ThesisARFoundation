@@ -81,7 +81,8 @@ public class ChallengeManager : MonoBehaviour
             _messageManager.SetActive(startWithMessage);
             if (startWithMessage)
             {
-                _messageManager.GetComponent<MessagesManager>().NextMessage();
+//                _messageManager.GetComponent<MessagesManager>().NextMessage();
+                uiController.ShowNextMessage();
             }
             
             _targetingManager.SetActive(!startWithMessage);
