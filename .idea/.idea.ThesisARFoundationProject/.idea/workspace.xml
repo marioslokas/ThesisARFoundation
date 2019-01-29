@@ -4,7 +4,6 @@
     <list default="true" id="d552ab52-1952-4766-9627-21f01fff0f88" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/IntroCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/IntroCanvas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/IntroScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IntroScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSetup.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,28 +44,8 @@
       <file leaf-file-name="GameSetup.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="116" column="21" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="21" />
-              <folding>
-                <marker date="1548771021607" expanded="false" signature="6:135" ph="..." />
-                <marker date="1548771021607" expanded="true" signature="175:3422" ph="{...}" />
-                <marker date="1548771021607" expanded="true" signature="208:263" ph="{...}" />
-                <marker date="1548771021607" expanded="true" signature="296:355" ph="{...}" />
-                <marker date="1548771021607" expanded="true" signature="383:685" ph="{...}" />
-                <marker date="1548771021607" expanded="true" signature="569:679" ph="{...}" />
-                <marker date="1548771021607" expanded="true" signature="848:962" ph="/* [SerializeField] private Dropdown environmentDropdown; ... */" />
-                <marker date="1548771021607" expanded="true" signature="1429:2088" ph="{...}" />
-                <marker date="1548771021607" expanded="true" signature="1436:2082" ph="/* _options = new GameOptions(ArEnvironment.Earth, BallProjectile.GolfBall); ... */" />
-                <marker date="1548771021607" expanded="true" signature="2090:2591" ph="/* void EnvironmentDropdownValueChanged(Dropdown envDropdown) ... */" />
-                <marker date="1548771021607" expanded="true" signature="2641:2715" ph="{...}" />
-                <marker date="1548771021607" expanded="true" signature="2745:2835" ph="{...}" />
-                <marker date="1548771021607" expanded="true" signature="2867:2987" ph="{...}" />
-                <marker date="1548771021607" expanded="true" signature="3028:3198" ph="{...}" />
-                <marker date="1548771021607" expanded="true" signature="3060:3119" ph="{...}" />
-                <marker date="1548771021607" expanded="true" signature="3132:3192" ph="{...}" />
-                <marker date="1548771021607" expanded="true" signature="3232:3331" ph="{...}" />
-                <marker date="1548771021607" expanded="true" signature="3362:3419" ph="{...}" />
-              </folding>
+            <state relative-caret-position="245">
+              <caret line="109" column="13" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -146,8 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>updatableVelocities</find>
-      <find>pauseUpdating</find>
       <find>movableObjectStartingPosition</find>
       <find>movableObject</find>
       <find>mainGameObject</find>
@@ -176,6 +153,8 @@
       <find>_uiController</find>
       <find>camera</find>
       <find>CalculateGuidingArrowPosition</find>
+      <find>toArScene</find>
+      <find>sceneLoadSet</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -263,7 +242,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="170" />
     <option name="y" value="91" />
     <option name="width" value="1026" />
@@ -346,12 +325,12 @@
       <workItem from="1548245132782" duration="11552000" />
       <workItem from="1548342735764" duration="6949000" />
       <workItem from="1548407977830" duration="396000" />
-      <workItem from="1548765344361" duration="3376000" />
+      <workItem from="1548765344361" duration="4165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143244000" />
+    <option name="totallyTimeSpent" value="144033000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -363,7 +342,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -696,28 +675,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="116" column="21" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="21" />
-          <folding>
-            <marker date="1548771021607" expanded="false" signature="6:135" ph="..." />
-            <marker date="1548771021607" expanded="true" signature="175:3422" ph="{...}" />
-            <marker date="1548771021607" expanded="true" signature="208:263" ph="{...}" />
-            <marker date="1548771021607" expanded="true" signature="296:355" ph="{...}" />
-            <marker date="1548771021607" expanded="true" signature="383:685" ph="{...}" />
-            <marker date="1548771021607" expanded="true" signature="569:679" ph="{...}" />
-            <marker date="1548771021607" expanded="true" signature="848:962" ph="/* [SerializeField] private Dropdown environmentDropdown; ... */" />
-            <marker date="1548771021607" expanded="true" signature="1429:2088" ph="{...}" />
-            <marker date="1548771021607" expanded="true" signature="1436:2082" ph="/* _options = new GameOptions(ArEnvironment.Earth, BallProjectile.GolfBall); ... */" />
-            <marker date="1548771021607" expanded="true" signature="2090:2591" ph="/* void EnvironmentDropdownValueChanged(Dropdown envDropdown) ... */" />
-            <marker date="1548771021607" expanded="true" signature="2641:2715" ph="{...}" />
-            <marker date="1548771021607" expanded="true" signature="2745:2835" ph="{...}" />
-            <marker date="1548771021607" expanded="true" signature="2867:2987" ph="{...}" />
-            <marker date="1548771021607" expanded="true" signature="3028:3198" ph="{...}" />
-            <marker date="1548771021607" expanded="true" signature="3060:3119" ph="{...}" />
-            <marker date="1548771021607" expanded="true" signature="3132:3192" ph="{...}" />
-            <marker date="1548771021607" expanded="true" signature="3232:3331" ph="{...}" />
-            <marker date="1548771021607" expanded="true" signature="3362:3419" ph="{...}" />
-          </folding>
+        <state relative-caret-position="245">
+          <caret line="109" column="13" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
         </state>
       </provider>
     </entry>
