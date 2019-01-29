@@ -34,10 +34,10 @@ public class GameSetup : MonoBehaviour
 
     [SerializeField] private GameObject startOptions;
     [SerializeField] private GameObject howToPlayInfo;
-    [SerializeField] private GameObject toArScene;
+    [SerializeField] private GameObject startGameButton;
 
-    [SerializeField] private Dropdown environmentDropdown;
-    [SerializeField] private Dropdown ballDropdown;
+//    [SerializeField] private Dropdown environmentDropdown;
+//    [SerializeField] private Dropdown ballDropdown;
 
     private GameOptions _options;
     private ArEnvironment[] _environmentValues;
@@ -50,6 +50,13 @@ public class GameSetup : MonoBehaviour
     [SerializeField]
     private string gravityARScene;
 
+    private bool sceneLoadSet = false;
+
+    [Header("Help objects")] 
+    [SerializeField]
+    private GameObject help1;
+    [SerializeField]
+    private GameObject help2;
 
     void Start()
     {
@@ -83,20 +90,42 @@ public class GameSetup : MonoBehaviour
     public void SetSceneToLoad(string sceneName)
     {
         sceneToLoad = sceneName;
+        sceneLoadSet = true;
     }
 
     public void ToInfoView()
     {
         startOptions.SetActive(false);
         howToPlayInfo.SetActive(true);
-        toArScene.SetActive(true);
     }
 
     public void ToSelectView()
     {
         startOptions.SetActive(true);
         howToPlayInfo.SetActive(false);
-        toArScene.SetActive(false);
+        sceneLoadSet = false;
+        
+        help1.SetActive(true);
+        help2.SetActive(false);
+        startGameButton.SetActive(false);
+    }
+
+    public void EnableStartGameButton()
+    {
+        if (sceneLoadSet)
+        {
+            startGameButton.SetActive(true);
+        }
+        else
+        {
+            startGameButton.SetActive(false);
+        }
+    }
+
+    public void SwitchHelpInfo()
+    {
+        help1.SetActive(help2.activeSelf);
+        help2.SetActive(!help1.activeSelf);
     }
 
     public void LoadArScene()
