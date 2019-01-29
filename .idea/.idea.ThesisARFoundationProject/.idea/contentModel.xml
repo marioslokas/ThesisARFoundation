@@ -67,6 +67,7 @@
           <e p="BlinkText.cs" t="Include" />
           <e p="CallSphereOnTap.cs" t="Include" />
           <e p="ChallengeManager.cs" t="Include" />
+          <e p="ChangeColor.cs" t="Include" />
           <e p="DetectTouchMovement.cs" t="Include" />
           <e p="DisplayVelocity.cs" t="Include" />
           <e p="FollowObject.cs" t="Include" />
@@ -85,6 +86,7 @@
           <e p="OneHandPositionChangeManager.cs" t="Include" />
           <e p="OneHandTargetingManager.cs" t="Include" />
           <e p="PrepareGame.cs" t="Include" />
+          <e p="SimpleUIRotate.cs" t="Include" />
           <e p="TargetingManager.cs" t="Include" />
           <e p="UIController.cs" t="Include" />
           <e p="UpdateManager.cs" t="Include" />
