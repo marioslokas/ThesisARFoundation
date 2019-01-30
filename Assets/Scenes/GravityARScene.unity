@@ -840,8 +840,8 @@ MonoBehaviour:
     mainMessages:
     - Swipe up and down to adjust the distance between the 2 planets.
     secondaryMessages:
-    - Observe what happens to the gravitational force vector. Explain why the attraction
-      is different for each planet.
+    - Observe what happens to the gravitational force for each planet. Why is the
+      attraction force different for each planet?
   centralGamePosition: {x: 0, y: 0, z: 0}
 --- !u!1 &672119066
 GameObject:
@@ -2952,6 +2952,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6877756619878996638, guid: 1aa72a3736b96b840a3f1ecb264ef6a6,
+        type: 3}
+      propertyPath: m_Name
+      value: PlaneDetectionInfoText
+      objectReference: {fileID: 0}
     - target: {fileID: 6877756620657218235, guid: 1aa72a3736b96b840a3f1ecb264ef6a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3056,11 +3061,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6877756619878996638, guid: 1aa72a3736b96b840a3f1ecb264ef6a6,
-        type: 3}
-      propertyPath: m_Name
-      value: PlaneDetectionInfoText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa72a3736b96b840a3f1ecb264ef6a6, type: 3}
