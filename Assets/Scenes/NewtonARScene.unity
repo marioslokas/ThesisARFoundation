@@ -970,7 +970,7 @@ MonoBehaviour:
     - Welcome to this little simulation! Here you see a little ball floating in space.
     - What will happen to this ball after a force has been applied to it?
     secondaryMessages:
-    - Swipe right-left to change the direction and up/right to change the magnitude
+    - Swipe right-left to change the direction and up-right to change the magnitude
       of a force to be applied on it. When you are ready, press Fire.
     - Remember that there is no gravity or air friction in space.
   - startWithMessage: 1
