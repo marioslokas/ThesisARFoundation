@@ -17,6 +17,7 @@ public class SimpleUIRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _rectTransform.RotateAround(_rectTransform.position, Vector3.forward, speed);
+//        _rectTransform.RotateAround(_rectTransform.position, Vector3.forward, speed);
+        _rectTransform.Rotate(Vector3.forward, speed);
     }
 }
