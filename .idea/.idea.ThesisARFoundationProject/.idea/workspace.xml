@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d552ab52-1952-4766-9627-21f01fff0f88" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThesisARFoundationProject/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewtonARScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewtonARScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="d552ab52-1952-4766-9627-21f01fff0f88" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,8 +77,8 @@
       <file leaf-file-name="DoubleDirectionTargetingManager.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/DoubleDirectionTargetingManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="222" column="44" selection-start-line="222" selection-start-column="44" selection-end-line="222" selection-end-column="44" />
+            <state relative-caret-position="232">
+              <caret line="302" column="69" selection-start-line="302" selection-start-column="69" selection-end-line="302" selection-end-column="69" />
               <folding>
                 <marker date="1548783987524" expanded="false" signature="6:100" ph="..." />
                 <marker date="1548783987524" expanded="true" signature="181:11265" ph="{...}" />
@@ -328,9 +324,9 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="7788">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="7788" />
+      <option name="pid" />
     </configuration>
   </component>
   <component name="TaskManager">
@@ -358,12 +354,12 @@
       <workItem from="1548245132782" duration="11552000" />
       <workItem from="1548342735764" duration="6949000" />
       <workItem from="1548407977830" duration="396000" />
-      <workItem from="1548765344361" duration="9465000" />
+      <workItem from="1548765344361" duration="10229000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149333000" />
+    <option name="totallyTimeSpent" value="150097000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -375,7 +371,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -389,7 +385,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unity" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.031301484" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.031301484" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -408,19 +404,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url />
-          <line>299</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/DoubleDirectionTargetingManager.cs" initialLine="288">
-            <startOffsets>
-              <startOffset value="9972" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="10006" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url />
           <line>223</line>
@@ -719,8 +702,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/DoubleDirectionTargetingManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="222" column="44" selection-start-line="222" selection-start-column="44" selection-end-line="222" selection-end-column="44" />
+        <state relative-caret-position="232">
+          <caret line="302" column="69" selection-start-line="302" selection-start-column="69" selection-end-line="302" selection-end-column="69" />
           <folding>
             <marker date="1548783987524" expanded="false" signature="6:100" ph="..." />
             <marker date="1548783987524" expanded="true" signature="181:11265" ph="{...}" />

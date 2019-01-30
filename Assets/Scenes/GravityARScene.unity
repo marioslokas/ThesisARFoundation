@@ -1829,6 +1829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PausePhysicsCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1413049241, guid: 93eb7e6e67a85ba439464514a226c7c5, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1116793683078261255, guid: 93eb7e6e67a85ba439464514a226c7c5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1944,11 +1948,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 4904610760418444658}
-    - target: {fileID: 1116793684323401989, guid: 93eb7e6e67a85ba439464514a226c7c5,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: PauseUpdating
-      objectReference: {fileID: 0}
     - target: {fileID: 1116793684361784272, guid: 93eb7e6e67a85ba439464514a226c7c5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1959,11 +1958,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 4904610760418444658}
-    - target: {fileID: 1116793684361784272, guid: 93eb7e6e67a85ba439464514a226c7c5,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: ResumeUpdating
-      objectReference: {fileID: 0}
+    - target: {fileID: 793647037, guid: 93eb7e6e67a85ba439464514a226c7c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1822251479}
+    - target: {fileID: 793647037, guid: 93eb7e6e67a85ba439464514a226c7c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 8935098572666291275}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93eb7e6e67a85ba439464514a226c7c5, type: 3}
 --- !u!224 &1939602624 stripped
@@ -2930,11 +2932,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 6877756619878996638, guid: 1aa72a3736b96b840a3f1ecb264ef6a6,
-        type: 3}
-      propertyPath: m_Name
-      value: PlaneDetectionInfoText
-      objectReference: {fileID: 0}
     - target: {fileID: 6877756620657218235, guid: 1aa72a3736b96b840a3f1ecb264ef6a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3039,6 +3036,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877756619878996638, guid: 1aa72a3736b96b840a3f1ecb264ef6a6,
+        type: 3}
+      propertyPath: m_Name
+      value: PlaneDetectionInfoText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa72a3736b96b840a3f1ecb264ef6a6, type: 3}

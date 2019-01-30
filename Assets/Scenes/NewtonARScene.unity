@@ -990,7 +990,7 @@ MonoBehaviour:
     - What is the relationship of the resulting force applied, and the acceleration
       the object acquires?
     secondaryMessages:
-    - Both forces will always have the magnitude you give them.
+    - Both force vectors will have the same magnitude you give them.
     - 
   - startWithMessage: 1
     playMessageOnFire: 1
@@ -2179,6 +2179,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PausePhysicsCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1413049241, guid: 93eb7e6e67a85ba439464514a226c7c5, type: 3}
+      propertyPath: m_Text
+      value: None
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413049241, guid: 93eb7e6e67a85ba439464514a226c7c5, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1116793683078261255, guid: 93eb7e6e67a85ba439464514a226c7c5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2312,6 +2320,35 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1822251479}
+    - target: {fileID: 793647037, guid: 93eb7e6e67a85ba439464514a226c7c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ToMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 793647037, guid: 93eb7e6e67a85ba439464514a226c7c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 793647037, guid: 93eb7e6e67a85ba439464514a226c7c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 793647037, guid: 93eb7e6e67a85ba439464514a226c7c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 562277882134758098, guid: 93eb7e6e67a85ba439464514a226c7c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510208738, guid: 93eb7e6e67a85ba439464514a226c7c5, type: 3}
+      propertyPath: m_Text
+      value: Recent messages
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510208738, guid: 93eb7e6e67a85ba439464514a226c7c5, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93eb7e6e67a85ba439464514a226c7c5, type: 3}
 --- !u!224 &1939602624 stripped
