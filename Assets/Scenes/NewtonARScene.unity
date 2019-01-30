@@ -477,6 +477,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3995463910844327810, guid: 2b1c28cb88656f7478c60f49edadeaa6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 827637413, guid: 2b1c28cb88656f7478c60f49edadeaa6, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -485,11 +490,6 @@ PrefabInstance:
       propertyPath: _uiController
       value: 
       objectReference: {fileID: 1822251479}
-    - target: {fileID: 3995463910844327810, guid: 2b1c28cb88656f7478c60f49edadeaa6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3995463910844327808, guid: 2b1c28cb88656f7478c60f49edadeaa6,
         type: 3}
       propertyPath: m_Enabled
@@ -998,9 +998,9 @@ MonoBehaviour:
     - There are now 2 forces applied to the sphere, with a 90 degree angle between
       them.
     - What is the relationship of the resulting force applied, and the acceleration
-      the object acquires?
+      the object acquires after?
     secondaryMessages:
-    - Both force vectors will have the same magnitude you give them.
+    - As you swipe up/down, both forces will acquire the same magnitude.
     - 
   - startWithMessage: 1
     playMessageOnFire: 1
@@ -1029,7 +1029,7 @@ MonoBehaviour:
     mainMessages:
     - Try and aim for that meteorite you can see.
     secondaryMessages:
-    - Remember that the meteorite has many times the sphere's mass.
+    - Remember that the meteorite has many more times the sphere's mass.
   centralGamePosition: {x: 0, y: 0, z: 0}
 --- !u!1 &672119066
 GameObject:
@@ -2679,13 +2679,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 447232752, guid: ca3c6e9b4e202b64aabd644790d92634, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 1887762504, guid: ca3c6e9b4e202b64aabd644790d92634, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447232752, guid: ca3c6e9b4e202b64aabd644790d92634, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca3c6e9b4e202b64aabd644790d92634, type: 3}
