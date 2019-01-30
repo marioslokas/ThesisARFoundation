@@ -13,11 +13,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OneHandPositionChangeManager.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OneHandPositionChangeManager.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandPositionChangeManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
+            <state relative-caret-position="391">
               <caret line="72" selection-start-line="72" selection-end-line="72" />
+              <folding>
+                <marker date="1548780578895" expanded="false" signature="6:100" ph="..." />
+                <marker date="1548780578895" expanded="true" signature="178:5994" ph="{...}" />
+                <marker date="1548780578895" expanded="true" signature="1328:2170" ph="{...}" />
+                <marker date="1548780578895" expanded="true" signature="1736:1811" ph="{...}" />
+                <marker date="1548780578895" expanded="true" signature="1824:2164" ph="{...}" />
+                <marker date="1548780578895" expanded="true" signature="2207:2249" ph="{...}" />
+                <marker date="1548780578895" expanded="true" signature="2283:2326" ph="{...}" />
+                <marker date="1548780578895" expanded="true" signature="2345:4246" ph="{...}" />
+                <marker date="1548780578895" expanded="true" signature="2532:4240" ph="{...}" />
+                <marker date="1548780578895" expanded="true" signature="2642:2777" ph="{...}" />
+                <marker date="1548780578895" expanded="true" signature="2838:4142" ph="{...}" />
+                <marker date="1548780578895" expanded="true" signature="3169:3350" ph="{...}" />
+                <marker date="1548780578895" expanded="true" signature="4201:4230" ph="{...}" />
+                <marker date="1548780578895" expanded="true" signature="4498:5992" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -31,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleUIRotate.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SimpleUIRotate.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/SimpleUIRotate.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -279,7 +295,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="170" />
     <option name="y" value="91" />
     <option name="width" value="1026" />
@@ -316,7 +332,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="one&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/OneHandPositionChangeManager.cs&#10;pre&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;uic&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/UIController.cs&#10;manua&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/ManualGravity.cs&#10;messa&#9;null&#9;null&#10;gamese&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/GameSetup.cs&#10;cha&#9;null&#9;null&#10;i&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/Interfaces/ITransformHandler.cs&#10;prep&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;up&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/UpdateManager.cs&#10;prepa&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;setta&#9;null&#9;null&#10;detect&#9;null&#9;null&#10;base&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="oneh&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/OneHandPositionChangeManager.cs&#10;one&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/OneHandPositionChangeManager.cs&#10;pre&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;uic&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/UIController.cs&#10;manua&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/ManualGravity.cs&#10;messa&#9;null&#9;null&#10;gamese&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/GameSetup.cs&#10;cha&#9;null&#9;null&#10;i&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/Interfaces/ITransformHandler.cs&#10;prep&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;up&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/UpdateManager.cs&#10;prepa&#9;FILE&#9;file://D:/Unity Projects/ThesisARFoundationProject/Assets/Scripts/PrepareGame.cs&#10;setta&#9;null&#9;null&#10;detect&#9;null&#9;null&#10;base&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -363,12 +379,12 @@
       <workItem from="1548342735764" duration="6949000" />
       <workItem from="1548407977830" duration="396000" />
       <workItem from="1548765344361" duration="10229000" />
-      <workItem from="1548855965410" duration="520000" />
+      <workItem from="1548855965410" duration="743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150617000" />
+    <option name="totallyTimeSpent" value="150840000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,7 +396,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -681,13 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandPositionChangeManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -765,6 +774,29 @@
             <marker date="1548856047649" expanded="true" signature="123:574" ph="{...}" />
             <marker date="1548856047649" expanded="true" signature="286:359" ph="{...}" />
             <marker date="1548856047649" expanded="true" signature="417:572" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandPositionChangeManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <marker date="1548780578895" expanded="false" signature="6:100" ph="..." />
+            <marker date="1548780578895" expanded="true" signature="178:5994" ph="{...}" />
+            <marker date="1548780578895" expanded="true" signature="1328:2170" ph="{...}" />
+            <marker date="1548780578895" expanded="true" signature="1736:1811" ph="{...}" />
+            <marker date="1548780578895" expanded="true" signature="1824:2164" ph="{...}" />
+            <marker date="1548780578895" expanded="true" signature="2207:2249" ph="{...}" />
+            <marker date="1548780578895" expanded="true" signature="2283:2326" ph="{...}" />
+            <marker date="1548780578895" expanded="true" signature="2345:4246" ph="{...}" />
+            <marker date="1548780578895" expanded="true" signature="2532:4240" ph="{...}" />
+            <marker date="1548780578895" expanded="true" signature="2642:2777" ph="{...}" />
+            <marker date="1548780578895" expanded="true" signature="2838:4142" ph="{...}" />
+            <marker date="1548780578895" expanded="true" signature="3169:3350" ph="{...}" />
+            <marker date="1548780578895" expanded="true" signature="4201:4230" ph="{...}" />
+            <marker date="1548780578895" expanded="true" signature="4498:5992" ph="{...}" />
           </folding>
         </state>
       </provider>
