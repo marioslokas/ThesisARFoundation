@@ -2113,6 +2113,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1354694735, guid: 6049ff13d2ff10c42a8fb054ba61acbd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354694737, guid: 6049ff13d2ff10c42a8fb054ba61acbd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6049ff13d2ff10c42a8fb054ba61acbd, type: 3}
 --- !u!4 &1797377423 stripped
@@ -2610,6 +2618,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1887762504, guid: ca3c6e9b4e202b64aabd644790d92634, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca3c6e9b4e202b64aabd644790d92634, type: 3}
 --- !u!4 &2120941416 stripped
@@ -3050,6 +3062,16 @@ PrefabInstance:
       propertyPath: _uiController
       value: 
       objectReference: {fileID: 1822251479}
+    - target: {fileID: 5655746586983514947, guid: c1c84c3d210e8fc4b8014b83fe1a55b3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 760684747074687921, guid: c1c84c3d210e8fc4b8014b83fe1a55b3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1c84c3d210e8fc4b8014b83fe1a55b3, type: 3}
 --- !u!224 &5142570568912184598 stripped
