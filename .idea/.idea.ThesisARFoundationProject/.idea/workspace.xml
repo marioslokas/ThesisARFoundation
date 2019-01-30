@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d552ab52-1952-4766-9627-21f01fff0f88" name="Default" comment="" />
+    <list default="true" id="d552ab52-1952-4766-9627-21f01fff0f88" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewtonARScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewtonARScene.unity" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +16,7 @@
       <file leaf-file-name="OneHandPositionChangeManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandPositionChangeManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="1080">
               <caret line="72" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
@@ -23,17 +25,23 @@
       <file leaf-file-name="ChangeColor.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChangeColor.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="210">
               <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleUIRotate.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SimpleUIRotate.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/SimpleUIRotate.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+            <state relative-caret-position="270">
+              <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+              <folding>
+                <marker date="1548856047649" expanded="false" signature="6:78" ph="..." />
+                <marker date="1548856047649" expanded="true" signature="123:574" ph="{...}" />
+                <marker date="1548856047649" expanded="true" signature="286:359" ph="{...}" />
+                <marker date="1548856047649" expanded="true" signature="417:572" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,7 +49,7 @@
       <file leaf-file-name="GameSetup.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="1635">
               <caret line="109" column="13" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
             </state>
           </provider>
@@ -50,7 +58,7 @@
       <file leaf-file-name="PrepareGame.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PrepareGame.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
+            <state relative-caret-position="1515">
               <caret line="101" column="33" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
             </state>
           </provider>
@@ -59,7 +67,7 @@
       <file leaf-file-name="ChallengeManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
+            <state relative-caret-position="1260">
               <caret line="84" column="47" selection-start-line="84" selection-start-column="47" selection-end-line="84" selection-end-column="47" />
             </state>
           </provider>
@@ -68,16 +76,16 @@
       <file leaf-file-name="OneHandTargetingManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="105">
               <caret line="7" column="71" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoubleDirectionTargetingManager.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DoubleDirectionTargetingManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/DoubleDirectionTargetingManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
+            <state relative-caret-position="4485">
               <caret line="302" column="69" selection-start-line="302" selection-start-column="69" selection-end-line="302" selection-end-column="69" />
               <folding>
                 <marker date="1548783987524" expanded="false" signature="6:100" ph="..." />
@@ -133,7 +141,7 @@
       <file leaf-file-name="UIController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UIController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="510">
               <caret line="34" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
@@ -142,7 +150,7 @@
       <file leaf-file-name="MessagesManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/MessagesManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="510">
               <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
             </state>
           </provider>
@@ -260,7 +268,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GravityForceDisplay.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PrepareGame.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChangeColor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SimpleUIRotate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSetup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MessagesManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs" />
@@ -268,6 +275,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/OneHandPositionChangeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoubleDirectionTargetingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SimpleUIRotate.cs" />
       </list>
     </option>
   </component>
@@ -355,11 +363,12 @@
       <workItem from="1548342735764" duration="6949000" />
       <workItem from="1548407977830" duration="396000" />
       <workItem from="1548765344361" duration="10229000" />
+      <workItem from="1548855965410" duration="520000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150097000" />
+    <option name="totallyTimeSpent" value="150617000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -381,7 +390,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08850227" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0892587" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unity" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -405,7 +414,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url />
+          <url>file://$PROJECT_DIR$/Assets/Scripts/DoubleDirectionTargetingManager.cs</url>
           <line>223</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/DoubleDirectionTargetingManager.cs" initialLine="223">
             <startOffsets>
@@ -639,70 +648,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChangeColor.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="210">
           <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SimpleUIRotate.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameSetup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
+        <state relative-caret-position="1635">
           <caret line="109" column="13" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PrepareGame.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
+        <state relative-caret-position="1515">
           <caret line="101" column="33" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MessagesManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="510">
           <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/UIController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="510">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandPositionChangeManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="1080">
           <caret line="72" selection-start-line="72" selection-end-line="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/OneHandTargetingManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="105">
           <caret line="7" column="71" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChallengeManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
+        <state relative-caret-position="1260">
           <caret line="84" column="47" selection-start-line="84" selection-start-column="47" selection-end-line="84" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/DoubleDirectionTargetingManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
+        <state relative-caret-position="4485">
           <caret line="302" column="69" selection-start-line="302" selection-start-column="69" selection-end-line="302" selection-end-column="69" />
           <folding>
             <marker date="1548783987524" expanded="false" signature="6:100" ph="..." />
@@ -750,6 +752,19 @@
             <marker date="1548783987524" expanded="true" signature="10147:11263" ph="{...}" />
             <marker date="1548783987524" expanded="true" signature="10652:10836" ph="{...}" />
             <marker date="1548783987524" expanded="true" signature="10849:11105" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SimpleUIRotate.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+          <folding>
+            <marker date="1548856047649" expanded="false" signature="6:78" ph="..." />
+            <marker date="1548856047649" expanded="true" signature="123:574" ph="{...}" />
+            <marker date="1548856047649" expanded="true" signature="286:359" ph="{...}" />
+            <marker date="1548856047649" expanded="true" signature="417:572" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -485,6 +485,16 @@ PrefabInstance:
       propertyPath: _uiController
       value: 
       objectReference: {fileID: 1822251479}
+    - target: {fileID: 3995463910844327810, guid: 2b1c28cb88656f7478c60f49edadeaa6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995463910844327808, guid: 2b1c28cb88656f7478c60f49edadeaa6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b1c28cb88656f7478c60f49edadeaa6, type: 3}
 --- !u!4 &160677550 stripped
