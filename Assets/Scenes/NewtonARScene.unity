@@ -1187,7 +1187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &910032855
 Transform:
   m_ObjectHideFlags: 0
@@ -2446,6 +2446,29 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6877756619325314678}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1940341961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940341960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130992401bbbff84691b312ba8d1d8ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  informationText: {fileID: 553684201}
+  lookingForPlanesMsg: Looking for surfaces...
+  planeFoundMsg: Surface found! Look at a surface and press start to begin.
+  _planeManager: {fileID: 1127487259}
+  startButton: {fileID: 1536658315}
+  _eyeRaycaster: {fileID: 553605771}
+  _challengeManager: {fileID: 583401016}
+  _prepareGameCanvas: {fileID: 1940341960}
+  _helpMessage: Try to stand up and look down and around.
+  _additionalhelpText: {fileID: 959162786}
+  waitingTime: 8
 --- !u!224 &1940341965 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6877756620657218235, guid: 1aa72a3736b96b840a3f1ecb264ef6a6,
