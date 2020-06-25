@@ -1,14 +1,3 @@
 # Thesis project directly taken from AR Foundation
-Example projects that use *AR Foundation* and demonstrate its functionality with sample assets and components.
-
-Compatible with Unity 2018.3.
-
-## Instructions for installing AR Foundation
-
-1. Download the latest version of Unity 2018.3
-
-2. Open Unity and load the project at the root of the *arfoundation-samples* repository
-
-3. Open your choice of sample scene.
-
-4. See the [AR Foundation Documentation](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@1.0) for usage instructions and more information.
+This project (Newton's laws in AR) was developed as a part of my master's thesis in DTU. The app is free for anyone to use-extent.
+The project was developed with Unity 2018.3 and requires the ARFoundation package from the package manager
